@@ -1,0 +1,13 @@
+*.pdf
+*.swp
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.toc
+*.out
+*.synctex.gz
+*.code-workspace
+example-*

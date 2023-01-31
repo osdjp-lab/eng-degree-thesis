@@ -1,0 +1,53 @@
+\documentclass[a4paper, 12pt, oneside]{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+% \usepackage[utf8]{inputenc}
+% \usepackage{polski}
+\usepackage{listings}
+\bibliographystyle{unsrt}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+\include{0-title-page}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\include{1-abstract}
+\include{2-introduction}
+\include{3-build-system}
+\include{4-software-selection}
+\include{5-code-modification}
+\include{5.1-methodology}
+\include{5.2-general-changes}
+\include{5.3-specific-changes}
+\include{6-learners-guide}
+\include{7-summary}
+
+\bibliography{8-references} 
+\end{document}

@@ -1,0 +1,38 @@
+\section{Build system}\label{Build system}
+
+The system is build using a set of scripts.
+
+\subsection{Host preparation}
+
+The host system package requirements are checked.
+
+An empty 10GB virtual disk file is created by means of the dd command.
+
+The file is mounted via a loop mount as a block device.
+
+The virtual disk is set for the GPT partitioning scheme.
+
+Two paritions are created the EFI partition and the ROOT partition.
+
+The tarballs of the selected packages are downloaded into the sources directory.
+
+An initial skeleton of the filesystem directory tree is created.
+
+A dedicated user is added.
+
+The behavior of the user shell is modified by setting the environment variables.
+
+\subsection{Cross toolchain}
+
+\subsection{Temporary tools}
+
+\subsection{Chroot}
+
+\subsection{Additional temporary tools}
+
+\subsection{Software installation}
+
+\subsection{System configuration}
+
+\subsection{System boot}
+
