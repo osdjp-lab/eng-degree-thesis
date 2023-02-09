@@ -1,30 +1,48 @@
 \section{Introduction}\label{Introduction}
 
-The conceptual foundation for this system stems from the Linux From Scratch (LFS) project \cite{lfs}, it's derivative project Automated Linux From Scratch (ALFS) \cite{alfs} as well as a seperate minimal system creation project called Minimal Linux Live (MLL) \cite{mll}. Similarly to the aformentioned projects as well as many other Linux systems this project relies on the following standards for some of its implementation details:
+* Extended reasoning for selection of project.
 
-\begin{itemize}
-    \item Linux Standard Base (LSB) \cite{lsb} - for its selection of included packages and features.
-    \item Filesystem Hierarchy Standard (FHS) \cite{fhs} - for its directory layout.
-    \item POSIX
-    \item Single Unix Specification (SUS)
-\end{itemize}
+\subsection{Linux}
 
+* Types of distributions (general purpose, hosting (server), business oriented, security oriented, education, etc.)
+
+Currently there are many Linux distributions available online most of which are built for general use, business or security. Few however are built for the purpose of educating about the implementation and creation of Linux systems. 
+
+* Source based distributions (LFS, Gentoo, NixOS, CRUX, GoboLinux, Source Mage, Calculate Linux)
+
+* Why my system is different from the above (different target user base, significanly smaller and easier to setup, ease of code modification, chroot and iso options, etc.)
+
+
+\subsection{Software}
+
+* Characteristics of commonly used software (source code, build systems, features, etc.) for example primary GNU software packages (glibc, gcc, binutils, bash, coreutils, diffutils, findutils, gawk, etc.)
 
 A set of common goals underly the development of nearly all software:
 
 \begin{itemize}
-    \item Performance optimization.
-    \item Introduction of new features.
+    \item Maintenence (patching of bugs).
+    \item Optimization (performance).
+    \item Extension (introduction of features for versatility or compatibilty with alternative implementations; porting of software to alternative operating systems, etc.).
 \end{itemize}
 
-As a result over many years of development the code base of any project is going to increase in size and possibly complexity.
+As a result over the course of many years of development the code base of any project increases in size and complexity.
 
-An example of this are the GNU software packages.
+* Graph of selected GNU packages size evolution since inception.
 
-Overview of primary GNU packages (glibc, gcc, binutils, bash, coreutils, diffutils, findutils, gawk)
+* Changes to mainstream software packages resulting in an abundance of excess code (maintenence, optimization, extension etc.)
 
-Changes to mainstream software packages since their inception resulting in an abundance of excess code (depricated features etc.)
+* Intended goal (singular build target (Linux) resulting in a minimal build system, reduced complexity, reduced feature set with a goal of adhering to the Unix philosophy of minimalizm and modularity)
 
-Enormous code base causing labour intensive maintenance as well as addition of novel feautures, removal of bugs.
 
+\subsection{Cognitive complexity metrics}
+
+* Weyuker's nine desirable properties of complexity metrics.
+
+* Halstead complexity measures.
+
+* McCabe cyclomatic complexity.
+
+* Cognitive weight and functional size (A new measure of software complexity based on cognitive weights).
+
+* Reasoning behind some of the metrics used for source code evaluation.
 
