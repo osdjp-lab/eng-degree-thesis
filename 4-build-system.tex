@@ -1,38 +1,71 @@
 \section{Build system}\label{Build system}
 
-The system is build using a set of scripts.
+\subsection{Layout}
 
-\subsection{Host preparation}
+Composition of the Linux for Learners project.
 
-The host system package requirements are checked.
+\subsubsection{Static}
 
-An empty 10GB virtual disk file is created by means of the dd command.
+Components in repository prioir to system build are as follows:
 
-The file is mounted via a loop mount as a block device.
+\begin{itemize}
+    \item \textbf{README.md} - general project information.
+    \item \textbf{LICENSE} - project use and distribution terms.
+    \item \textbf{Makefile} - listing of make targets with associated scripts.
+    \item Numbered scripts \textbf{\enquote{0[0-5]*}} - responsible for each step in the creation of the Linux system.
+    \item \textbf{wget-sources} and \textbf{git-sources} - lists of software source code locations.
+    \item \textbf{make-scripts} directory - makefile target scripts.
+    \item \textbf{build-scripts} directory - individual package build and install scripts.
+    \item \textbf{config-files} directory - system configuration files.
+\end{itemize}
 
-The virtual disk is set for the GPT partitioning scheme.
+\subsubsection{Dynamic}
 
-Two paritions are created the EFI partition and the ROOT partition.
+Components created dynamically during system creation:
 
-The tarballs of the selected packages are downloaded into the sources directory.
+\begin{itemize}
+    \item \textbf{archive} directory - contains compressed tarballs of source code packages.
+    \item \textbf{sources} directory - uncompressed source code packages or git repositories.
+    \item \textbf{rootfs} directory - contains the root filesystem of the Linux for Learners system.
+    \item \textbf{isoimage} directory - contains all files necessary to generate the iso disk image.
+    \item linux-for-learners.iso - the Linux for Learners disk image.
+\end{itemize}
 
-An initial skeleton of the filesystem directory tree is created.
+\subsection{Process}
 
-A dedicated user is added.
+A step by step description of the build process.
 
-The behavior of the user shell is modified by setting the environment variables.
+\subsubsection{Package acquisition}
 
-\subsection{Cross toolchain}
+All software packages required for the system are downloaded. Where available the packages are gathered in the form of compressed tarballs into the archive directory otherwise they are git cloned from online repositories into the sources directory.
 
-\subsection{Temporary tools}
+\subsubsection{Source code extraction}
 
-\subsection{Chroot}
+All tarballs found in the archive directory are extracted into the sources directory, while in the case of git repositories a selected commit is checked out. After that all source code patches are applied.
 
-\subsection{Additional temporary tools}
+\subsubsection{Root filesystem creation}
 
-\subsection{Software installation}
+The base FHS filesystem layout is created in the rootfs directory.
 
-\subsection{System configuration}
+\subsubsection{Software installation}
 
-\subsection{System boot}
+Each piece of software is build in its respective subdirectory of sources, after which the compiled static binaries are installed into place in the root filesystem along with their associated man-pages.
 
+\subsubsection{Configuration}
+
+All configuration files are copied from the config-files directory tree into corresponding directories in the root filesystem.
+
+\subsubsection{Packaging}
+
+All of the required system components located in the isoimage directory are packaged into an ISO 9660 disk image.
+
+\noindent
+Contents of the isoimage directory:
+
+\begin{itemize}
+    \item \textbf{isolinux.bin} - bootloader binary
+    \item \textbf{ldlinux.c32} - bootloader dynamic library
+    \item \textbf{isolinux.cfg} - bootloader configuration file
+    \item \textbf{kernel.gz} - self-extracting compressed Linux kernel image
+    \item \textbf{rootfs.gz} - compressed root filesystem archive 
+\end{itemize}
