@@ -1,21 +1,19 @@
 \section{Introduction}\label{Introduction}
 
-Many Linux distributions are currently available. Few however have goals which overlap with the intended purpose of this project, teaching about the implementation of software and the creation of a Linux system. Those that most closely align fall into two groups:
+\subsection{Linux systems}
+
+Many Linux distributions are currently available. Few however have goals which overlap with the intended purpose of this project, teaching about the implementation of software and the creation of a Linux system. Those that do, fall into two categories:
 
 \begin{itemize}
-    \item Source based distributions
-    \item Embedded systems
+    \item Source based
+    \item Embedded
 \end{itemize}
 
-The first are characterized by software installation from source code. They include LFS, Gentoo, NixOS, CRUX and GNU Guix to name a few. Of these the Linux From Scratch (LFS) family of operating systems, are of greatest interest due to their focus on a step-by-step approach to system creation using standard software implementations. 
+The first are characterized by modular software installation from source code. They include LFS, Gentoo, NixOS, CRUX and GNU Guix to name a few. Of these the Linux From Scratch (LFS) family of operating systems, are of greatest interest due to their focus on a step-by-step approach to system creation using standard software implementations. 
 
-The second group are primarily intended for embedded use. As a result they contain minimal reimplementations of commonly used software and are most often focused on standards adherence, portability and security. In this category are systems like Busybox and Toybox.
+The second group include systems like Busybox and Toybox which are primarily intended for embedded use and contain minimal reimplementations of commonly used software.
 
-The intended purpose of this project stands apart from those mentioned above. LFS makes use of bloated standard packages and Busybox and Toybox are too focused on standards compliance, portability and security.
-
-Is intended to serve as a teaching resource for the purpose of educating about the implementation of software and the creation of Linux systems.
-
-As a result none of them are suitable for the purposes of this project.
+This project stands apart from those mentioned above. Unlike LFS it intends to incorporate only minimal software solutions and unlike Busybox and Toybox aims to reduce their implementations to a theoretical minimal cognitive complexity not bound by goals like standards compliance, efficiency or security. As a result none of the preceeding systems are suitable for the purposes of this project.
 
 \subsection{Free and open-source software (FOSS)}
 
@@ -33,10 +31,9 @@ Both definition overlap in many terms of which the following are most significan
 FOSS is distributed under one or many compatible licences. The following are a few key examples of FOSS licences:
 
 \begin{itemize}
-    \item MIT
-    \item GPL
-    \item BSD
-    \item Apache
+    \item CC0, Unlicense - public domain or equivalent.
+    \item BSD, MIT, Apache - permissive
+    \item AGPL, GPL - protective (copyleft)
 \end{itemize}
 
 All of the components used in the creation of this project are available under free and open-source software licensing terms.
@@ -74,7 +71,6 @@ As a result over the course of many years of development the code base of any pr
 * Changes to mainstream software packages resulting in an abundance of excess code (maintenence, optimization, extension etc.)
 
 * Intended goal (singular build target (Linux) resulting in a minimal build system, reduced complexity, reduced feature set with a goal of adhering to the Unix philosophy of minimalizm and modularity)
-
 
 \subsection{Code metrics}
 
