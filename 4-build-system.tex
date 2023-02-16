@@ -6,17 +6,17 @@ Composition of the Linux for Learners project.
 
 \subsubsection{Static}
 
-Components in repository prioir to system build are as follows:
+Components in the repository prior to system build:
 
 \begin{itemize}
     \item \textbf{README.md} - general project information.
     \item \textbf{LICENSE} - project use and distribution terms.
     \item \textbf{Makefile} - listing of make targets with associated scripts.
-    \item Numbered scripts \textbf{\enquote{0[0-5]*}} - responsible for each step in the creation of the Linux system.
-    \item \textbf{wget-sources} and \textbf{git-sources} - lists of software source code locations.
-    \item \textbf{make-scripts} directory - makefile target scripts.
-    \item \textbf{build-scripts} directory - individual package build and install scripts.
-    \item \textbf{config-files} directory - system configuration files.
+    \item \textbf{build-scripts} - scripts responsible for each step in the creation of the system.
+    \item \textbf{src-lists} - lists of software source code locations.
+    \item \textbf{make-scripts} - makefile target scripts.
+    \item \textbf{pkg-scripts} - individual package build and install scripts.
+    \item \textbf{config-files} - system configuration files.
 \end{itemize}
 
 \subsubsection{Dynamic}
@@ -24,11 +24,11 @@ Components in repository prioir to system build are as follows:
 Components created dynamically during system creation:
 
 \begin{itemize}
-    \item \textbf{archive} directory - contains compressed tarballs of source code packages.
-    \item \textbf{sources} directory - uncompressed source code packages or git repositories.
-    \item \textbf{rootfs} directory - contains the root filesystem of the Linux for Learners system.
-    \item \textbf{isoimage} directory - contains all files necessary to generate the iso disk image.
-    \item linux-for-learners.iso - the Linux for Learners disk image.
+    \item \textbf{archive} - compressed tarballs of source code packages.
+    \item \textbf{sources} - uncompressed source code packages or git repositories.
+    \item \textbf{rootfs} - the root filesystem of the Linux for Learners system.
+    \item \textbf{isoimage} - all files necessary to generate the iso disk image.
+    \item \textbf{linux-for-learners.iso} - the Linux for Learners disk image.
 \end{itemize}
 
 \subsection{Process}
