@@ -1,31 +1,21 @@
 \section{Introduction}\label{Introduction}
 
-Many Linux distributions are currently available. Few however are built for the purpose of being used as a teaching resource.
-
-Nonetheless there are still numerous systems (which/that), even though not intended, can be used for the purposes of education.
-
-The following groups of systems exhibit commonality with the goals of this project. Providing education about the implementation of software and the creation of Linux systems.
-
-Of these there are two major categories:
+Many Linux distributions are currently available. Few however have goals which overlap with the intended purpose of this project, teaching about the implementation of software and the creation of a Linux system. Those that most closely align fall into two groups:
 
 \begin{itemize}
     \item Source based distributions
     \item Embedded systems
 \end{itemize}
 
-The first set of systems  are the so called source based distributions. They include LFS, Gentoo, NixOS, CRUX and GNU Guix to name a few.  
+The first are characterized by software installation from source code. They include LFS, Gentoo, NixOS, CRUX and GNU Guix to name a few. Of these the Linux From Scratch (LFS) family of operating systems, are of greatest interest due to their focus on a step-by-step approach to system creation using standard software implementations. 
 
-Of these the Linux From Scratch (LFS) family of operating systems, are of interest due to their focus on a step-by-step approach to guiding and explaining the methodology of system creation using standard software implementations. 
+The second group are primarily intended for embedded use. As a result they contain minimal reimplementations of commonly used software and are most often focused on standards adherence, portability and security. In this category are systems like Busybox and Toybox.
 
-The second set are systems primarily intended for embedded use. They include Busybox, Toybox, Buildroot and Yocto.
-
-Projects like Busybox and Toybox, which contain minimal reimplementations of commonly used software primarily intended for embedded use, focus on security, portability as well as adherence to standards including POSIX-2008, LSB4.1 and SUSv3.
-
-* Why my system is different from the above (different target user base, significanly smaller and easier to setup, ease of code modification, chroot and iso options, etc.)
+The intended purpose of this project stands apart from those mentioned above. LFS makes use of bloated standard packages and Busybox and Toybox are too focused on standards compliance, portability and security.
 
 Is intended to serve as a teaching resource for the purpose of educating about the implementation of software and the creation of Linux systems.
 
-As a result none of them in their initial state are suitable for the purposes of this project.
+As a result none of them are suitable for the purposes of this project.
 
 \subsection{Free and open-source software (FOSS)}
 
