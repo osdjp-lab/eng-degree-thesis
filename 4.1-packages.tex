@@ -1,51 +1,77 @@
 \subsection{Packages}\label{Packages}
 
-\subsubsection{Base system}
+\subsubsection{Differing package}
 
-The minimal standard system packages were:
+Packages that differ from the selected subset of standard packages:
+
+\begin{center}
+    \begin{tabular}{|c|c||c|c|}
+        \hline
+        \multicolumn{2}{|c||}{Base system} & \multicolumn{2}{|c|}{Linux for learners} \\
+        \hline
+        \hline
+        Package name & Lines of code & Package name & Lines of code \\
+        \hline
+        \hline
+        grub-2.06 & 456 318 & syslinux-6.03 & 412 273 \\
+        \hline
+        sysvinit-3.06 & 9 052 & sinit & 116 \\
+        \hline
+        bash-5.2 & 196 059 & dash-0.5.11.5 & 13 610 \\
+        \hline
+        util-linux-2.38.1 & 213 861 & ubase & 5 482 \\
+        \hline
+        coreutils-9.1 & 355 087 & \multirow{6}{*}{sbase} & \multirow{6}{*}{18 531} \\
+        findutils-4.9.0 & 184 414 & & \\
+        sed-4.8 & 103 933 & & \\
+        grep-3.7 & 131 031 & & \\
+        tar-1.34 & 118 730 & & \\
+        vim-9.0.0.228 & 842 984 & & \\
+        \hline
+        gawk-5.1.1 & 226 032 & oawk & 32 676 \\
+        \hline
+        man-db-2.10.2 & 163 880 & mandoc-1.14.6 & 64 590 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsubsection{Common packages}
+
+Packages retained from selected subset of standard packages:
+
+\begin{center}
+    \begin{tabular}{|c||c|}
+        \hline
+        Package name & Lines of code \\
+        \hline
+        \hline
+        sysklogd-1.5.1 & 3 861 \\
+        \hline
+        bc-6.2.2 & 23 708 \\
+        \hline        
+        diffutils-3.8 & 127 219 \\
+        \hline
+        less-590 & 21 763 \\
+        \hline
+        patch-2.7.6 & 64 276 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsubsection{Alternatives}
+
+In search of minimal software implementations the following packages were also considered:
 
 \begin{itemize}
-    \item Grub
-    \item Sysvinit
-    \item Sysklogd
-    \item Bash
-    \item Util-linux
-    \item GNU Coreutils \cite{coreutils} - GPLv3
-    \item Findutils
-    \item Sed
-    \item Grep
-    \item Tar
-    \item Vim
-    \item Gawk
-    \item Bc
-    \item Diffutils
-    \item Less
-    \item Man-db
-    \item Patch
-\end{itemize}
-
-\subsubsection{Derivative system}
-
-In search of minimal software implementations the following packages were considered:
-
-\begin{itemize}
-    \item Syslinux
-    \item Sinit
-    \item Sysklogd
-    \item Dash
-    \item Oawk
-    \item Mandoc
     \item 9base-6 \cite{9base} - MIT
     \item BusyBox \cite{busybox} - GPLv2
     \item Toybox \cite{toybox} - 0BSD
     \item Skarnet s6-linux-utils \cite{s6-linux} and s6-portable-utils \cite{s6-portable} - ISC
-    \item Suckless ubase \cite{ubase} and sbase \cite{sbase} - MIT
 \end{itemize}
 
-\subsection{Contents}
+\subsubsection{Contents}
 
 \begin{itemize}
     \item Package comparison and overview.
     \item Base packages from LFS vs coresponding packages from the Linux for Learners system.
 \end{itemize}
-
