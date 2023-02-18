@@ -1,6 +1,6 @@
 \subsection{Packages}\label{Packages}
 
-\subsubsection{Differing package}
+\subsubsection{Differing packages}
 
 Packages that differ from the selected subset of standard packages:
 
@@ -15,20 +15,22 @@ Packages that differ from the selected subset of standard packages:
         \hline
         grub-2.06 & 456 318 & syslinux-6.03 & 412 273 \\
         \hline
-        sysvinit-3.06 & 9 052 & sinit & 116 \\
+        sysvinit-3.06 & 9 052 & sinit-1.1 & 116 \\
         \hline
         bash-5.2 & 196 059 & dash-0.5.11.5 & 13 610 \\
         \hline
-        util-linux-2.38.1 & 213 861 & ubase & 5 482 \\
+        \multirow{2}{*}{util-linux-2.38.1} & \multirow{2}{*}{213 861} & ubase & \multirow{2}{*}{5 482} \\
+        & & (commit 3c88778) & \\
         \hline
-        coreutils-9.1 & 355 087 & \multirow{6}{*}{sbase} & \multirow{6}{*}{18 531} \\
+        coreutils-9.1 & 355 087 & & \multirow{6}{*}{18 531} \\
         findutils-4.9.0 & 184 414 & & \\
-        sed-4.8 & 103 933 & & \\
-        grep-3.7 & 131 031 & & \\
+        sed-4.8 & 103 933 & sbase & \\
+        grep-3.7 & 131 031 & (commit 191f7e6) & \\
         tar-1.34 & 118 730 & & \\
         vim-9.0.0.228 & 842 984 & & \\
         \hline
-        gawk-5.1.1 & 226 032 & oawk & 32 676 \\
+        \multirow{2}{*}{gawk-5.1.1} & \multirow{2}{*}{226 032} & oawk & \multirow{2}{*}{32 676} \\
+        & & (commit 5e49ea4) & \\
         \hline
         man-db-2.10.2 & 163 880 & mandoc-1.14.6 & 64 590 \\
         \hline

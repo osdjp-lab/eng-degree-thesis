@@ -2,6 +2,8 @@
 
 \subsection{Free and open-source software (FOSS)}
 
+All of the components used in the creation of this project are available under free and open-source software licensing terms.
+
 FOSS is software that simultaneously adheres to two definitions: the definition of free software provided by the Free Software Foundation (FSF) and the definition of open-source software provided by the Open Source Initiative (OSI).
 
 Both definition overlap in many terms of which the following are most significant:
@@ -21,19 +23,47 @@ FOSS is distributed under one or many compatible licences. The following are a f
     \item AGPL, GPL - protective (copyleft)
 \end{itemize}
 
-All of the components used in the creation of this project are available under free and open-source software licensing terms.
+* Advantages and disadvantages of FOSS
 
-\subsection{The operating system}
+\subsection{Software development}
 
-* Components of an operating system
+* Increase in size and complexity of any project undergoing continious development.
 
-** Bootloader
+* Changes to mainstream software packages resulting in an abundance of excess code (maintenence, optimization, extension etc.)
 
-** Kernel:
+* Intended goal (singular build target (Linux) resulting in a minimal build system, reduced complexity, reduced feature set with a goal of adhering to the Unix philosophy of minimalizm and modularity)
 
-** Software (init system, logger, display server, utilities, user programs)
+\subsection{Standard FOSS software packages}
 
-There are many open source operating systems available online Linux, FreeBSD, MINIX, RedoxOS and FreeDOS to name a few 
+* Characteristics of commonly used software (source code, build systems, features, etc.) for example primary GNU software packages (glibc, gcc, binutils, bash, coreutils, diffutils, findutils, gawk, etc.)
+
+* Graph of selected GNU packages size evolution since inception.
+
+\subsection{Source code evaluation}
+
+Numerous metrics how been proposed for the assessment of source code.
+The following are a few most applicable to the goals of this project.
+
+\begin{itemize}
+    \item Lines of code (LOC)
+    \item McCabe cyclomatic complexity
+    \item Halstead complexity measures
+    \item Maintainability index
+    \item Function points
+    \item Cognitive functional size (CFS)
+\end{itemize}
+
+\subsection{Operating systems}
+
+Operating systems are a complex composition of different programs (software) which enable the utilization of a computer (hardware). They consist of the following elements:
+
+\begin{itemize}
+    \item Bootloader
+    \item Kernel
+    \item User space
+\end{itemize}
+
+There are many open source operating systems available online including Linux, FreeBSD, MINIX, RedoxOS and FreeDOS.
 
 \subsection{Linux systems}
 
@@ -49,48 +79,3 @@ The first are characterized by modular software installation from source code. T
 The second group include systems like Busybox and Toybox which are primarily intended for embedded use and contain minimal reimplementations of commonly used software.
 
 This project stands apart from those mentioned above. Unlike LFS it intends to incorporate only minimal software solutions and unlike Busybox and Toybox aims to reduce their implementations to a theoretical minimal cognitive complexity not bound by goals like standards compliance, efficiency or security. As a result none of the preceeding systems are suitable for the purposes of this project.
-
-\subsection{The Linux kernel}
-
-
-\subsection{Software}
-
-* Why open source software?
-
-* Characteristics of commonly used software (source code, build systems, features, etc.) for example primary GNU software packages (glibc, gcc, binutils, bash, coreutils, diffutils, findutils, gawk, etc.)
-
-A set of common goals underly the development of nearly all software:
-
-\begin{itemize}
-    \item Maintenence (patching of bugs).
-    \item Optimization (performance).
-    \item Extension (introduction of features for versatility or compatibilty with alternative implementations; porting of software to alternative operating systems, etc.).
-\end{itemize}
-
-As a result over the course of many years of development the code base of any project increases in size and complexity.
-
-* Graph of selected GNU packages size evolution since inception.
-
-* Changes to mainstream software packages resulting in an abundance of excess code (maintenence, optimization, extension etc.)
-
-* Intended goal (singular build target (Linux) resulting in a minimal build system, reduced complexity, reduced feature set with a goal of adhering to the Unix philosophy of minimalizm and modularity)
-
-\subsection{Code metrics}
-
-Criteria of importance for learning linux software implementation details.
-
-\subsubsection{Software comprehension}
-
-\subsubsection{Understandability}
-
-\subsubsection{Readability}
-
-\subsubsection{Cognitive complexity}
-
-* Weyuker's nine desirable properties of complexity metrics.
-
-* Halstead complexity measures.
-
-* McCabe cyclomatic complexity.
-
-* Cognitive weight and functional size (A new measure of software complexity based on cognitive weights).
