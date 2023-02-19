@@ -2,8 +2,6 @@
 
 \subsection{Free and open-source software (FOSS)}
 
-All of the components used in the creation of this project are available under free and open-source software licensing terms.
-
 FOSS is software that simultaneously adheres to two definitions: the definition of free software provided by the Free Software Foundation (FSF) and the definition of open-source software provided by the Open Source Initiative (OSI).
 
 Both definition overlap in many terms of which the following are most significant:
@@ -25,19 +23,31 @@ FOSS is distributed under one or many compatible licences. The following are a f
 
 * Advantages and disadvantages of FOSS
 
-\subsection{Software development}
+All of the components used in the creation of this project are available under free and open-source software licensing terms.
 
-* Increase in size and complexity of any project undergoing continious development.
+\subsection{Standard software packages}
 
-* Changes to mainstream software packages resulting in an abundance of excess code (maintenence, optimization, extension etc.)
-
-* Intended goal (singular build target (Linux) resulting in a minimal build system, reduced complexity, reduced feature set with a goal of adhering to the Unix philosophy of minimalizm and modularity)
-
-\subsection{Standard FOSS software packages}
-
-* Characteristics of commonly used software (source code, build systems, features, etc.) for example primary GNU software packages (glibc, gcc, binutils, bash, coreutils, diffutils, findutils, gawk, etc.)
+A large number of commonly used FOSS tools originte from the GNU project. Many of these have been in development for more than two decades growing significanlty over that time. This growth whether it be the result of feature additions, bug fixes, optimizations or general maintenence has made the source code of these tools significantly larger and in effect for the most part unsuitable as a teaching resource.
 
 * Graph of selected GNU packages size evolution since inception.
+
+\subsection{Software bloat}
+
+There are many different kinds of software bloat. A few of the most commonly mentioned include inefficient usage of resources, bad software design as well as the inclusion of excessive or unwanted features. Since software bloat in large part depends on the point of view of the observer other types can also be delimited. In the case of the applicability of a given piece of source code for use as a teaching resource the following factors as well as others should be considered:
+
+\begin{itemize}
+    \item Insufficient documentation.
+    \item Excess features.
+    \item Unclear optimization.
+    \item Unneeded portability considerations.
+    \item Excess fall-back implementations.
+    \item Use of multiple programming lanaguages.
+    \item Bad formating or naming conventions.
+    \item Complex build systems.
+    \item Convoluted code structuring.
+\end{itemize}
+
+Each of these points require carefully defined means of quantification.
 
 \subsection{Source code evaluation}
 
@@ -58,14 +68,16 @@ The following are a few most applicable to the goals of this project.
 Operating systems are a complex composition of different programs (software) which enable the utilization of a computer (hardware). They consist of the following elements:
 
 \begin{itemize}
-    \item Bootloader
-    \item Kernel
-    \item User space
+    \item Bootloader - responsible for loading the kernel.
+    \item Kernel - the foundation of the operating system, responsible for managing access to available resources as well as providing a clear and consistent abstraction of the hardware for the creation of software.
+    \item User space - software designed for the user or users of the operating system.
 \end{itemize}
 
-There are many open source operating systems available online including Linux, FreeBSD, MINIX, RedoxOS and FreeDOS.
+Currently many open source operating systems are available online for e.g. Linux, FreeBSD, MINIX, RedoxOS and FreeDOS. Of these the most commonly used and contributed to is Linux.
 
-\subsection{Linux systems}
+\subsection{Linux}
+
+Colloquially the term Linux is used to refer to systems utilizing the Linux kernel. These differ in terms of their implementation. Whether that be the result of supporting different platforms, utilizing different bootloaders, kernel configurations or software packages.
 
 Many Linux distributions are currently available. Few however have goals which overlap with the intended purpose of this project, teaching about the implementation of software and the creation of a Linux system. Those that do, fall into two categories:
 
