@@ -2,11 +2,8 @@
 
 Comparitive listing of programs from selected standard and minimal packages.
 
-* Comparison of program sizes extracted from packages.
-
 \begin{itemize}
-    \item Included and excluded programs.
-    \item Direct one-to-one program comparison of corresponding programs \\(structure, languages, size, etc.)
+    \item Direct one-to-one program comparison of selected programs \\(structure, languages, size, etc.)
 \end{itemize}
 
 \newpage
@@ -130,87 +127,91 @@ Programs excluded from the Linux for learners system.
 \begin{center}
     \begin{tabular}{|c|c|c|c|}
         \hline
-        accessdb & addpart & b2sum & base64 \\
+        accessdb & addpart & b2sum \\
         \hline
-        basenc & bash & bashbug & blkid \\
+        base64 & basenc & bash \\
         \hline
-        blkzone & blockdev & bootlogd & cfdisk \\
+        bashbug & blkid & blkzone \\
         \hline
-        chcon & chcpu & chmem & choom \\
+        blockdev & bootlogd & cfdisk \\
         \hline
-        chrt & col & colcrt & colrm \\
+        chcon & chcpu & chmem \\
         \hline
-        column & csplit & delpart & dir \\
+        choom & chrt & col \\
         \hline
-        dircolors & egrep & factor & fdisk \\
+        colcrt & colrm & column \\
         \hline
-        fgrep & fincore & findfs & findmnt \\
+        csplit & delpart & dir \\
         \hline
-        fmt & fsck & fsck.cramfs & fsck.minix \\
+        dircolors & egrep & factor \\
         \hline
-        fstab-decode & fstrim & gawk & gawk-5.1.1 \\
+        fdisk & fgrep & fincore \\
         \hline
-        getopt & groups & grub-bios-setup & grub-editenv \\
+        findfs & findmnt & fmt \\
         \hline
-        grub-file & grub-fstest & grub-glue-efi & grub-install \\
+        fsck & fsck.cramfs & fsck.minix \\
         \hline
-        grub-kbdcomp & grub-macbless & grub-menulst2cfg & grub-mkconfig \\
+        fstab-decode & fstrim & gawk \\
         \hline
-        grub-mkimage & grub-mklayout & grub-mknetdir & grub-mkpasswd-pbkdf2 \\
+        gawk-5.1.1 & getopt & groups \\
         \hline
-        grub-mkrelpath & grub-mkrescue & grub-mkstandalone & grub-ofpathname \\
+        grub-bios-setup & grub-editenv & grub-file \\
         \hline
-        grub-probe & grub-reboot & grub-render-label & grub-script-check \\
+        grub-fstest & grub-glue-efi & grub-install \\
         \hline
-        grub-set-default & grub-setup & grub-syslinux2cfg & hexdump \\
+        grub-kbdcomp & grub-macbless & grub-menulst2cfg \\
         \hline
-        hostid & i386 & ionice & ipcmk \\
+        grub-mkconfig & grub-mkimage & grub-mklayout \\
         \hline
-        ipcrm & ipcs & irqtop & isosize \\
+        grub-mknetdir & grub-mkpasswd-pbkdf2 & grub-mkrelpath \\
         \hline
+        grub-mkrescue & grub-mkstandalone & grub-ofpathname \\
+        \hline
+        grub-probe & grub-reboot & grub-render-label \\
+        \hline
+        grub-script-check & grub-set-default & grub-setup \\
+        \hline
+        grub-syslinux2cfg & hexdump \\
+        \cline{1-2}
     \end{tabular}
 \end{center}
 
 \begin{center}
-    \begin{tabular}{|c|c|c|c|}
+    \begin{tabular}{|c|c|c|c|c|}
         \hline
-        lastb & ldattach & lexgrog & linux32 \\
+        hostid & i386 & ionice & ipcmk & ipcrm \\
         \hline
-        linux64 & locate & look & losetup \\
+        ipcs & irqtop & isosize & lastb & ldattach \\
         \hline
-        lsblk & lscpu & lsipc & lsirq \\
+        lexgrog & linux32 & linux64 & locate & look \\
         \hline
-        lslocks & lslogins & lsmem & lsns \\
+        losetup & lsblk & lscpu & lsipc & lsirq \\
         \hline
-        mandb & manpath & man-recode & mcookie \\
+        lslocks & lslogins & lsmem & lsns & mandb \\
         \hline
-        mkfs & mkfs.bfs & mkfs.cramfs & mkfs.minix \\
+        manpath & man-recode & mcookie & mkfs & mkfs.bfs \\
         \hline
-        more & namei & nproc & nsenter \\
+        mkfs.cramfs & mkfs.minix & more & namei & nproc \\
         \hline
-        numfmt & partx & pinky & pr \\
+        nsenter & numfmt & partx & pinky & pr \\
         \hline
-        prlimit & ptx & readprofile & realpath \\
+        prlimit & ptx & readprofile & realpath & red \\
         \hline
-        red & rename & resizepart & rkfill \\
+        rename & resizepart & rkfill & rtcwake & runcon \\
         \hline
-        rtcwake & runcon & runlevel & script \\
+        runlevel & script & scriptlive & scriptreplay & setarch \\
         \hline
-        scriptlive & scriptreplay & setarch & setterm \\
+        setterm & sfdisk & shred & shuf & shutdown \\
         \hline
-        sfdisk & shred & shuf & shutdown \\
+        stdbuf & stty & sulogin & sum & tac \\
         \hline
-        stdbuf & stty & sulogin & sum \\
+        taskset & telinit & timeout & uclampset & ul \\
         \hline
-        tac & taskset & telinit & timeout \\
+        uname26 & updatedb & users & utmpdump & uuidd \\
         \hline
-        uclampset & ul & uname26 & updatedb \\
-        \hline
-        users & utmpdump & uuidd & uuidgen \\
-        \hline
-        uuidparse & vdir & wall & wdctl \\
+        uuidgen & uuidparse & vdir & wall & wdctl \\
         \hline
         whereis & wipefs & x86\_64 & zramctl \\
-        \hline
+        \cline{1-4}
     \end{tabular}
 \end{center}
