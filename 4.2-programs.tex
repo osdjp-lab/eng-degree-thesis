@@ -18,15 +18,17 @@ Programs included in both the reference system and the Linux for learners system
 \begin{center}
     \begin{tabular}{|c|c|c|c|}
         \hline
-        [ & apropos & awk & basename \\
+        apropos & awk & basename & bc \\
         \hline
         blkdiscard & cal & cat & catman \\
         \hline
         chgrp & chmod & chown & chroot \\
         \hline
-        cksum & comm & cp & ctrlaltdel \\
+        cksum & cmp & comm & cp \\
         \hline
-        cut & date & dd & df \\
+        ctrlaltdel & cut & date & dc \\
+        \hline
+        dd & df & diff & diff3 \\
         \hline
         dirname & dmesg & du & echo \\
         \hline
@@ -34,41 +36,45 @@ Programs included in both the reference system and the Linux for learners system
         \hline
         expr & fallocate & false & find \\
         \hline
-        flock & fold & fsfreeze & grep \\
+        flock & fold & fsfreeze & getty / agetty \\
         \hline
-        halt & head & hwclock & id \\
+        grep & halt & head & hwclock \\
         \hline
-        init & install & join & kill \\
+        id & init & install & join \\
         \hline
-        killall5 & last & link & ln \\
+        kill & killall5 & klogd & last \\
         \hline
-        logger & logname & ls & man \\
+        less & lessecho & lesskey & link \\
         \hline
-        md5sum & mesg & mkdir & mkfifo \\
+        ln & logger & logname & ls \\
         \hline
-        mknod & mkswap & mktemp & mount \\
+        man & md5sum & mesg & mkdir \\
         \hline
-        mountpoint & mv & nice & nl \\
+        mkfifo & mknod & mkswap & mktemp \\
         \hline
-        nohup & od & paste & pathchk \\
+        mount & mountpoint & mv & nice \\
         \hline
-        pivot\_root & poweroff & printenv & printf \\
+        nl & nohup & od & paste \\
         \hline
-        pwd & readlink & reboot & renice \\
+        patch & pathchk & pivot\_root & poweroff \\
         \hline
-        rev & rm & rmdir & sed \\
+        printenv & printf & pwd & readlink \\
         \hline
-        seq & setsid & sh & sha1sum \\
+        reboot & renice & rev & rm \\
         \hline
-        sha224sum & sha256sum & sha384sum & sha512sum \\
+        rmdir & sdiff & sed & seq \\
         \hline
-        sleep & sort & split & stat \\
+        setsid & sh & sha1sum & sha224sum \\
         \hline
-        swaplabel & swapoff & swapon & switch\_root \\
+        sha256sum & sha384sum & sha512sum & sleep \\
         \hline
-        sync & tail & tar & tee \\
+        sort & split & stat & swaplabel \\
         \hline
-        test & touch & tr & true \\
+        swapoff & swapon & switch\_root & sync \\
+        \hline
+        syslogd & tail & tar & tee \\
+        \hline
+        test / [ & touch & tr & true \\
         \hline
         truncate & tsort & tty & umount \\
         \hline
@@ -90,17 +96,15 @@ Programs unique to the Linux for learners system.
 \begin{center}
     \begin{tabular}{|c|c|c|c|c|}
         \hline
-        chvt & clear & cmp & cols \\
+        chvt & clear & cols & cron \\
         \hline
-        cron & dash & dd & demandoc \\
+        dash & demandoc & free & freeramdisk \\
         \hline
-        free & freeramdisk & getconf & getty \\
+        getconf & hostname & insmod & lastlog \\
         \hline
-        hostname & insmod & lastlog & login \\
+        login & lsmod & lsusb & makewhatis \\
         \hline
-        lsmod & lsusb & makewhatis & mandoc \\
-        \hline
-        mandocd & mknod & msoelim & nologin \\
+        mandoc & mandocd & msoelim & nologin \\
         \hline
         pagesize & passwd & pidof & ps \\
         \hline
@@ -124,115 +128,89 @@ Programs unique to the Linux for learners system.
 Programs excluded from the Linux for learners system.
 
 \begin{center}
-    \begin{tabular}{|c|c|c|}
+    \begin{tabular}{|c|c|c|c|}
         \hline
-        accessdb & addpart & agetty \\
+        accessdb & addpart & b2sum & base64 \\
         \hline
-        b2sum & base64 & basenc \\
+        basenc & bash & bashbug & blkid \\
         \hline
-        bash & bashbug & blkid \\
+        blkzone & blockdev & bootlogd & cfdisk \\
         \hline
-        blkzone & blockdev & bootlogd \\
+        chcon & chcpu & chmem & choom \\
         \hline
-        cfdisk & chcon & chcpu \\
+        chrt & col & colcrt & colrm \\
         \hline
-        chmem & choom & chrt \\
+        column & csplit & delpart & dir \\
         \hline
-        col & colcrt & colrm \\
+        dircolors & egrep & factor & fdisk \\
         \hline
-        column & csplit & delpart \\
+        fgrep & fincore & findfs & findmnt \\
         \hline
-        dir & dircolors & egrep \\
+        fmt & fsck & fsck.cramfs & fsck.minix \\
         \hline
-        factor & fdisk & fgrep \\
+        fstab-decode & fstrim & gawk & gawk-5.1.1 \\
         \hline
-        fincore & findfs & findmnt \\
+        getopt & groups & grub-bios-setup & grub-editenv \\
         \hline
-        fmt & fsck & fsck.cramfs \\
+        grub-file & grub-fstest & grub-glue-efi & grub-install \\
         \hline
-        fsck.minix & fstab-decode & fstrim \\
+        grub-kbdcomp & grub-macbless & grub-menulst2cfg & grub-mkconfig \\
         \hline
-        gawk & gawk-5.1.1 & getopt \\
+        grub-mkimage & grub-mklayout & grub-mknetdir & grub-mkpasswd-pbkdf2 \\
         \hline
-        groups & grub-bios-setup & grub-editenv \\
+        grub-mkrelpath & grub-mkrescue & grub-mkstandalone & grub-ofpathname \\
         \hline
-        grub-file & grub-fstest & grub-glue-efi \\
+        grub-probe & grub-reboot & grub-render-label & grub-script-check \\
         \hline
-        grub-install & grub-kbdcomp & grub-macbless \\
+        grub-set-default & grub-setup & grub-syslinux2cfg & hexdump \\
         \hline
-        grub-menulst2cfg & grub-mkconfig & grub-mkimage \\
+        hostid & i386 & ionice & ipcmk \\
         \hline
-        grub-mklayout & grub-mknetdir & grub-mkpasswd-pbkdf2 \\
-        \hline
-        grub-mkrelpath & grub-mkrescue & grub-mkstandalone \\
-        \hline
-        grub-ofpathname & grub-probe & grub-reboot \\
-        \hline
-        grub-render-label & grub-script-check & grub-set-default \\
-        \hline
-        grub-setup & grub-syslinux2cfg & hexdump \\
-        \hline
-        hostid & i386 & ionice \\
-        \hline
-        ipcmk & ipcrm & ipcs \\
+        ipcrm & ipcs & irqtop & isosize \\
         \hline
     \end{tabular}
 \end{center}
 
 \begin{center}
-    \begin{tabular}{|c|c|c|}
+    \begin{tabular}{|c|c|c|c|}
         \hline
-        irqtop & isosize & lastb \\
+        lastb & ldattach & lexgrog & linux32 \\
         \hline
-        ldattach & lexgrog & linux32 \\
+        linux64 & locate & look & losetup \\
         \hline
-        linux64 & locate & look \\
+        lsblk & lscpu & lsipc & lsirq \\
         \hline
-        losetup & lsblk & lscpu \\
+        lslocks & lslogins & lsmem & lsns \\
         \hline
-        lsipc & lsirq & lslocks \\
+        mandb & manpath & man-recode & mcookie \\
         \hline
-        lslogins & lsmem & lsns \\
+        mkfs & mkfs.bfs & mkfs.cramfs & mkfs.minix \\
         \hline
-        mandb & manpath & man-recode \\
+        more & namei & nproc & nsenter \\
         \hline
-        mcookie & mkfs & mkfs.bfs \\
+        numfmt & partx & pinky & pr \\
         \hline
-        mkfs.cramfs & mkfs.minix & more \\
+        prlimit & ptx & readprofile & realpath \\
         \hline
-        namei & nproc & nsenter \\
+        red & rename & resizepart & rkfill \\
         \hline
-        numfmt & partx & pinky \\
+        rtcwake & runcon & runlevel & script \\
         \hline
-        pr & prlimit & ptx \\
+        scriptlive & scriptreplay & setarch & setterm \\
         \hline
-        readprofile & realpath & red \\
+        sfdisk & shred & shuf & shutdown \\
         \hline
-        rename & resizepart & rkfill \\
+        stdbuf & stty & sulogin & sum \\
         \hline
-        rtcwake & runcon & runlevel \\
+        tac & taskset & telinit & timeout \\
         \hline
-        script & scriptlive & scriptreplay \\
+        uclampset & ul & uname26 & updatedb \\
         \hline
-        setarch & setterm & sfdisk \\
+        users & utmpdump & uuidd & uuidgen \\
         \hline
-        shred & shuf & shutdown \\
+        uuidparse & vdir & wall & wdctl \\
         \hline
-        stdbuf & stty & sulogin \\
-        \hline
-        sum & tac & taskset \\
-        \hline
-        telinit & timeout & uclampset \\
-        \hline
-        ul & uname26 & updatedb \\
-        \hline
-        users & utmpdump & uuidd \\
-        \hline
-        uuidgen & uuidparse & vdir \\
-        \hline
-        wall & wdctl & whereis \\
-        \hline
-        wipefs & x86\_64 & zramctl \\
+        whereis & wipefs & x86\_64 & zramctl \\
         \hline
     \end{tabular}
 \end{center}
