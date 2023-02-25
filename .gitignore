@@ -8,6 +8,8 @@
 *.log
 *.toc
 *.out
+*.bcf
+*.run.xml
 *.synctex.gz
 *.code-workspace
 example-*

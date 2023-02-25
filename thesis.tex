@@ -4,11 +4,14 @@
 % \usepackage[utf8]{inputenc}
 % \usepackage{polski}
 \usepackage{listings}
-\bibliographystyle{unsrt}
+\usepackage[backend=biber, style=numeric, alldates=iso, seconds=true]{biblatex}
+\addbibresource{8-references.bib}
+%\bibliographystyle{unsrt}
 \usepackage{xcolor}
 \usepackage{csquotes}
 \usepackage{multirow}
 %\usepackage{indentfirst}
+\usepackage{url}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -49,5 +52,7 @@
 \include{6-future-prospects}
 \include{7-summary}
 
-\bibliography{8-references} 
+\emergencystretch=1em
+\printbibliography
+%\bibliography{8-references}
 \end{document}
