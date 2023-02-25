@@ -1,95 +1,150 @@
 \subsection{Packages}\label{Packages}
 
-\subsubsection{Differing packages}
-
-Packages that differ from the selected subset of standard packages:
-
-\begin{center}
-    \begin{tabular}{|c|c||c|c|}
-        \hline
-        \multicolumn{2}{|c||}{Base system} & \multicolumn{2}{|c|}{Linux for learners} \\
-        \hline
-        \hline
-        Package name & Lines of code & Package name & Lines of code \\
-        \hline
-        \hline
-        grub-2.06 & 456 318 & syslinux-6.03 & 412 273 \\
-        \hline
-        sysvinit-3.06 & 9 052 & sinit-1.1 & 116 \\
-        \hline
-        bash-5.2 & 196 059 & dash-0.5.12 & 15 511 \\
-        \hline
-        \multirow{2}{*}{util-linux-2.38.1} & \multirow{2}{*}{213 861} & ubase & \multirow{2}{*}{5 482} \\
-        & & (commit 3c88778) & \\
-        \hline
-        coreutils-9.1 & 355 087 & & \multirow{6}{*}{18 531} \\
-        findutils-4.9.0 & 184 414 & & \\
-        sed-4.8 & 103 933 & sbase & \\
-        grep-3.7 & 131 031 & (commit 191f7e6) & \\
-        tar-1.34 & 118 730 & & \\
-        ed-1.19 & 3 095 & & \\
-        \hline
-        gawk-5.1.1 & 226 032 & mawk-1.3.4-20230203 & 20 112 \\
-        \hline
-        man-db-2.10.2 & 163 880 & mandoc-1.14.6 & 64 590 \\
-        \hline
-        glibc-2.36 & 1 495 641 & dietlibc-0.34 & 88 075 \\
-        \hline
-        gcc-12.2.0 & 8 526 557 & tcc-0.9.27 & 81 481 \\
-        \hline
-    \end{tabular}
-\end{center}
+Initially a small subset of essential standard packages was selected. For each of these packages smaller alternatives were found and evaluated in accordance with the selection critera. The resulting set of software was assembled into the final system.
 
 \subsubsection{Common packages}
 
 Packages retained from selected subset of standard packages:
 
-\begin{center}
-    \begin{tabular}{|c||c|}
+\begin{table}[!h]
+    \centering
+    %\begin{center}
+        \begin{tabular}{|c||c|}
+            \hline
+            Package & LOC \\
+            \hline
+            \hline
+            linux \cite{linux} & 22 104 580 \\
+            \hline
+            sysklogd \cite{sysklogd} & 3 861 \\
+            \hline
+            bc \cite{bc} & 23 708 \\
+            \hline        
+            diffutils \cite{diffutils} & 127 219 \\
+            \hline
+            less \cite{less} & 21 763 \\
+            \hline
+            patch \cite{patch} & 64 276 \\
+            \hline
+        \end{tabular}
+        \caption{Common packages and their sizes expressed in lines of code (LOC).}
+    %\end{center}
+\end{table}
+
+\newpage
+
+\subsubsection{Differing packages}
+
+Packages that differ from the selected subset of standard packages.
+
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c||c|c|}
         \hline
-        Package name & Lines of code \\
+        \multicolumn{2}{|c||}{Standard} & \multicolumn{2}{|c|}{Selected} \\
         \hline
         \hline
-        linux-5.11.6 & 22 104 580 \\
+        Package & LOC & Package & LOC \\
         \hline
-        sysklogd-1.5.1 & 3 861 \\
         \hline
-        bc-6.2.2 & 23 708 \\
-        \hline        
-        diffutils-3.8 & 127 219 \\
+        grub \cite{grub} & 456 318 & syslinux \cite{syslinux} & 412 273 \\
         \hline
-        less-590 & 21 763 \\
+        sysvinit \cite{sysvinit} & 9 052 & sinit \cite{sinit} & 116 \\
         \hline
-        patch-2.7.6 & 64 276 \\
+        bash \cite{bash} & 196 059 & dash \cite{dash} & 15 511 \\
+        \hline
+        util-linux \cite{util-linux} & 213 861 & ubase \cite{ubase} & 5 482 \\
+        \hline
+        coreutils \cite{coreutils} & 355 087 & \multirow{6}{*}{sbase \cite{sbase}} & \multirow{6}{*}{18 531} \\
+        findutils \cite{findutils} & 184 414 & & \\
+        sed \cite{sed} & 103 933 & & \\
+        grep \cite{grep} & 131 031 & & \\
+        tar \cite{tar} & 118 730 & & \\
+        ed \cite{ed} & 3 095 & & \\
+        \hline
+        gawk \cite{gawk} & 226 032 & mawk \cite{mawk} & 20 112 \\
+        \hline
+        man-db \cite{man-db} & 163 880 & mandoc \cite{mandoc} & 64 590 \\
+        \hline
+        glibc \cite{glibc} & 1 495 641 & dietlibc \cite{dietlibc} & 88 075 \\
+        \hline
+        gcc \cite{gcc} & 8 526 557 & tcc \cite{tcc} & 81 481 \\
         \hline
     \end{tabular}
-\end{center}
+    \caption{Corresponding standard and selected packages with their sizes expressed in lines of code (LOC).}
+\end{table}
+
+\newpage
 
 \subsubsection{Alternatives}
 
-In search of minimal software implementations the following packages were also considered:
+In search of minimal software implementations the following packages were also considered.
 
-\begin{itemize}
-    \item 9base-6 \cite{9base} - MIT
-    \item busyBox \cite{busybox} - GPLv2
-    \item toybox \cite{toybox} - 0BSD
-    \item s6-linux-utils \cite{s6-linux} and s6-portable-utils \cite{s6-portable} - ISC
-    \item s6 \cite{s6}, s6-rc \cite{s6-rc} and s6-linux-init \cite{s6-linux-init} - ISC
-    \item oawk \cite{oawk} - ISC
-    \item lilo \cite{lilo} - BSD-3-Clause
-    \item refind \cite{refind} - GPLv3
-    \item minit \cite{minit} - GPLv2
-    \item openrc \cite{openrc} - BSD-2-Clause
-    \item runit \cite{runit} - BSD-3-Clause
-    \item shepherd \cite{shepherd} - GPLv3
-    \item metalog \cite{metalog} - GPLv2
-    \item mksh \cite{mksh} - ISC
-    \item oksh \cite{oksh} - Public Domain
-    \item rc \cite{rc} - Zlib
-    \item yash \cite{yash} - GPLv2
-    \item nano \cite{nano} - GPLv3
-    \item chibicc \cite{chibicc} - MIT
-    \item cparser \cite{cparser} - GPLv2
-    \item musl \cite{musl} - MIT
-    \item uClibc-ng \cite{uclibc-ng} - LGPLv2.1
-\end{itemize}
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Type & Package & Licence \\
+        \hline
+        \hline
+        \multirow{5}{*}{Collection} & 9base-6 \cite{9base} & MIT \\
+        \cline{2-3}
+        & busybox \cite{busybox} & GPLv2 \\
+        \cline{2-3}
+        & toybox \cite{toybox} & 0BSD \\
+        \cline{2-3}
+        & s6-linux-utils \cite{s6-linux} & ISC \\
+        \cline{2-3}
+        & s6-portable-utils \cite{s6-portable} & ISC \\
+        \hline
+        \multirow{3}{*}{Bootloader} & lilo \cite{lilo} & BSD-3-Clause \\
+        \cline{2-3}
+        & refind \cite{refind} & GPLv3 \\
+        \cline{2-3}
+        & u-boot \cite{uboot} & BSD-3-Clause \\
+        \hline
+        \multirow{8}{*}{Init system} & s6 \cite{s6} & ISC \\
+        \cline{2-3}
+        & s6-rc \cite{s6-rc} & ISC \\
+        \cline{2-3}
+        & s6-linux-init \cite{s6-linux-init} & ISC \\
+        \cline{2-3}
+        & minit \cite{minit} & GPLv2 \\
+        \cline{2-3}
+        & openrc \cite{openrc} & BSD-2-Clause \\
+        \cline{2-3}
+        & runit \cite{runit} & BSD-3-Clause \\
+        \cline{2-3}
+        & shepherd \cite{shepherd} & GPLv3 \\
+        \cline{2-3}
+        & finit \cite{finit} & MIT \\
+        \hline
+        \multirow{3}{*}{Logger} & metalog \cite{metalog} & GPLv2 \\
+        \cline{2-3}
+        & rsyslog \cite{rsyslog} & GPLv3 \\
+        \cline{2-3}
+        & syslog-ng \cite{syslog-ng} & LGPL2.1 \\
+        \hline
+        \multirow{4}{*}{Shell} & mksh \cite{mksh} & ISC \\
+        \cline{2-3}
+        & oksh \cite{oksh} & Public Domain \\
+        \cline{2-3}
+        & rc \cite{rc} & Zlib \\
+        \cline{2-3}
+        & yash \cite{yash} & GPLv2 \\
+        \hline
+        Awk & oawk \cite{oawk} & ISC \\
+        \hline
+        Text editor & nano \cite{nano} & GPLv3 \\
+        \hline
+        \multirow{2}{*}{Compiler} & chibicc \cite{chibicc} & MIT \\
+        \cline{2-3}
+        & cparser \cite{cparser} & GPLv2 \\
+        \hline
+        \multirow{2}{*}{Libc} & musl \cite{musl} & MIT \\
+        \cline{2-3}
+        & uClibc-ng \cite{uclibc-ng} & LGPLv2.1 \\
+        \hline
+    \end{tabular}
+    \caption{Alternative package types, names and corresponding licences.}
+\end{table}
