@@ -11,35 +11,19 @@ Comparitive listing of programs from selected standard and minimal packages.
 \subsubsection{Included identical}
 
 \begin{itemize}
-    \item bc
-        \begin{center}
-            \begin{tabular}{|c|c|}
-                \hline
-                bc & dc \\
-                \hline
-            \end{tabular}
-        \end{center}
-    \item diffutils
-        \begin{center}
-            \begin{tabular}{|c|c|c|c|}
-                \hline
-                cmp & diff & diff3 & sdiff \\
-                \hline
-            \end{tabular}
-        \end{center}
-    \item less
-        \begin{center}
-            \begin{tabular}{|c|c|c|}
-                \hline
-                less & lessecho & lesskey \\
-                \hline
-            \end{tabular}
-        \end{center}
     \item patch
         \begin{center}
             \begin{tabular}{|c|}
                 \hline
                 patch \\
+                \hline
+            \end{tabular}
+        \end{center}
+    \item bc
+        \begin{center}
+            \begin{tabular}{|c|c|}
+                \hline
+                bc & dc \\
                 \hline
             \end{tabular}
         \end{center}
@@ -51,13 +35,45 @@ Comparitive listing of programs from selected standard and minimal packages.
                 \hline
             \end{tabular}
         \end{center}
-\end{itemize}
 
+    \item less
+        \begin{center}
+            \begin{tabular}{|c|c|c|}
+                \hline
+                less & lessecho & lesskey \\
+                \hline
+            \end{tabular}
+        \end{center}
+    \item diffutils
+        \begin{center}
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                cmp & diff & diff3 & sdiff \\
+                \hline
+            \end{tabular}
+        \end{center}
+    \end{itemize}
 \subsubsection{Included common}
 
 Programs included in both the reference system and the Linux for learners system.
 
 \begin{itemize}
+    \item dash
+        \begin{center}
+            \begin{tabular}{|c|}
+                \hline
+                sh \\
+                \hline
+            \end{tabular}
+        \end{center}
+    \item mawk
+        \begin{center}
+            \begin{tabular}{|c|}
+                \hline   
+                awk \\
+                \hline
+            \end{tabular}
+        \end{center}
     \item sinit
         \begin{center}
             \begin{tabular}{|c|c|c|}
@@ -66,11 +82,11 @@ Programs included in both the reference system and the Linux for learners system
                 \hline
             \end{tabular}
         \end{center}
-    \item dash
+    \item mandoc
         \begin{center}
-            \begin{tabular}{|c|}
+            \begin{tabular}{|c|c|c|c|}
                 \hline
-                sh \\
+                apropos & catman & man & whatis \\
                 \hline
             \end{tabular}
         \end{center}
@@ -144,22 +160,6 @@ Programs included in both the reference system and the Linux for learners system
                 \cline{1-1}
             \end{tabular}
         \end{center}
-    \item mawk
-        \begin{center}
-            \begin{tabular}{|c|}
-                \hline   
-                awk \\
-                \hline
-            \end{tabular}
-        \end{center}
-    \item mandoc
-        \begin{center}
-            \begin{tabular}{|c|c|c|c|}
-                \hline
-                apropos & catman & man & whatis \\
-                \hline
-            \end{tabular}
-        \end{center}
 \end{itemize}
 
 \newpage
@@ -177,22 +177,14 @@ Programs unique to the Linux for learners system.
                 \hline
             \end{tabular}
         \end{center}
-    \item ubase
+    \item mandoc
         \begin{center}
-            \begin{tabular}{|c|c|c|c|}
+            \begin{tabular}{|c|c|c|}
                 \hline
-                chvt & clear & free & freeramdisk  \\
+                demandoc & makewhatis & mandoc \\
                 \hline
-                insmod & lastlog & login & lsmod  \\
-                \hline
-                lsusb & nologin & pagesize & passwd  \\
-                \hline
-                pidof & ps & pwdx & readahead  \\
-                \hline
-                respawn & rmmod & su & sysctl  \\
-                \hline
-                uptime & vtallow & watch \\
-                \cline{1-3}
+                mandocd & msoelim \\
+                \cline{1-2}
             \end{tabular}
         \end{center}
     \item sbase
@@ -207,14 +199,18 @@ Programs unique to the Linux for learners system.
                 \hline
             \end{tabular}
         \end{center}
-    \item mandoc
+    \item ubase
         \begin{center}
-            \begin{tabular}{|c|c|c|}
+            \begin{tabular}{|c|c|c|c|c|c|}
                 \hline
-                demandoc & makewhatis & mandoc \\
+                chvt & clear & free & freeramdisk & insmod & lastlog \\
                 \hline
-                mandocd & msoelim \\
-                \cline{1-2}
+                login & lsmod & lsusb & nologin & pagesize & passwd \\
+                \hline
+                pidof & ps & pwdx & readahead & respawn & rmmod \\
+                \hline
+                su & sysctl & uptime & vtallow & watch \\
+                \cline{1-5}
             \end{tabular}
         \end{center}
 \end{itemize}
@@ -231,6 +227,14 @@ Programs excluded from the Linux for learners system.
             \begin{tabular}{|c|}
                 \hline
                 red \\
+                \hline
+            \end{tabular}
+        \end{center}
+    \item grep
+        \begin{center}
+            \begin{tabular}{|c|c|}
+                \hline
+                egrep & fgrep \\
                 \hline
             \end{tabular}
         \end{center}
@@ -258,14 +262,6 @@ Programs excluded from the Linux for learners system.
                 \hline
             \end{tabular}
         \end{center}
-    \item grep
-        \begin{center}
-            \begin{tabular}{|c|c|}
-                \hline
-                egrep & fgrep \\
-                \hline
-            \end{tabular}
-        \end{center}
     \item man-db
         \begin{center}
             \begin{tabular}{|c|c|c|}
@@ -284,6 +280,22 @@ Programs excluded from the Linux for learners system.
                 \hline
                 shutdown & telinit \\
                 \cline{1-2}
+            \end{tabular}
+        \end{center}
+    \item coreutils
+        \begin{center}
+            \begin{tabular}{|c|c|c|c|c|c|}
+                \hline
+                b2sum & base64 & basenc & chcon & csplit & dir \\
+                \hline
+                dircolors & factor & fmt & groups & hostid & nproc \\
+                \hline
+                numfmt & pinky & pr & ptx & realpath & runcon \\
+                \hline
+                shred & shuf & stdbuf & stty & sum & tac \\
+                \hline
+                timeout & users & vdir \\
+                \cline{1-3}
             \end{tabular}
         \end{center}
     \item grub
@@ -308,26 +320,6 @@ Programs excluded from the Linux for learners system.
                 \hline
                 grub-syslinux2cfg \\
                 \cline{1-1}
-            \end{tabular}
-        \end{center}
-    \item coreutils
-        \begin{center}
-            \begin{tabular}{|c|c|c|c|}
-                \hline
-                b2sum & base64 & basenc & chcon \\
-                \hline
-                csplit & dir & dircolors & factor \\
-                \hline
-                fmt & groups & hostid & nproc \\
-                \hline
-                numfmt & pinky & pr & ptx \\
-                \hline
-                realpath & runcon & shred & shuf \\
-                \hline
-                stdbuf & stty & sum & tac \\
-                \hline
-                timeout & users & vdir \\
-                \cline{1-3}
             \end{tabular}
         \end{center}
     \item util-linux
