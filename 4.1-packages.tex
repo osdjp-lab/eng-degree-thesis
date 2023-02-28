@@ -85,55 +85,66 @@ In search of minimal software implementations the following packages\\ grouped b
         Type & Package & LOC \\
         \hline
         \hline
-        \multirow{6}{*}{Collection} & busybox \cite{busybox} & 201 743 \\
-        \cline{2-3}
-        & toybox \cite{toybox} & 69 627 \\
-        \cline{2-3}
-        & heirloom \cite{heirloom} \footnotemark & 355 888 \\
-        \cline{2-3}
-        & 9base-6 \cite{9base} & 74 177 \\
-        \cline{2-3}
+        \multirow{6}{*}{Collection}
         & s6-linux-utils \cite{s6-linux} & 4 032 \\
         \cline{2-3}
         & s6-portable-utils \cite{s6-portable} & 6 578 \\
+        \cline{2-3}
+        & toybox \cite{toybox} & 70 798 \\
+        \cline{2-3}
+        & 9base-6 \cite{9base} & 74 177 \\
+        \cline{2-3}
+        & busybox \cite{busybox} & 205 596 \\
+        \cline{2-3}
+        & heirloom \cite{heirloom} \footnotemark & 355 888 \\
         \hline
         \hline
-        \multirow{3}{*}{Bootloader} & lilo \cite{lilo} & 36 981 \\
+        \multirow{3}{*}{Bootloader}
+        & lilo \cite{lilo} & 36 981 \\
         \cline{2-3}
         & refind \cite{refind} & 69 353 \\
         \cline{2-3}
-        & u-boot \cite{uboot} & 2 874 376 \\
+        & u-boot \cite{uboot} & 2 810 179 \\
         \hline
         \hline
-        \multirow{8}{*}{Init system} & s6 \cite{s6} & 24 824 \\
+        \multirow{11}{*}{Init system}
+        & minit \cite{minit} & 1 746 \\
         \cline{2-3}
-        & s6-rc \cite{s6-rc} & 8 920 \\
+        & daemontools \cite{daemontools} & 4 342 \\
         \cline{2-3}
         & s6-linux-init \cite{s6-linux-init} & 4 976 \\
         \cline{2-3}
-        & minit \cite{minit} & 1 746 \\
+        & s6-rc \cite{s6-rc} & 8 920 \\
         \cline{2-3}
-        & openrc \cite{openrc} & 21 295 \\
+        & anopa \cite{anopa} & 8 996 \\
         \cline{2-3}
         & runit \cite{runit} & 9 887 \\
         \cline{2-3}
+        & openrc \cite{openrc} & 21 292 \\
+        \cline{2-3}
         & shepherd \cite{shepherd} & 23 733 \\
         \cline{2-3}
+        & s6 \cite{s6} & 24 824 \\
+        \cline{2-3}
         & finit \cite{finit} & 35 280 \\
+        \cline{2-3}
+        & nosh \cite{nosh} & 82 618 \\
         \hline
         \hline
-        \multirow{3}{*}{Logger} & metalog \cite{metalog} & 2 298 \\
+        \multirow{3}{*}{Logger}
+        & metalog \cite{metalog} & 2 298 \\
         \cline{2-3}
         & rsyslog \cite{rsyslog} & 234 488 \\
         \cline{2-3}
         & syslog-ng \cite{syslog-ng} & 487 588 \\
         \hline
         \hline
-        \multirow{4}{*}{Shell} & mksh \cite{mksh} & 30 680 \\
+        \multirow{4}{*}{Shell}
+        & rc \cite{rc} & 7 205 \\
         \cline{2-3}
         & oksh \cite{oksh} & 23 001 \\
         \cline{2-3}
-        & rc \cite{rc} & 7 205 \\
+        & mksh \cite{mksh} & 30 680 \\
         \cline{2-3}
         & yash \cite{yash} & 72 746 \\
         \hline
@@ -152,9 +163,10 @@ In search of minimal software implementations the following packages\\ grouped b
         Type & Package & LOC \\
         \hline
         \hline
-        \multirow{4}{*}{Text editor} & nano \cite{nano} & 97 912 \\
-        \cline{2-3}
+        \multirow{4}{*}{Text editor}
         & ex \cite{ex-vi} \footnotemark & 23 481 \\
+        \cline{2-3}
+        & nano \cite{nano} & 97 912 \\
         \cline{2-3}
         & vim \cite{vim} & 842 984 \\
         \cline{2-3}
@@ -164,26 +176,28 @@ In search of minimal software implementations the following packages\\ grouped b
         Awk & oawk \cite{oawk} & 32 676 \\
         \hline
         \hline
-        \multirow{9}{*}{C Compiler} & 8cc \cite{8cc} & 10 229 \\
-        \cline{2-3}
-        & chibicc \cite{chibicc} & 9 665 \\
-        \cline{2-3}
-        & cparser \cite{cparser} & 178 500 \\
-        \cline{2-3}
+        \multirow{9}{*}{C Compiler}
         & c \cite{c} & 7 329 \\
         \cline{2-3}
         & cproc \cite{cproc} & 8 581 \\
         \cline{2-3}
-        & kefir \cite{kefir} & 140 758 \\
+        & chibicc \cite{chibicc} & 9 665 \\
+        \cline{2-3}
+        & 8cc \cite{8cc} & 10 229 \\
         \cline{2-3}
         & lacc \cite{lacc} & 27 010 \\
         \cline{2-3}
         & lcc \cite{lcc} \footnotemark & 27 736 \\
         \cline{2-3}
         & ack \cite{ack} & 124 728 \\
+        \cline{2-3}
+        & kefir \cite{kefir} & 140 758 \\
+        \cline{2-3}
+        & cparser \cite{cparser} & 178 500 \\
         \hline
         \hline
-        \multirow{2}{*}{Libc} & musl \cite{musl} & 95 004 \\
+        \multirow{2}{*}{Libc}
+        & musl \cite{musl} & 95 004 \\
         \cline{2-3}
         & uClibc-ng \cite{uclibc-ng} & 269 410 \\
         \hline
