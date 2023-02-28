@@ -8,27 +8,25 @@ Packages retained from selected subset of standard packages:
 
 \begin{table}[!h]
     \centering
-    %\begin{center}
-        \begin{tabular}{|c||c|}
-            \hline
-            Package & LOC \\
-            \hline
-            \hline
-            linux \cite{linux} & 22 104 580 \\
-            \hline
-            sysklogd \cite{sysklogd} & 3 861 \\
-            \hline
-            bc \cite{bc} & 23 708 \\
-            \hline        
-            diffutils \cite{diffutils} & 127 219 \\
-            \hline
-            less \cite{less} & 21 763 \\
-            \hline
-            patch \cite{patch} & 64 276 \\
-            \hline
-        \end{tabular}
-        \caption{Common packages and their sizes expressed in lines of code (LOC).}
-    %\end{center}
+    \begin{tabular}{|c||c|}
+        \hline
+        Package & LOC \\
+        \hline
+        \hline
+        linux \cite{linux} & 22 104 580 \\
+        \hline
+        sysklogd \cite{sysklogd} & 3 861 \\
+        \hline
+        bc \cite{bc} & 23 708 \\
+        \hline        
+        diffutils \cite{diffutils} & 127 219 \\
+        \hline
+        less \cite{less} & 21 763 \\
+        \hline
+        patch \cite{patch} & 64 276 \\
+        \hline
+    \end{tabular}
+    \caption{Common packages and their sizes expressed in lines of code (LOC).}
 \end{table}
 
 \newpage
@@ -76,22 +74,24 @@ Packages that differ from the selected subset of standard packages.
 
 \newpage
 
-\subsubsection{Alternatives}
+\subsubsection{Alternative packages}
 
-In search of minimal software implementations the following packages were also considered.
+In search of minimal software implementations the following packages\\ grouped by type were also considered.
 
-\begin{table}[!h]
+\begin{table}[!ht]
     \centering
     \begin{tabular}{|c|c|c|}
         \hline
         Type & Package & Licence \\
         \hline
         \hline
-        \multirow{5}{*}{Collection} & 9base-6 \cite{9base} & MIT \\
-        \cline{2-3}
-        & busybox \cite{busybox} & GPLv2 \\
+        \multirow{5}{*}{Collection} & busybox \cite{busybox} & GPL-2.0 \\
         \cline{2-3}
         & toybox \cite{toybox} & 0BSD \\
+        \cline{2-3}
+        & heirloom \cite{heirloom} & Zlib et al. \footnotemark\\
+        \cline{2-3}
+        & 9base-6 \cite{9base} & MIT \\
         \cline{2-3}
         & s6-linux-utils \cite{s6-linux} & ISC \\
         \cline{2-3}
@@ -99,7 +99,7 @@ In search of minimal software implementations the following packages were also c
         \hline
         \multirow{3}{*}{Bootloader} & lilo \cite{lilo} & BSD-3-Clause \\
         \cline{2-3}
-        & refind \cite{refind} & GPLv3 \\
+        & refind \cite{refind} & GPL-3.0 \\
         \cline{2-3}
         & u-boot \cite{uboot} & BSD-3-Clause \\
         \hline
@@ -109,19 +109,19 @@ In search of minimal software implementations the following packages were also c
         \cline{2-3}
         & s6-linux-init \cite{s6-linux-init} & ISC \\
         \cline{2-3}
-        & minit \cite{minit} & GPLv2 \\
+        & minit \cite{minit} & GPL-2.0 \\
         \cline{2-3}
         & openrc \cite{openrc} & BSD-2-Clause \\
         \cline{2-3}
         & runit \cite{runit} & BSD-3-Clause \\
         \cline{2-3}
-        & shepherd \cite{shepherd} & GPLv3 \\
+        & shepherd \cite{shepherd} & GPL-3.0 \\
         \cline{2-3}
         & finit \cite{finit} & MIT \\
         \hline
-        \multirow{3}{*}{Logger} & metalog \cite{metalog} & GPLv2 \\
+        \multirow{3}{*}{Logger} & metalog \cite{metalog} & GPL-2.0 \\
         \cline{2-3}
-        & rsyslog \cite{rsyslog} & GPLv3 \\
+        & rsyslog \cite{rsyslog} & GPL-3.0 \\
         \cline{2-3}
         & syslog-ng \cite{syslog-ng} & LGPL2.1 \\
         \hline
@@ -131,15 +131,52 @@ In search of minimal software implementations the following packages were also c
         \cline{2-3}
         & rc \cite{rc} & Zlib \\
         \cline{2-3}
-        & yash \cite{yash} & GPLv2 \\
+        & yash \cite{yash} & GPL-2.0 \\
+        \hline
+    \end{tabular}
+    \caption{Alternative package types, names and corresponding licences.}
+\end{table}
+
+\footnotetext{Multiple FOSS and non-FOSS OSI open-source and FSF free software licences.}
+
+\newpage
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Type & Package & Licence \\
+        \hline
+        \hline
+        \multirow{5}{*}{Text editor} & nano \cite{nano} & GPL-3.0 \\
+        \cline{2-3}
+        & \multirow{2}{*}{ex \cite{ex-vi}} & BSD-4-Clause \footnotemark \\
+        & & and BSD-3-Clause \\
+        \cline{2-3}
+        & vim \cite{vim} & VIM \\
+        \cline{2-3}
+        & neovim \cite{neovim} & VIM and Apache-2.0 \\
         \hline
         Awk & oawk \cite{oawk} & ISC \\
         \hline
-        Text editor & nano \cite{nano} & GPLv3 \\
-        \hline
-        \multirow{2}{*}{Compiler} & chibicc \cite{chibicc} & MIT \\
+        \multirow{10}{*}{C Compiler} & 8cc \cite{8cc} & MIT \\
         \cline{2-3}
-        & cparser \cite{cparser} & GPLv2 \\
+        & chibicc \cite{chibicc} & MIT \\
+        \cline{2-3}
+        & cparser \cite{cparser} & GPL-2.0 \\
+        \cline{2-3}
+        & c \cite{c} & BSD-2-Clause \\
+        \cline{2-3}
+        & \multirow{2}{*}{cproc \cite{cproc}} & ISC, MIT \\
+        & & and Unlicense \\
+        \cline{2-3}
+        & kefir \cite{kefir} & GPL-3.0 \\
+        \cline{2-3}
+        & lacc \cite{lacc} & MIT \\
+        \cline{2-3}
+        & lcc \cite{lcc} & LCC \footnotemark \\
+        \cline{2-3}
+        & ack \cite{ack} & BSD-3-Clause \\
         \hline
         \multirow{2}{*}{Libc} & musl \cite{musl} & MIT \\
         \cline{2-3}
@@ -148,3 +185,8 @@ In search of minimal software implementations the following packages were also c
     \end{tabular}
     \caption{Alternative package types, names and corresponding licences.}
 \end{table}
+
+\footnotetext[2]{Non OSI open-source free software licence.}
+\footnotetext[3]{Non-FOSS open-source licence.}
+
+\newpage

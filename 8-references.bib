@@ -1,3 +1,37 @@
+% Standards
+
+@misc{lsb,
+  author       = {Linux Foundation},
+  title        = {{Linux Standard Base}},
+  url          = {https://refspecs.linuxfoundation.org/lsb.shtml},
+  version      = {5.0},
+  date         = {2023-02-24}
+}
+
+@misc{fhs,
+  author       = {Linux Foundation},
+  title        = {{Filesystem Hierarchy Standard}},
+  url          = {https://refspecs.linuxfoundation.org/fhs.shtml},
+  version      = {3.0},
+  date         = {2023-02-24}
+}
+
+% Organizations
+
+@misc{fsf,
+  author       = {Free Software Foundation},
+  title        = {{What is Free Software?}},
+  url          = {https://www.gnu.org/philosophy/free-sw.html},
+  date         = {2023-02-24}
+}
+
+@misc{osi,
+  author       = {Open Source Initiative},
+  title        = {{The Open Source Definition (Annotated)}},
+  url          = {https://opensource.org/definition/},
+  date         = {2023-02-24}
+}
+
 % Books
 
 @book{lfs,
@@ -8,12 +42,19 @@
   date         = {2023-02-24}
 }
 
-@misc{alfs,
+@book{alfs,
   author       = {Jeremy Huntwork et al},
   title        = {{Automated Linux From Scratch}},
   url          = {https://linuxfromscratch.org/alfs/},
   version      = {11.2},
   date         = {2023-02-24}
+}
+
+@book{clean-code,
+  author       = {Robert C. Martin et al.},
+  title        = {{Clean Code: A Handbook of Agile Software Craftsmanship}},
+  publisher    = {Pearson},
+  year         = {2008}
 }
 
 % Reference projects
@@ -192,7 +233,7 @@
   date         = {2023-02-24}
 }
 
-# Minimal selected projects
+# Selected projects
 
 @misc{syslinux,
   author       = {H. Peter Anvin et al.},
@@ -230,7 +271,7 @@
 @misc{sbase,
   author       = {Connor Smith et al.},
   title        = {sbase - suckless base},
-  url          = {https://www.gnu.org/software/coreutils/},
+  url          = {https://core.suckless.org/sbase/},
   version      = {commit 191f7e6},
   date         = {2023-02-24}
 }
@@ -269,13 +310,6 @@
 
 % Alternative projects
 
-@misc{9base,
-  author       = {Plan 9 and Anselm R Garbe},
-  title        = {9base},
-  url          = {https://tools.suckless.org/9base/},
-  date         = {2023-02-24}
-}
-
 @misc{busybox,
   author       = {Denys Vlasenko et al.},
   title        = {{BusyBox}},
@@ -289,6 +323,20 @@
   title        = {Toybox},
   url          = {https://landley.net/toybox/},
   version      = {0.8.9},
+  date         = {2023-02-24}
+}
+
+@misc{heirloom,
+  author       = {Gunnar Ritter et al.},
+  title        = {{The Heirloom Project}},
+  url          = {https://heirloom.sourceforge.net/},
+  date         = {2023-02-26}
+}
+
+@misc{9base,
+  author       = {Plan 9 and Anselm R Garbe},
+  title        = {9base},
+  url          = {https://tools.suckless.org/9base/},
   date         = {2023-02-24}
 }
 
@@ -437,13 +485,6 @@
   date         = {2023-02-24}
 }
 
-@misc{oawk,
-  author       = {Brian Kernighan},
-  title        = {One true awk},
-  url          = {https://github.com/onetrueawk/awk},
-  date         = {2023-02-24}
-}
-
 @misc{nano,
   author       = {The GNU Project},
   title        = {{GNU Nano}},
@@ -451,9 +492,44 @@
   date         = {2023-02-24}
 }
 
+@misc{ex-vi,
+  author       = {Gunnar Ritter et al.},
+  title        = {{The Traditional Vi}},
+  url          = {https://ex-vi.sourceforge.net/},
+  date         = {2023-02-27}
+}
+
+@misc{vim,
+  author       = {Bram Moolenaar et al.},
+  title        = {{Vim - the ubiquitous text editor}},
+  url          = {https://www.vim.org/},
+  date         = {2023-02-27}
+}
+
+@misc{neovim,
+  author       = {Jan E. Lazo et al.},
+  title        = {{Neovim - hyperextensible Vim-based text editor}},
+  url          = {https://neovim.io/},
+  date         = {2023-02-27}
+}
+
+@misc{oawk,
+  author       = {Brian Kernighan},
+  title        = {One true awk},
+  url          = {https://github.com/onetrueawk/awk},
+  date         = {2023-02-24}
+}
+
+@misc{8cc,
+  author       = {Ueyama Rui},
+  title        = {{8cc C Compiler}},
+  url          = {https://github.com/rui314/8cc},
+  date         = {2023-02-24}
+}
+
 @misc{chibicc,
   author       = {Ueyama Rui},
-  title        = {{A small C compiler}},
+  title        = {{chibicc: A Small C Compiler}},
   url          = {https://github.com/rui314/chibicc},
   date         = {2023-02-24}
 }
@@ -463,6 +539,48 @@
   title        = {Cparser},
   url          = {https://pp.ipd.kit.edu/firm/},
   date         = {2023-02-24}
+}
+
+@misc{ack,
+  author       = {Andrew Tanenbaum and Ceriel Jacobs},
+  title        = {{The Amsterdam Compiler Kit}},
+  url          = {https://tack.sourceforge.net/},
+  date         = {2023-02-28}
+}
+
+@misc{c,
+  author       = {Andrew Chambers},
+  title        = {{A small, fast C compiler suite.}},
+  url          = {https://github.com/andrewchambers/c},
+  date         = {2023-02-28}
+}
+
+@misc{cproc,
+  author       = {Michael Forney},
+  title        = {{C11 compiler}},
+  url          = {https://github.com/michaelforney/cproc},
+  date         = {2023-02-28}
+}
+
+@misc{kefir,
+  author       = {Jevgēnijs Protopopovs},
+  title        = {{Kefir C compiler}},
+  url          = {https://github.com/protopopov1122/kefir},
+  date         = {2023-02-28}
+}
+
+@misc{lacc,
+  author       = {Lars K. Melhus, B. Callahan and N. Korotkiy},
+  title        = {{lacc: A simple, self-hosting C compiler}},
+  url          = {https://github.com/larmel/lacc},
+  date         = {2023-02-28}
+}
+
+@misc{lcc,
+  author       = {Christopher W. Fraser, and David R. Hanson},
+  title        = {{lcc, A Retargetable Compiler for ANSI C}},
+  url          = {https://drh.github.io/lcc/},
+  date         = {2023-02-28}
 }
 
 @misc{musl,
@@ -476,39 +594,5 @@
   author       = {Waldemar Brodkorb et al.},
   title        = {{uClibc-ng - Embedded C library}},
   url          = {https://www.uclibc-ng.org/},
-  date         = {2023-02-24}
-}
-
-% Standards
-
-@misc{lsb,
-  author       = {Linux Foundation},
-  title        = {{Linux Standard Base}},
-  url          = {https://refspecs.linuxfoundation.org/lsb.shtml},
-  version      = {5.0},
-  date         = {2023-02-24}
-}
-
-@misc{fhs,
-  author       = {Linux Foundation},
-  title        = {{Filesystem Hierarchy Standard}},
-  url          = {https://refspecs.linuxfoundation.org/fhs.shtml},
-  version      = {3.0},
-  date         = {2023-02-24}
-}
-
-% Organizations
-
-@misc{fsf,
-  author       = {Free Software Foundation},
-  title        = {{What is Free Software?}},
-  url          = {https://www.gnu.org/philosophy/free-sw.html},
-  date         = {2023-02-24}
-}
-
-@misc{osi,
-  author       = {Open Source Initiative},
-  title        = {{The Open Source Definition (Annotated)}},
-  url          = {https://opensource.org/definition/},
   date         = {2023-02-24}
 }
