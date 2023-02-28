@@ -82,56 +82,60 @@ In search of minimal software implementations the following packages\\ grouped b
     \centering
     \begin{tabular}{|c|c|c|}
         \hline
-        Type & Package & Licence \\
+        Type & Package & LOC \\
         \hline
         \hline
-        \multirow{5}{*}{Collection} & busybox \cite{busybox} & GPL-2.0 \\
+        \multirow{6}{*}{Collection} & busybox \cite{busybox} & 201 743 \\
         \cline{2-3}
-        & toybox \cite{toybox} & 0BSD \\
+        & toybox \cite{toybox} & 69 627 \\
         \cline{2-3}
-        & heirloom \cite{heirloom} & Zlib et al. \footnotemark\\
+        & heirloom \cite{heirloom} \footnotemark & 355 888 \\
         \cline{2-3}
-        & 9base-6 \cite{9base} & MIT \\
+        & 9base-6 \cite{9base} & 74 177 \\
         \cline{2-3}
-        & s6-linux-utils \cite{s6-linux} & ISC \\
+        & s6-linux-utils \cite{s6-linux} & 4 032 \\
         \cline{2-3}
-        & s6-portable-utils \cite{s6-portable} & ISC \\
+        & s6-portable-utils \cite{s6-portable} & 6 578 \\
         \hline
-        \multirow{3}{*}{Bootloader} & lilo \cite{lilo} & BSD-3-Clause \\
-        \cline{2-3}
-        & refind \cite{refind} & GPL-3.0 \\
-        \cline{2-3}
-        & u-boot \cite{uboot} & BSD-3-Clause \\
         \hline
-        \multirow{8}{*}{Init system} & s6 \cite{s6} & ISC \\
+        \multirow{3}{*}{Bootloader} & lilo \cite{lilo} & 36 981 \\
         \cline{2-3}
-        & s6-rc \cite{s6-rc} & ISC \\
+        & refind \cite{refind} & 69 353 \\
         \cline{2-3}
-        & s6-linux-init \cite{s6-linux-init} & ISC \\
-        \cline{2-3}
-        & minit \cite{minit} & GPL-2.0 \\
-        \cline{2-3}
-        & openrc \cite{openrc} & BSD-2-Clause \\
-        \cline{2-3}
-        & runit \cite{runit} & BSD-3-Clause \\
-        \cline{2-3}
-        & shepherd \cite{shepherd} & GPL-3.0 \\
-        \cline{2-3}
-        & finit \cite{finit} & MIT \\
+        & u-boot \cite{uboot} & 2 874 376 \\
         \hline
-        \multirow{3}{*}{Logger} & metalog \cite{metalog} & GPL-2.0 \\
-        \cline{2-3}
-        & rsyslog \cite{rsyslog} & GPL-3.0 \\
-        \cline{2-3}
-        & syslog-ng \cite{syslog-ng} & LGPL2.1 \\
         \hline
-        \multirow{4}{*}{Shell} & mksh \cite{mksh} & ISC \\
+        \multirow{8}{*}{Init system} & s6 \cite{s6} & 24 824 \\
         \cline{2-3}
-        & oksh \cite{oksh} & Public Domain \\
+        & s6-rc \cite{s6-rc} & 8 920 \\
         \cline{2-3}
-        & rc \cite{rc} & Zlib \\
+        & s6-linux-init \cite{s6-linux-init} & 4 976 \\
         \cline{2-3}
-        & yash \cite{yash} & GPL-2.0 \\
+        & minit \cite{minit} & 1 746 \\
+        \cline{2-3}
+        & openrc \cite{openrc} & 21 295 \\
+        \cline{2-3}
+        & runit \cite{runit} & 9 887 \\
+        \cline{2-3}
+        & shepherd \cite{shepherd} & 23 733 \\
+        \cline{2-3}
+        & finit \cite{finit} & 35 280 \\
+        \hline
+        \hline
+        \multirow{3}{*}{Logger} & metalog \cite{metalog} & 2 298 \\
+        \cline{2-3}
+        & rsyslog \cite{rsyslog} & 234 488 \\
+        \cline{2-3}
+        & syslog-ng \cite{syslog-ng} & 487 588 \\
+        \hline
+        \hline
+        \multirow{4}{*}{Shell} & mksh \cite{mksh} & 30 680 \\
+        \cline{2-3}
+        & oksh \cite{oksh} & 23 001 \\
+        \cline{2-3}
+        & rc \cite{rc} & 7 205 \\
+        \cline{2-3}
+        & yash \cite{yash} & 72 746 \\
         \hline
     \end{tabular}
     \caption{Alternative package types, names and corresponding licences.}
@@ -145,42 +149,43 @@ In search of minimal software implementations the following packages\\ grouped b
     \centering
     \begin{tabular}{|c|c|c|}
         \hline
-        Type & Package & Licence \\
+        Type & Package & LOC \\
         \hline
         \hline
-        \multirow{5}{*}{Text editor} & nano \cite{nano} & GPL-3.0 \\
+        \multirow{4}{*}{Text editor} & nano \cite{nano} & 97 912 \\
         \cline{2-3}
-        & \multirow{2}{*}{ex \cite{ex-vi}} & BSD-4-Clause \footnotemark \\
-        & & and BSD-3-Clause \\
+        & ex \cite{ex-vi} \footnotemark & 23 481 \\
         \cline{2-3}
-        & vim \cite{vim} & VIM \\
+        & vim \cite{vim} & 842 984 \\
         \cline{2-3}
-        & neovim \cite{neovim} & VIM and Apache-2.0 \\
+        & neovim \cite{neovim} & 760 010 \\
         \hline
-        Awk & oawk \cite{oawk} & ISC \\
         \hline
-        \multirow{10}{*}{C Compiler} & 8cc \cite{8cc} & MIT \\
-        \cline{2-3}
-        & chibicc \cite{chibicc} & MIT \\
-        \cline{2-3}
-        & cparser \cite{cparser} & GPL-2.0 \\
-        \cline{2-3}
-        & c \cite{c} & BSD-2-Clause \\
-        \cline{2-3}
-        & \multirow{2}{*}{cproc \cite{cproc}} & ISC, MIT \\
-        & & and Unlicense \\
-        \cline{2-3}
-        & kefir \cite{kefir} & GPL-3.0 \\
-        \cline{2-3}
-        & lacc \cite{lacc} & MIT \\
-        \cline{2-3}
-        & lcc \cite{lcc} & LCC \footnotemark \\
-        \cline{2-3}
-        & ack \cite{ack} & BSD-3-Clause \\
+        Awk & oawk \cite{oawk} & 32 676 \\
         \hline
-        \multirow{2}{*}{Libc} & musl \cite{musl} & MIT \\
+        \hline
+        \multirow{9}{*}{C Compiler} & 8cc \cite{8cc} & 10 229 \\
         \cline{2-3}
-        & uClibc-ng \cite{uclibc-ng} & LGPLv2.1 \\
+        & chibicc \cite{chibicc} & 9 665 \\
+        \cline{2-3}
+        & cparser \cite{cparser} & 178 500 \\
+        \cline{2-3}
+        & c \cite{c} & 7 329 \\
+        \cline{2-3}
+        & cproc \cite{cproc} & 8 581 \\
+        \cline{2-3}
+        & kefir \cite{kefir} & 140 758 \\
+        \cline{2-3}
+        & lacc \cite{lacc} & 27 010 \\
+        \cline{2-3}
+        & lcc \cite{lcc} \footnotemark & 27 736 \\
+        \cline{2-3}
+        & ack \cite{ack} & 124 728 \\
+        \hline
+        \hline
+        \multirow{2}{*}{Libc} & musl \cite{musl} & 95 004 \\
+        \cline{2-3}
+        & uClibc-ng \cite{uclibc-ng} & 269 410 \\
         \hline
     \end{tabular}
     \caption{Alternative package types, names and corresponding licences.}
