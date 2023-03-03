@@ -25,32 +25,42 @@ All of the components used in the creation of this project are available under f
 
 \subsection{Standard software packages}
 
-The FOSS communities are the source of a great number and variety of actively maintained software implementations. Among these only a small subset is considered essential and included by default in the majority of modern day open-source operating system distributions. This selection of packages can be considered standard implementations. There is no definitive list to enumerate these packages. However, a reasonably accurate assumption can be made on the basis of a comparative analysis of the foundational sets of software included in some of the most popular distributions (Debian, Ubuntu, Fedora, openSUSE etc.) and the list of programs required by the Linux Standard Base (LSB) specification \cite{lsb}.
+The FOSS communities are the source of a great number and variety of actively maintained software implementations. Among these only a small subset is considered essential and is included by default in the majority of modern day open-source operating systems. This selection of software for Unix and Linux systems is defined in the following standards:
 
-\begin{table}
-    \begin{center}
-        \begin{tabular}{|c|c|c|c|c|}
+\begin{itemize}
+    \item Single UNIX Specification (SUS) \cite{susv4}.
+    \item Linux Standard Base (LSB) specification \cite{lsb}.
+\end{itemize}
+
+These specifications extend far beyond the scope of this project as such only the LSB Core subset of the LSB standard has been chosen for reference in the creation of the Linux for learners system.
+
+\begin{table}[H]
+    \centering
+    %\begin{center}
+        \begin{tabular}{|c|c|c|c|}
             \hline
-            at & bash & bc & binutils & coreutils \\
+            at & bash & bc & binutils \\
             \hline
-            cpio & diffutils & ed & fcron & file \\
+            coreutils & cpio & diffutils & ed \\
             \hline
-            findutils & gawk & grep & gzip & lsb-tools \\
+            fcron & file & findutils & gawk \\
             \hline
-            m4 & man-db & ncurses & nspr & nss \\
+            grep & gzip & lsb-tools & m4 \\
             \hline
-            pam & pax & perl & procps & psmisc \\
+            man-db & ncurses & nspr & nss \\
             \hline
-            python & sed & sendmail & shadow & tar \\
+            pam & pax & procps & psmisc \\
             \hline
-            time  & util-linux & zlib \\
+            sed & sendmail & shadow & tar \\
+            \hline
+            time & util-linux & zlib \\
             \cline{1-3}
         \end{tabular}
-        \caption{A selection of commonly used FOSS packages required for LSB conformance.}
-    \end{center}
+        \caption{A selection of commonly used FOSS packages required for LSB Core compliance.}
+    %\end{center}
 \end{table}
 
-The majority of these standard software packages originate from the GNU project, with the remainder being the work of other organizations or groups. Many have been in development for over two decades and in that time have undergone extensive growth as the result of feature additions, bug fixes or general maintenance. In effect their source code has increased significantly in both size and complexity making it for the most part unsuitable for use as a teaching resource.
+Over half of the packages needed to fulfil the requirements of LSB Core originate from the GNU project, with the remainder being the work of other organizations or groups. Many have been in development for over two decades and in that time have undergone extensive growth as the result of feature additions, bug fixes or general maintenance. In effect their source code has increased significantly in both size and complexity making it for the most part unsuitable for use as a teaching resource.
 
 \subsection{Software bloat}
 
