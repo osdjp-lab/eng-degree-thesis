@@ -25,14 +25,14 @@ All of the components used in the creation of this project are available under f
 
 \subsection{Standard software packages}
 
-The FOSS communities are the source of a great number and variety of actively maintained software implementations. Among these only a small subset is considered essential and is included by default in the majority of modern day open-source operating systems. This selection of software for Unix and Linux systems is defined in the following standards:
+The FOSS communities are the source of a great number and variety of actively maintained software implementations. However only a small subset of these is included by default in modern day open-source operating systems. This selection tends to differ from system to system. As such the following unifed subsets of system interfaces for Unix and Linux systems have been published in order to provide a uniform foundation for software development and use:
 
 \begin{itemize}
     \item Single UNIX Specification (SUS) \cite{susv4}.
     \item Linux Standard Base (LSB) specification \cite{lsb}.
 \end{itemize}
 
-These specifications extend far beyond the scope of this project as such only the LSB Core subset of the LSB standard has been chosen for reference in the creation of the Linux for learners system.
+These specifications extend far beyond the scope of this project as such only the LSB Core subset of the LSB standard has been considered for use in the creation of the Linux for learners system.
 
 \begin{table}[H]
     \centering
@@ -60,11 +60,11 @@ These specifications extend far beyond the scope of this project as such only th
     %\end{center}
 \end{table}
 
-Over half of the packages needed to fulfil the requirements of LSB Core originate from the GNU project, with the remainder being the work of other organizations or groups. Many have been in development for over two decades and in that time have undergone extensive growth as the result of feature additions, bug fixes or general maintenance. In effect their source code has increased significantly in both size and complexity making it for the most part unsuitable for use as a teaching resource.
+Over half of the standard packages needed to fulfil the requirements of LSB Core originate from the GNU project, with the remainder being the work of other organizations or groups. Many have been in development for over two decades and in that time have undergone extensive growth as the result of feature additions, bug fixes or general maintenance. In effect their source code has increased significantly in both size and complexity making it for the most part unsuitable for use as a teaching resource.
 
 \subsection{Software bloat}
 
-Software bloat can be defined as a collection of factors impacting the functionality, performance, development and/or maintenance of a piece of software. Much effort has been put forward in order to prevent and/or alleviate its effects. This has resulted in the formulation of numerous guidelines (\cite[C++ Core Guidelines]{cpp-guidelines}, \cite[Haskell Guidelines]{haskel-guidelines}), principles (\cite["Keep it Simple, Stupid" (KISS)]{kiss}, \cite[The Unix philosophy]{unix-philosophy}, \cite["Worse is better"]{worse-is-better}, \cite["Don't Repeat Yourself" (DRY)]{dry}, \cite["You aren't gonna need it" (YAGNI)]{yagni}, \cite[SOLID]{solid}) and paradigms (\cite[Imperative programming]{imperative}, \cite[Declarative programming]{declarative}) as well as the publication of a multitude of books \cite{clean-code,clean-architecture,pragmatic-programmer,extreme-programming,unix-programming} and articles \cite{Pike2007ProgramDI,Milicchio2007TheUK,Thayer2004FourUP,McGrenere2000AreWA,Quach2018DebloatingST,McGrenere2000BloatTO,Quach2019BloatFA}. In effect many different kinds of software bloat have been defined. Some of the most commonly studied include inefficient usage of resources, bad software design as well as the inclusion of excessive or unwanted features. Since software bloat in large part depends on the point of view of the observer other types can also be delimited. The following are a subset of factors contributing to the applicability of a given piece of software for use as a teaching resource:
+Software bloat can be defined as a collection of factors impacting the functionality, performance, development and/or maintenance of a piece of software \cite{McGrenere2000AreWA,McGrenere2000BloatTO,Quach2018DebloatingST,Quach2019BloatFA}. A significant amount of research has been conducted that directly or indirectly evaluates the causes \cite{Mitchell2010FourTL} and effects \cite{Quach2019BloatFA} as well as means of prevention \cite{Pike2007ProgramDI,Milicchio2007TheUK} and alleviation \cite{Quach2018DebloatingST} of software bloat. As a result many different kinds of software bloat have been defined. Some of the most commonly studied include inefficient usage of resources, bad software design as well as feature creep. Since software bloat in large part depends on the point of view of the observer other types can also be delimited. The following are a subset of factors contributing to the applicability of a given piece of software for use as a teaching resource:
 
 \begin{itemize}
     \item Insufficient documentation.
@@ -82,8 +82,7 @@ Each of these points require carefully defined means of quantification.
 
 \subsection{Source code evaluation}
 
-Numerous metrics how been proposed for the assessment of source code.
-The following are a few most applicable to the goals of this project.
+In order to assess the suitability of a given piece of source code for use as a teaching resource its most relevant properties need to be measured. For this purpose appropriate metrics need to be selected. The following are a few most applicable to the goals of this project.
 
 \begin{itemize}
     \item Lines of code (LOC)
