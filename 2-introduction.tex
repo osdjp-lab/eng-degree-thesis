@@ -25,7 +25,7 @@ All of the components used in the creation of this project are available under f
 
 \subsection{Standard software packages}
 
-The FOSS communities are the source of a great number and variety of actively maintained software implementations. However only a small subset of these is included by default in modern day open-source operating systems. This selection tends to differ from system to system. As such the following unifed subsets of system interfaces for Unix and Linux systems have been published in order to provide a uniform foundation for software development and use:
+The FOSS communities are the source of a great number and variety of actively maintained software implementations. However only a small subset of these is included by default in modern day open-source operating systems. This selection tends to differ from system to system. As such the following subsets of standardized system interfaces have been created in order to provide a uniform foundation for software development and use on Unix and Linux systems:
 
 \begin{itemize}
     \item Single UNIX Specification (SUS) \cite{susv4}.
@@ -60,7 +60,7 @@ These specifications extend far beyond the scope of this project as such only th
     %\end{center}
 \end{table}
 
-Over half of the standard packages needed to fulfil the requirements of LSB Core originate from the GNU project, with the remainder being the work of other organizations or groups. Many have been in development for over two decades and in that time have undergone extensive growth as the result of feature additions, bug fixes or general maintenance. In effect their source code has increased significantly in both size and complexity making it for the most part unsuitable for use as a teaching resource.
+Over half of the standard packages needed to fulfil the requirements of LSB Core originate from the GNU project, with the remainder being the work of other organizations or groups. Many have been in development for over two decades and in that time have undergone extensive growth as the result of feature addition, bug fixes or general maintenance. In effect their source code has increased significantly in both size and complexity \cite{Quach2018DebloatingST,Quach2019BloatFA}.
 
 \subsection{Software bloat}
 
@@ -70,19 +70,31 @@ Software bloat can be defined as a collection of factors impacting the functiona
     \item Insufficient documentation.
     \item Excess features.
     \item Unclear optimization.
-    \item Unneeded portability considerations.
+    \item Extraneous portability considerations.
     \item Excess fall-back implementations.
     \item Use of multiple programming languages.
-    \item Bad formatting or naming conventions.
+    \item Convoluted code structuring (unsuitable formatting and/or naming conventions).
     \item Complex build systems.
-    \item Convoluted code structuring.
 \end{itemize}
-
-Each of these points require carefully defined means of quantification.
 
 \subsection{Source code evaluation}
 
-In order to assess the suitability of a given piece of source code for use as a teaching resource its most relevant properties need to be measured. For this purpose appropriate metrics need to be selected. The following are a few most applicable to the goals of this project.
+In order to evaluate a given piece of source code its qualitative and quantitative properties need to be assessed or measured. 
+
+\subsubsection{Qualities}
+
+Consist of non-numeric values used to describe the source code. Below are a few of the most relevant:
+
+\begin{itemize}
+    \item Programming language.
+    \item Coding convention.
+    \item Comments and documentation.
+    \item Software architecture.
+\end{itemize}
+
+\subsubsection{Quantities}
+
+Consist of discrete measurable values which by themself or in composition can form distinct metrics. The following are a few most applicable to the goals of this project.
 
 \begin{itemize}
     \item Lines of code (LOC)
@@ -91,6 +103,17 @@ In order to assess the suitability of a given piece of source code for use as a 
     \item Maintainability index
     \item Function points
     \item Cognitive functional size (CFS)
+\end{itemize}
+
+\subsubsection{Automation}
+
+The following is a selection of free and open-source programs for the automated evaluation of source code properties:
+
+\begin{itemize}
+    \item tokei \cite{tokei}
+    \item cloc \cite{cloc}
+    \item ohcount \cite{ohcount}
+    \item cccc \cite{cccc}
 \end{itemize}
 
 \subsection{Operating systems}
