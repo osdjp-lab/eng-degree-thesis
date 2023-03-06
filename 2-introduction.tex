@@ -36,31 +36,29 @@ These specifications extend far beyond the scope of this project as such only th
 
 \begin{table}[H]
     \centering
-    %\begin{center}
-        \begin{tabular}{|c|c|c|c|}
-            \hline
-            at & bash & bc & binutils \\
-            \hline
-            coreutils & cpio & diffutils & ed \\
-            \hline
-            fcron & file & findutils & gawk \\
-            \hline
-            grep & gzip & lsb-tools & m4 \\
-            \hline
-            man-db & ncurses & nspr & nss \\
-            \hline
-            pam & pax & procps & psmisc \\
-            \hline
-            sed & sendmail & shadow & tar \\
-            \hline
-            time & util-linux & zlib \\
-            \cline{1-3}
-        \end{tabular}
-        \caption{A selection of commonly used FOSS packages required for LSB Core compliance.}
-    %\end{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        at & bash & bc & binutils \\
+        \hline
+        coreutils & cpio & diffutils & ed \\
+        \hline
+        fcron & file & findutils & gawk \\
+        \hline
+        grep & gzip & lsb-tools & m4 \\
+        \hline
+        man-db & ncurses & nspr & nss \\
+        \hline
+        pam & pax & procps & psmisc \\
+        \hline
+        sed & sendmail & shadow & tar \\
+        \hline
+        time & util-linux & zlib \\
+        \cline{1-3}
+    \end{tabular}
+    \caption{A selection of commonly used FOSS packages required for LSB Core compliance.}
 \end{table}
 
-Over half of the standard packages needed to fulfil the requirements of LSB Core originate from the GNU project, with the remainder being the work of other organizations or groups. Many have been in development for over two decades and in that time have undergone extensive growth as the result of feature addition, bug fixes or general maintenance. In effect their source code has increased significantly in both size and complexity \cite{Quach2018DebloatingST,Quach2019BloatFA}.
+Over half of the standard packages needed to fulfil the requirements of LSB Core originate from the GNU project, with the remainder being the work of other organizations or groups. Many have been in development for over two decades and in that time have undergone extensive growth as the result of feature addition, bug fixes or general maintenance. In effect their source code has increased significantly in both size and complexity \cite{Succi2001PreliminaryRF,Quach2018DebloatingST,Quach2019BloatFA}.
 
 \subsection{Software bloat}
 
@@ -83,7 +81,7 @@ In order to evaluate a given piece of source code its qualitative and quantitati
 
 \subsubsection{Qualities}
 
-Consist of non-numeric values used to describe the source code. Below are a few of the most relevant:
+Qualities consist of non-numeric values used to describe the source code. Below are a few of the most relevant:
 
 \begin{itemize}
     \item Programming language.
@@ -94,31 +92,71 @@ Consist of non-numeric values used to describe the source code. Below are a few 
 
 \subsubsection{Quantities}
 
-Consist of discrete measurable values which by themself or in composition can form distinct metrics. The following are a few most applicable to the goals of this project.
+Quantities consist of discrete measurable values which by themself or in composition can form distinct metrics. The following are a few most applicable to the goals of this project.
 
 \begin{itemize}
-    \item Lines of code (LOC)
-    \item McCabe cyclomatic complexity
-    \item Halstead complexity measures
-    \item Maintainability index
-    \item Function points
-    \item Cognitive functional size (CFS)
+    \item Lines of code (LOC) \cite{loc}
+    \item Lines of comments (LCM) \cite{lcm-1,lcm-2}
+    \item Number of files (NOF) \cite{nof}
+    \item McCabe cyclomatic complexity (CC) \cite{mccabe-complexity}
+    \item Halstead complexity measures (HC) \cite{halstead-complexity}
+    \item Maintainability index (MI) \cite{maintainability-1,maintainability-2}
+    \item Function points (FP) \cite{functional-size}
+    \item Cognitive functional size (CFS) \cite{cognitive-complexity}
 \end{itemize}
 
 \subsubsection{Automation}
 
-The following is a selection of free and open-source programs for the automated evaluation of source code properties:
+There are many free and open-source programs available for the automated evaluation of source code properties. Few however provide options for measuring values outside of the number of lines of code or number of lines of comments. Among those that do there scope is usually limited to a single or at most a few languages with similarly few available metrics. Additionally the consistency of values obtained for the same metrics and code base between different revisions of the same tool or between tools providing the same metrics is not guaranteed.
 
-\begin{itemize}
-    \item tokei \cite{tokei}
-    \item cloc \cite{cloc}
-    \item ohcount \cite{ohcount}
-    \item cccc \cite{cccc}
-\end{itemize}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Program & Supported languages & Supported metrics \\
+        \hline
+        \hline
+        tokei \cite{tokei} & 226 languages
+        & \multirow{3}{*}{
+            \begin{tabular}{c}
+                Lines of code \\
+                Lines of comments \\
+                Number of files \\
+            \end{tabular}
+        } \\
+        \cline{1-2}
+        cloc \cite{cloc} & 249 languages & \\
+        \cline{1-2}
+        ohcount \cite{ohcount} & 121 languages & \\
+        \hline
+        \multirow{6}{*}{cccc \cite{cccc}} & \multirow{6}{*}{C, C++, Java}
+        & Lines of code \\
+        & & Lines of comments \\
+        & & Cyclomatic complexity \\
+        & & 4/6 Chidamber-Kemerer metrics \\
+        & & Fan-in and Fan-out \\
+        & & Information flow \\
+        \hline
+        \multirow{5}{*}{radon \cite{radon}} & \multirow{5}{*}{Python}
+        & Lines of code \\
+        & & Lines of comments \\
+        & & Cyclomatic complexity \\
+        & & Halstead metrics \\
+        & & Maintainability index \\
+        \hline
+        \multirow{4}{*}{frama-c \cite{frama-c}} & \multirow{4}{*}{C}
+        & Lines of code \\
+        & & Cyclomatic complexity \\
+        & & Halstead metrics \\
+        & & Eva coverage estimate \\
+        \hline
+    \end{tabular}
+    \caption{Listing of programs for automated source code evaluation.}
+\end{table}
 
 \subsection{Operating systems}
 
-Operating systems are a complex composition of different programs (software) which enable the utilization of a computer (hardware). They consist of the following elements:
+Operating systems are complex compositions of programs (software) which enable the utilization of a computer (hardware). They consist of the following elements:
 
 \begin{itemize}
     \item Bootloader - responsible for loading the kernel.
@@ -126,7 +164,7 @@ Operating systems are a complex composition of different programs (software) whi
     \item User space - software designed for the user or users of the operating system.
 \end{itemize}
 
-Currently many open source operating systems are available online for e.g. Linux, FreeBSD, MINIX, RedoxOS and FreeDOS. Of these the most commonly used and contributed to is Linux.
+At present many open source operating systems are available for e.g. Linux, FreeBSD, MINIX, RedoxOS and FreeDOS. Of these the most commonly used and contributed to is Linux.
 
 \subsection{Linux}
 
