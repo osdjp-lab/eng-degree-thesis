@@ -2,21 +2,25 @@
 
 \subsection{Criteria}
 
-The criteria chosen for the selection of packages for this project are, listed from highest priority to lowest (most significant to least significant), as follows:
+The following source code properties were chosen for the selection of packages:
 
-\begin{enumerate}
-    \item Number of lines of code (least to most)
-    \item Proportion of number of lines of code to number of lines of comments/documentation
-    \item Number of dependancies (least to most)
-    \item Number of programming langauges used (least to most)
-\end{enumerate}
+\begin{itemize}
+    \item Primary implementation language - C programming language due to its:
+    \begin{itemize}
+        \item simplicity.
+        \item widespread use in software development.
+        \item popularity in the programming communities.
+        \item use in the Linux kernel and Libc.
+        \item standard for API portability.
+    \end{itemize}
+    \item Number of lines of code (LOC) metric from least to most due to its:
+    \begin{itemize}
+        \item availability.
+        \item correlation with cognitive complexity.
+        \item representation of project scope.
+    \end{itemize}
+\end{itemize}
 
 \subsection{Methodology}
 
-For the purpose of evaluating the packages the following line counting programs were used:
-
-\begin{itemize}
-    \item tokei
-    \item cloc
-    \item ohcount
-\end{itemize}
+The primary implementation language and number of lines of code of each package were obtained via the tokei program \cite{tokei}.
