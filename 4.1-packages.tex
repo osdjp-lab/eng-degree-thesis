@@ -53,12 +53,13 @@ Packages that differ from the selected subset of standard packages.
         \hline
         util-linux \cite{util-linux} & 213 861 & ubase \cite{ubase} & 5 482 \\
         \hline
-        coreutils \cite{coreutils} & 355 087 & \multirow{6}{*}{sbase \cite{sbase}} & \multirow{6}{*}{18 531} \\
+        coreutils \cite{coreutils} & 355 087 & \multirow{7}{*}{sbase \cite{sbase}} & \multirow{7}{*}{18 531} \\
         findutils \cite{findutils} & 184 414 & & \\
         sed \cite{sed} & 103 933 & & \\
         grep \cite{grep} & 131 031 & & \\
         tar \cite{tar} & 118 730 & & \\
         ed \cite{ed} & 3 095 & & \\
+        time \cite{time} & 24 633 & & \\
         \hline
         gawk \cite{gawk} & 226 032 & mawk \cite{mawk} & 20 112 \\
         \hline
@@ -66,7 +67,8 @@ Packages that differ from the selected subset of standard packages.
         \hline
         glibc \cite{glibc} & 1 495 641 & dietlibc \cite{dietlibc} & 88 075 \\
         \hline
-        gcc \cite{gcc} & 8 526 557 & tcc \cite{tcc} & 81 481 \\
+        binutils \cite{binutils} & 4 292 524 & \multirow{2}{*}{tcc \cite{tcc}} & \multirow{2}{*}{81 481} \\
+        gcc \cite{gcc} & 8 526 557 & & \\
         \hline
     \end{tabular}
     \caption{Corresponding standard and selected packages with their sizes expressed in lines of code (LOC).}
@@ -149,7 +151,7 @@ In search of minimal software implementations the following packages\\ grouped b
         & yash \cite{yash} & 72 746 \\
         \hline
     \end{tabular}
-    \caption{Alternative package types, names and corresponding licences.}
+    \caption{Alternative packages grouped by type with their sizes expressed in lines of code (LOC).}
 \end{table}
 
 \footnotetext{Multiple FOSS and non-FOSS OSI open-source and FSF free software licences.}
@@ -174,6 +176,16 @@ In search of minimal software implementations the following packages\\ grouped b
         \hline
         \hline
         Awk & oawk \cite{oawk} & 32 676 \\
+        \hline
+        \hline
+        \multirow{4}{*}{Assembler}
+        & fasm \cite{fasm} & 3 096 \\
+        \cline{2-3}
+        & hla \cite{hla} & 50 071 \\
+        \cline{2-3}
+        & nasm \cite{nasm} & 179 029 \\
+        \cline{2-3}
+        & yasm \cite{yasm} & 764 223 \\
         \hline
         \hline
         \multirow{9}{*}{C Compiler}
@@ -202,7 +214,7 @@ In search of minimal software implementations the following packages\\ grouped b
         & uClibc-ng \cite{uclibc-ng} & 269 410 \\
         \hline
     \end{tabular}
-    \caption{Alternative package types, names and corresponding licences.}
+    \caption{Alternative packages grouped by type with their sizes expressed in lines of code (LOC) - continuation.}
 \end{table}
 
 \footnotetext[2]{Non OSI open-source free software licence.}
