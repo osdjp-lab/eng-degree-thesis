@@ -1,6 +1,6 @@
 \subsection{Packages}\label{Packages}
 
-Initially a small subset of essential standard packages was selected. For each of these packages smaller alternatives were found and evaluated in accordance with the selection critera. The resulting set of software was assembled into the final system.
+A comparison of the reduced subset of standard packages required by LSB Core and the packages incorporated into the Linux for Learners system as well as a listing of rejected alternative packages.
 
 \subsubsection{Common packages}
 
@@ -15,8 +15,6 @@ Packages retained from selected subset of standard packages:
         \hline
         linux \cite{linux} & 22 104 580 \\
         \hline
-        sysklogd \cite{sysklogd} & 3 861 \\
-        \hline
         bc \cite{bc} & 23 708 \\
         \hline        
         diffutils \cite{diffutils} & 127 219 \\
@@ -30,6 +28,8 @@ Packages retained from selected subset of standard packages:
         m4 \cite{m4} & 164 209 \\
         \hline
         ncurses \cite{ncurses} & 173 900 \\
+        \hline
+        cpio \cite{cpio} & 71 635 \\
         \hline
     \end{tabular}
     \caption{Common packages and their sizes expressed in lines of code (LOC).}
@@ -138,14 +138,16 @@ In search of minimal software implementations the following packages\\ grouped b
         \cline{2-3}
         & nosh \cite{nosh} & 82 618 \\
         \hline
-        \hline
-        \multirow{3}{*}{Logger}
-        & metalog \cite{metalog} & 2 298 \\
-        \cline{2-3}
-        & rsyslog \cite{rsyslog} & 234 488 \\
-        \cline{2-3}
-        & syslog-ng \cite{syslog-ng} & 487 588 \\
-        \hline
+        % \hline
+        % \multirow{4}{*}{Logger}
+        % & metalog \cite{metalog} & 2 298 \\
+        % \cline{2-3}
+        % & sysklogd \cite{sysklogd} & 3 861 \\
+        % \cline{2-3}
+        % & rsyslog \cite{rsyslog} & 234 488 \\
+        % \cline{2-3}
+        % & syslog-ng \cite{syslog-ng} & 487 588 \\
+        % \hline
         \hline
         \multirow{4}{*}{Shell}
         & rc \cite{rc} & 7 205 \\
@@ -225,5 +227,3 @@ In search of minimal software implementations the following packages\\ grouped b
 
 \footnotetext[2]{Non OSI open-source free software licence.}
 \footnotetext[3]{Non-FOSS open-source licence.}
-
-\newpage
