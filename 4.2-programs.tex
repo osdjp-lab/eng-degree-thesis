@@ -1,163 +1,32 @@
 \subsection{Programs}\label{Programs}
 
-Comparitive listing of programs from selected standard and minimal packages.
+Listing of programs from selected standard and minimal packages.
 
 \subsubsection{Included common}
 
-Programs included in both the reference system and the Linux for learners system.
+Programs with implementations retained from the standard set of packages.
 
 \begin{itemize}
-    \item dash
-        \begin{center}
-            \begin{tabular}{|c|}
-                \hline
-                sh \\
-                \hline
-            \end{tabular}
-        \end{center}
-    \item mawk
-        \begin{center}
-            \begin{tabular}{|c|}
-                \hline   
-                awk \\
-                \hline
-            \end{tabular}
-        \end{center}
-    \item sinit
-        \begin{center}
-            \begin{tabular}{|c|c|c|}
-                \hline
-                init & poweroff & reboot \\
-                \hline
-            \end{tabular}
-        \end{center}
-    \item mandoc
-        \begin{center}
-            \begin{tabular}{|c|c|c|c|}
-                \hline
-                apropos & catman & man & whatis \\
-                \hline
-            \end{tabular}
-        \end{center}
-    \item ubase
-        \begin{center}
-            \begin{tabular}{|c|c|c|c|}
-                \hline
-                blkdiscard & ctrlaltdel & dd & df \\
-                \hline
-                dmesg & eject & fallocate & fsfreeze \\
-                \hline
-                halt & hwclock & id & killall5 \\
-                \hline
-                last & mesg & mknod & mkswap \\
-                \hline
-                mount & mountpoint & pivot\_root & stat \\
-                \hline
-                swaplabel & swapoff & swapon & switch\_root \\
-                \hline
-                truncate & umount & unshare & who \\
-                \hline
-            \end{tabular}
-        \end{center}
-    \item sbase
-        \begin{center}
-            \begin{tabular}{|c|c|c|c|}
-                \hline
-                basename & cal & cat & chgrp \\
-                \hline
-                chmod & chown & chroot & cksum \\
-                \hline
-                cols (column) & comm & cp & cut \\
-                \hline
-                date & dd & dirname & du \\
-                \hline
-                echo & ed & env & expand \\
-                \hline
-                expr & false & find & flock \\
-                \hline
-                fold & getty (agetty) & grep & head \\
-                \hline
-                install & join & kill & link \\
-                \hline
-                ln & logger & logname & ls \\
-                \hline
-                md5sum & mkdir & mkfifo & mknod \\
-                \hline
-                mktemp & mv & nice & nl \\
-                \hline
-                nohup & od & paste & pathchk \\
-                \hline
-                printenv & printf & pwd & readlink \\
-                \hline
-                renice & rev & rm & rmdir \\
-                \hline
-                sed & seq & setsid & sha1sum \\
-                \hline
-                sha224sum & sha256sum & sha384sum & sha512sum \\
-                \hline
-                sleep & sort & split & sync \\
-                \hline
-                tail & tar & tee & test / [ \\
-                \hline
-                touch & tr & true & tsort \\
-                \hline
-                tty & uname & unexpand & uniq \\
-                \hline
-                unlink & wc & whoami & xargs \\
-                \hline
-                yes \\
-                \cline{1-1}
-            \end{tabular}
-        \end{center}
+    \item \textbf{bc:} bc, dc
+    \item \textbf{diffutils:} cmp, diff, diff3, sdiff
+    \item \textbf{less:} less, lessecho, lesskey
+    \item \textbf{patch:} patch
+    \item \textbf{make:} make
+    \item \textbf{m4:} m4
+    \item \textbf{ncurses:} captoinfo, clear, infocmp, infotocap, ncursesw6-config, reset, tabs, tic, toe, tput, tset
+    \item \textbf{cpio:} cpio
 \end{itemize}
+
 
 \subsubsection{Included distinct}
 
-Programs unique to the Linux for learners system.
+Programs with distinct implementations included in the Linux for learners system.
 
 \begin{itemize}
-    \item dash
-        \begin{center}
-            \begin{tabular}{|c|}
-                \hline
-                dash \\
-                \hline
-            \end{tabular}
-        \end{center}
-    \item mandoc
-        \begin{center}
-            \begin{tabular}{|c|c|c|}
-                \hline
-                demandoc & makewhatis & mandoc \\
-                \hline
-                mandocd & msoelim \\
-                \cline{1-2}
-            \end{tabular}
-        \end{center}
-    \item sbase
-        \begin{center}
-            \begin{tabular}{|c|c|c|c|}
-                \hline
-                cron & getconf & hostname & sha512-224sum \\
-                \hline
-                sha512-256sum & sponge & strings & tftp \\
-                \hline
-                time & uudecode & uuencode & which \\
-                \hline
-            \end{tabular}
-        \end{center}
-    \item ubase
-        \begin{center}
-            \begin{tabular}{|c|c|c|c|c|c|}
-                \hline
-                chvt & clear & free & freeramdisk & insmod & lastlog \\
-                \hline
-                login & lsmod & lsusb & nologin & pagesize & passwd \\
-                \hline
-                pidof & ps & pwdx & readahead & respawn & rmmod \\
-                \hline
-                su & sysctl & uptime & vtallow & watch \\
-                \cline{1-5}
-            \end{tabular}
-        \end{center}
+    \item \textbf{dash:} dash / sh 
+    \item \textbf{mawk:} awk
+    \item \textbf{sinit:} init, poweroff, reboot
+    \item \textbf{mandoc:} apropos, catman, demandoc, makewhatis, man, mandoc, mandocd, msoelim, whatis
+    \item \textbf{ubase:} blkdiscard, chvt, clear, ctrlaltdel, dd, df, dmesg, eject, fallocate, free, freeramdisk, fsfreeze, halt, hwclock, id, insmod, killall5, last, lastlog, login, lsmod, lsusb, mesg, mknod, mkswap, mount, mountpoint,nologin, pagesize, passwd, pidof, pivot\_root, ps, pwdx, readahead, respawn, rmmod, stat, su, swaplabel, swapoff, swapon, switch\_root, sysctl, truncate, umount, unshare, uptime, vtallow, watch, who
+    \item \textbf{sbase:} basename, cal, cat, chgrp, chmod, chown, chroot, cksum, cols (column), comm, cp, cron, cut, date, dd, dirname, du, echo, ed, env, expand, expr, false, find, flock, fold, getconf, getty (agetty), grep, head, hostname, install, join, kill, link, ln, logger, logname, ls, md5sum, mkdir, mkfifo, mknod, mktemp, mv, nice, nl, nohup, od, paste, pathchk, printenv, printf, pwd, readlink, renice, rev, rm, rmdir, sed, seq, setsid, sha1sum, sha224sum, sha256sum, sha384sum, sha512-224sum, sha512-256sum, sha512sum, sleep, sort, split, sponge, strings, sync, tail, tar, tee, test / [, tftp, time, touch, tr, true, tsort, tty, uname, unexpand, uniq, unlink, uudecode, uuencode, wc, which, whoami, xargs, yes
 \end{itemize}
