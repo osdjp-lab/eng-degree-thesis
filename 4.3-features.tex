@@ -1,13 +1,66 @@
 \subsection{Features}\label{Features}
 
-* Comparison of program features depending on package.
+A comparison of the features of some of the programs with differing implementations between the standard and selected packages.
 
-\begin{itemize}
-    \item Included and excluded features from included commands.
-\end{itemize}
-
-Table containing feature comparison of programs included in system.
-
-% Program name &               Features
-% Program name & Common & Reference pkg & Alt pkg 1 & Alt pkg 2
-% ls           &  [...] &     [...]     &   [...]   &   [...]
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            \multirow{3}{*}{Program} & \multicolumn{3}{|c|}{Features} \\
+            \cline{2-4}
+            & \multirow{2}{*}{Common} & \multicolumn{2}{|c|}{Distinct} \\
+            \cline{3-4}
+            & & Standard & Selected \\
+            \hline
+            \hline
+            sed & [Eefnr] & [lsuz] & [-] \\
+            \hline
+            ed & [ps] & [GVhlrv] & [-] \\
+            \hline
+            find & [HL] & [DOP] & [-] \\
+            \hline
+            \multirow{2}{*}{tar} & \multirow{2}{*}{[CJZacfhjmtxz]} & [ABFGHIKLMNOPRSTUV & \multirow{2}{*}{[-]} \\
+            & & WXbdgiklnoprsuvw] & \\
+            \hline
+            join & [12aeotv] & [ijz] & [-] \\
+            \hline
+            \multirow{2}{*}{ls} & [1AFHLRUacd & [BCDGILNQSTXZ & \multirow{2}{*}{[-]} \\
+            & fhilnpqrtu] & bgiklmnosvwx] & \\
+            \hline
+            sort & [Cbcdfikmnortu] & [MRSTVghsz] & [-] \\
+            \hline
+            tr & [Ccds] & [t] & [-] \\
+            \hline
+            \multirow{2}{*}{grep} & \multirow{2}{*}{[EFHcefhilnqsvwx]} & [ABCDGILPRTU & \multirow{2}{*}{[-]} \\
+            & & VZabdmoruyz] & \\
+            \hline
+            xargs & [Enrstx] & [0EILPadeilnoprstx] & [-] \\
+            \hline
+            tail & [cfn] & [Fqsvz] & [m] \\
+            \hline
+            cut & [bcdfns] & [z] & [-] \\
+            \hline
+            nl & [bdfhilnpsvw] & [-] & [-] \\
+            \hline
+            install & [Ddgmot] & [CSTZbcpsv] & [-] \\
+            \hline
+            touch & [acdmrt] & [fh] & [T] \\
+            \hline
+            seq & [fsw] & [-] & [-] \\
+            \hline
+            uniq & [cdfu] & [Diszw] & [-] \\
+            \hline
+            paste & [ds] & [z] & [-] \\
+            \hline
+            kill & [sl] & [Ln] & [-] \\ 
+            \hline
+            wc & [clmw] & [L] & [-] \\
+            \hline
+            du & [HLPadhksx] & [0BDSXbclmt] & [-] \\
+            \hline
+            split & [abdl] & [Centux] & [-] \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Feature comparison of short options of a subset of programs included in the Linux for learners system against their standard equivalents.}
+\end{table}
