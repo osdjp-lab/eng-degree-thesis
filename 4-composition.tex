@@ -1,19 +1,6 @@
 \section{Composition}\label{Composition}
 
-Initially a set of standard packages required by LSB Core was selected as shown in table \ref{table:LSB Core}. From among these the following grouped by category were rejected:
-
-\begin{itemize}
-    \item LSB Compliance - lsb-tools, pax
-    \item Networking - nspr, nss, sendmail
-    \item Security - pam, shadow
-    \item Compression - gzip, zlib
-    \item Process management - procps-ng, psmisc
-    \item System utilities - file, at, fcron
-\end{itemize}
-
-For the majority of the remaining packages smaller alternatives were found and evaluated in accordance with the selection critera. The rest were inherited. Finally packages not specified by LSB Core, but required for the creation of the system, including the bootloader, kernel and init were added.
-
-All software included in the system is statically linked.
+Initially a set of standard packages required by LSB Core was selected as shown in table \ref{table:LSB Core}. A number of these were found to be non-essential, incompatible or excessive and were thus excluded. For the majority of the remaining packages smaller alternatives were found and evaluated in accordance with the selection critera. The rest were inherited. Finally packages not specified by LSB Core, but required for the creation of the system, including the bootloader, kernel and init were added.
 
 \newpage
 \input{4.1-packages}
