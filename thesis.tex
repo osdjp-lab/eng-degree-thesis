@@ -13,6 +13,7 @@
 %\usepackage{indentfirst}
 \usepackage{url}
 \usepackage{float}
+\usepackage[a4paper]{geometry}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -39,11 +40,17 @@
 }
 
 \lstset{style=mystyle}
-\include{0-title-page}
 
 \begin{document}
+
+\newgeometry{margin=2cm, tmargin=0cm}
+\include{0-title-page}
+\restoregeometry
+
+\newgeometry{margin=3cm}
 \maketitle
 \tableofcontents
+\restoregeometry
 
 \include{1-abstract}
 \include{2-introduction}
@@ -55,5 +62,4 @@
 
 \emergencystretch=1em
 \printbibliography
-%\bibliography{8-references}
 \end{document}
