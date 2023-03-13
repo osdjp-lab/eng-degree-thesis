@@ -1,10 +1,10 @@
 \section{Introduction}\label{Introduction}
 
-The focus of this thesis is the creation of the Linux for learners system \cite{lfl}. This system consists of minimal implementations of commonly used software and is intended for use as a teaching resource for study and modification by junior programmers.
+The focus of this thesis is the creation of the "Linux for learners" system \cite{lfl}. This system consists of minimal implementations of commonly used software and is intended for use as a teaching resource for study and modification by junior programmers.
 
-\subsection{Free and open-source software (FOSS)}
+\subsection{Free and open source software}
 
-FOSS is software that simultaneously adheres to two definitions: the definition of free software provided by the Free Software Foundation (FSF) \cite{fsf} and the definition of open-source software provided by the Open Source Initiative (OSI) \cite{osi}.
+Free and open source software (FOSS) is software that simultaneously adheres to two definitions: the definition of free software provided by the Free Software Foundation (FSF) \cite{fsf} and the definition of open source software provided by the Open Source Initiative (OSI) \cite{osi}.
 
 Both definitions overlap in many terms of which the following are most significant:
 
@@ -23,18 +23,18 @@ FOSS is distributed under one or many compatible licences. The following are a f
     \item AGPL, GPL - protective (copyleft).
 \end{itemize}
 
-All of the components used in the creation of this project are available under free and open-source software licensing terms.
+All of the components used in the creation of this project are available under free and open source software licensing terms.
 
 \subsection{Standard software packages}
 
-The FOSS communities are the source of a great number and variety of actively maintained software implementations. However only a small subset of these is included by default in modern day open-source operating systems. This selection tends to differ from system to system. As such the following subsets of standardized system interfaces have been created in order to provide a uniform foundation for software development and use on Unix and Linux systems:
+The FOSS communities are the source of a great number and variety of actively maintained software implementations. However only a small subset of these is included by default in modern day open source operating systems. This selection tends to differ from system to system. As such the following subsets of standardised system interfaces have been created in order to provide a uniform foundation for software development and use on Unix and Linux systems:
 
 \begin{itemize}
     \item Single UNIX Specification (SUS) \cite{susv4}.
     \item Linux Standard Base (LSB) specification \cite{lsb}.
 \end{itemize}
 
-These specifications extend far beyond the scope of this project as such only the LSB Core subset of the LSB standard has been considered for use in the creation of the Linux for learners system.
+These specifications extend far beyond the scope of this project as such only the LSB Core subset of the LSB standard has been considered for use in the creation of the "Linux for learners" system.
 
 \begin{table}[H]
     \centering
@@ -61,7 +61,7 @@ These specifications extend far beyond the scope of this project as such only th
     \label{table:LSB Core}
 \end{table}
 
-Over half of the standard packages needed to fulfil the requirements of LSB Core originate from the GNU project, with the remainder being the work of other organizations or groups. Many have been in development for over two decades and in that time have undergone extensive growth as the result of feature addition, bug fixes or general maintenance. In effect their source code has increased significantly in both size and complexity \cite{Succi2001PreliminaryRF,Quach2018DebloatingST,Quach2019BloatFA}.
+Over half of the standard packages needed to fulfil the requirements of LSB Core originate from the GNU project, with the remainder being the work of other organisations or groups. Many have been in development for over two decades and in that time have undergone extensive growth as the result of feature addition, bug fixes or general maintenance. In effect their source code has increased significantly in both size and complexity \cite{Succi2001PreliminaryRF,Quach2018DebloatingST,Quach2019BloatFA}.
 
 \subsection{Software bloat}
 
@@ -70,7 +70,7 @@ Software bloat can be defined as a collection of factors impacting the functiona
 \begin{itemize}
     \item Insufficient documentation.
     \item Excess features.
-    \item Unclear optimization.
+    \item Unclear optimisation.
     \item Extraneous portability considerations.
     \item Excess fall-back implementations.
     \item Use of multiple programming languages.
@@ -95,7 +95,7 @@ Qualities consist of non-numeric values used to describe the source code. Below 
 
 \subsubsection{Quantities}
 
-Quantities consist of discrete measurable values which by themself or in composition can form distinct metrics. The following are a few most applicable to the goals of this project.
+Quantities consist of discrete measurable values which individually or in composition can form distinct metrics. The following are a few most applicable to the goals of this project.
 
 \begin{itemize}
     \item Lines of code (LOC) \cite{loc}
@@ -110,7 +110,7 @@ Quantities consist of discrete measurable values which by themself or in composi
 
 \subsubsection{Automation}
 
-There are many free and open-source programs available for the automated evaluation of source code properties. Few however provide options for measuring values outside of the number of lines of code or number of lines of comments. Among those that do there scope is usually limited to a single or at most a few languages with similarly few available metrics. Additionally the consistency of values obtained for the same metrics and code base between different revisions of the same tool or between tools providing the same metrics is not guaranteed.
+There are many free and open source programs available for the automated evaluation of source code properties. Few however provide options for measuring values outside of the most basic including the number of lines of code or number of lines of comments. Among those that do their scope is usually limited to a single or at most a few languages with similarly few available metrics. Additionally the consistency of values obtained for the same metrics and code base between different revisions of the same tool or between tools providing the same metrics is not guaranteed.
 
 \begin{table}[H]
     \centering
@@ -154,12 +154,12 @@ There are many free and open-source programs available for the automated evaluat
         & & Eva coverage estimate \\
         \hline
     \end{tabular}
-    \caption{Listing of programs for automated source code evaluation.}
+    \caption{Programs for automated source code evaluation.}
 \end{table}
 
 \subsection{Operating systems}
 
-Operating systems are complex compositions of programs (software) which enable the utilization of a computer (hardware). They consist of the following elements:
+Operating systems are complex compositions of programs (software) which enable the utilisation of a computer (hardware). They consist of the following elements:
 
 \begin{itemize}
     \item Bootloader - responsible for loading the kernel.
@@ -171,7 +171,7 @@ At present many open source operating systems are available for e.g. Linux, Free
 
 \subsection{Linux}
 
-Colloquially the term Linux is used to refer to systems utilizing the Linux kernel. These differ in terms of their implementation. Whether that be the result of supporting different platforms, utilizing different bootloaders, kernel configurations or software packages.
+Colloquially the term Linux is used to refer to systems utilising the Linux kernel. These differ in terms of their implementation. Whether that be the result of supporting different platforms, utilising different bootloaders, kernel configurations or software packages.
 
 Many Linux distributions are currently available. Few however have goals which overlap with the intended purpose of this project, teaching about the implementation of software and the creation of a Linux system. Those that do, fall into two categories:
 
@@ -180,8 +180,8 @@ Many Linux distributions are currently available. Few however have goals which o
     \item Embedded
 \end{itemize}
 
-The first are characterized by modular software installation from source code. They include LFS, Gentoo, NixOS, CRUX and GNU Guix to name a few. Of these the Linux From Scratch (LFS) family of operating systems, are of greatest interest due to their focus on a step-by-step approach to system creation using standard software implementations. 
+The first are characterised by modular software installation from source code. They include LFS, Gentoo, NixOS, CRUX and GNU Guix to name a few. Of these the Linux From Scratch (LFS) family of operating systems, are of greatest interest due to their focus on a step-by-step approach to system creation using standard software implementations. 
 
-The second group include systems like Busybox and Toybox which are primarily intended for embedded use and contain minimal reimplementations of commonly used software.
+The second group includes systems like Busybox and Toybox which contain minimal reimplementations of commonly used software primarily intended for embedded use, but are monolithic by design.
 
-This project stands apart from those mentioned above. Unlike LFS it intends to incorporate only minimal software solutions and unlike Busybox and Toybox aims to reduce their implementations to a theoretical minimal cognitive complexity not bound by goals like standards compliance, efficiency or security. As a result none of the preceding systems are suitable for the purposes of this project.
+This project stands apart from those mentioned above. Unlike LFS it intends to incorporate only minimal software solutions and unlike Busybox and Toybox aims to reduce their implementations to a theoretical minimal cognitive complexity not bound by goals like standards compliance, efficiency or security while retaining modularity. As a result none of the preceding systems are suitable for the purposes of this project.
