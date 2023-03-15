@@ -4,7 +4,7 @@ An overview of excluded, common, differing and alternative packages.
 
 \subsubsection{Excluded}
 
-Packages excluded from the initial LSB Core set of standard packages.
+Packages excluded from the initial \gls{lsb} Core set of standard packages.
 
 \begin{table}[!h]
     \centering
@@ -22,7 +22,7 @@ Packages excluded from the initial LSB Core set of standard packages.
         file\cite{file}\footnotemark[1], shadow\cite{shadow}\footnotemark[1], zlib\cite{zlib}\footnotemark[2] & Incompatible \\
         \hline
     \end{tabular}
-    \caption{Packages excluded from the LSB Core standard set of packages grouped by rejection criterion.}
+    \caption{Packages excluded from the \gls{lsb} Core standard set of packages grouped by rejection criterion.}
 \end{table}
 
 \footnotetext[1]{Lacking support for static builds.}
@@ -36,7 +36,7 @@ Packages retained from selected subset of standard packages:
     \centering
     \begin{tabular}{|c||c|}
         \hline
-        Package & LOC \\
+        Package & \gls{loc} \\
         \hline
         \hline
         linux \cite{linux} & 22 104 580 \\
@@ -58,7 +58,7 @@ Packages retained from selected subset of standard packages:
         cpio \cite{cpio} & 71 635 \\
         \hline
     \end{tabular}
-    \caption{Common packages and their sizes expressed in lines of code (LOC).}
+    \caption{Common packages and their sizes expressed in \gls{loc}.}
 \end{table}
 
 \newpage
@@ -74,7 +74,7 @@ Packages that differ from the selected subset of standard packages.
         \multicolumn{2}{|c||}{Standard} & \multicolumn{2}{|c|}{Selected} \\
         \hline
         \hline
-        Package & LOC & Package & LOC \\
+        Package & \gls{loc} & Package & \gls{loc} \\
         \hline
         \hline
         grub \cite{grub} & 456 318 & syslinux \cite{syslinux} & 412 273 \\
@@ -103,7 +103,7 @@ Packages that differ from the selected subset of standard packages.
         gcc \cite{gcc} & 8 526 557 & & \\
         \hline
     \end{tabular}
-    \caption{Corresponding standard and selected packages with their sizes expressed in lines of code (LOC).}
+    \caption{Corresponding standard and selected packages with their sizes expressed in \gls{loc}.}
 \end{table}
 
 \newpage
@@ -116,7 +116,7 @@ In search of minimal software implementations the following packages\\ grouped b
     \centering
     \begin{tabular}{|c|c|c|}
         \hline
-        Type & Package & LOC \\
+        Type & Package & \gls{loc} \\
         \hline
         \hline
         \multirow{6}{*}{Collection}
@@ -130,7 +130,7 @@ In search of minimal software implementations the following packages\\ grouped b
         \cline{2-3}
         & busybox \cite{busybox} & 205 596 \\
         \cline{2-3}
-        & heirloom \cite{heirloom} \footnotemark & 355 888 \\
+        & heirloom \cite{heirloom} \footnotemark[3] & 355 888 \\
         \hline
         \hline
         \multirow{3}{*}{Bootloader}
@@ -185,10 +185,10 @@ In search of minimal software implementations the following packages\\ grouped b
         & yash \cite{yash} & 72 746 \\
         \hline
     \end{tabular}
-    \caption{Alternative packages grouped by type with their sizes expressed in lines of code (LOC).}
+    \caption{Alternative packages grouped by type with their sizes expressed in \gls{loc}.}
 \end{table}
 
-\footnotetext{Multiple FOSS and non-FOSS OSI open-source and FSF free software licences.}
+\footnotetext[3]{Multiple \gls{foss} and non-\gls{foss} software licences.}
 
 \newpage
 
@@ -196,11 +196,11 @@ In search of minimal software implementations the following packages\\ grouped b
     \centering
     \begin{tabular}{|c|c|c|}
         \hline
-        Type & Package & LOC \\
+        Type & Package & \gls{loc} \\
         \hline
         \hline
         \multirow{4}{*}{Text editor}
-        & ex \cite{ex-vi} \footnotemark & 23 481 \\
+        & ex \cite{ex-vi} \footnotemark[4] & 23 481 \\
         \cline{2-3}
         & nano \cite{nano} & 97 912 \\
         \cline{2-3}
@@ -233,7 +233,7 @@ In search of minimal software implementations the following packages\\ grouped b
         \cline{2-3}
         & lacc \cite{lacc} & 27 010 \\
         \cline{2-3}
-        & lcc \cite{lcc} \footnotemark & 27 736 \\
+        & lcc \cite{lcc} \footnotemark[5] & 27 736 \\
         \cline{2-3}
         & ack \cite{ack} & 124 728 \\
         \cline{2-3}
@@ -248,8 +248,8 @@ In search of minimal software implementations the following packages\\ grouped b
         & uClibc-ng \cite{uclibc-ng} & 269 410 \\
         \hline
     \end{tabular}
-    \caption{Alternative packages grouped by type with their sizes expressed in lines of code (LOC) - continuation.}
+    \caption{Alternative packages grouped by type with their sizes expressed in \gls{loc} - continuation.}
 \end{table}
 
-\footnotetext[2]{Non OSI open-source free software licence.}
-\footnotetext[3]{Non-FOSS open-source licence.}
+\footnotetext[4]{Non-\gls{osi} open source free software licence.}
+\footnotetext[5]{Non-\gls{foss} open source licence.}

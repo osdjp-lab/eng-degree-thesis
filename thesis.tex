@@ -5,7 +5,7 @@
 % \usepackage{polski}
 \usepackage{listings}
 \usepackage[backend=biber, style=numeric-comp, alldates=iso, seconds=true, sorting=none]{biblatex}
-\addbibresource{8-references.bib}
+\addbibresource{9-references.bib}
 %\bibliographystyle{unsrt}
 \usepackage{xcolor}
 \usepackage{csquotes}
@@ -14,6 +14,8 @@
 \usepackage{url}
 \usepackage{float}
 \usepackage[a4paper]{geometry}
+\usepackage[nogroupskip, acronym, toc]{glossaries}
+\usepackage[automake]{glossaries-extra}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -41,6 +43,10 @@
 
 \lstset{style=mystyle}
 
+\setabbreviationstyle{long-short}
+
+\include{8-glossary}
+
 \begin{document}
 
 \newgeometry{margin=2cm, tmargin=0cm}
@@ -49,8 +55,8 @@
 
 \newgeometry{margin=3cm}
 \maketitle
-\tableofcontents
-\restoregeometry
+{\small\tableofcontents}
+%\restoregeometry
 
 \include{1-abstract}
 \include{2-introduction}
@@ -60,6 +66,13 @@
 \include{6-future-prospects}
 \include{7-summary}
 
+\clearpage
+
+\printglossary
+
+\clearpage
+
 \emergencystretch=1em
-\printbibliography
+\printbibliography[heading=bibintoc, title={References}]
+
 \end{document}

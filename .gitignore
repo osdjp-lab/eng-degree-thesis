@@ -9,6 +9,14 @@
 *.toc
 *.out
 *.bcf
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.ist
 *.run.xml
 *.synctex.gz
 *.code-workspace

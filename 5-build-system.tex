@@ -2,7 +2,7 @@
 
 \subsection{Layout}
 
-Composition of the "Linux for Learners" project.
+Composition of the \enquote{\glsxtrlong{lfl}} project.
 
 \subsubsection{Static}
 
@@ -26,9 +26,9 @@ Components created dynamically during system creation:
 \begin{itemize}
     \item \textbf{archive} - compressed tarballs of source code packages.
     \item \textbf{sources} - uncompressed source code packages or git repositories.
-    \item \textbf{rootfs} - the root filesystem of the "Linux for Learners" system.
+    \item \textbf{rootfs} - the root filesystem of the \enquote{\glsxtrlong{lfl}} system.
     \item \textbf{isoimage} - all files necessary to generate the iso disk image.
-    \item \textbf{linux-for-learners.iso} - the "Linux for Learners" disk image.
+    \item \textbf{linux-for-learners.iso} - the \enquote{\glsxtrlong{lfl}} disk image.
 \end{itemize}
 
 \subsection{Procedure}
@@ -45,7 +45,7 @@ All tarballs found in the archive directory are extracted into the sources direc
 
 \subsubsection{Root filesystem creation}
 
-The base FHS filesystem layout is created in the rootfs directory.
+The base \glsxtrshort{fhs} filesystem layout is created in the rootfs directory.
 
 \subsubsection{Software installation}
 
@@ -57,7 +57,7 @@ All configuration files are copied from the config-files directory tree into cor
 
 \subsubsection{Packaging}
 
-All of the required system components located in the isoimage directory are packaged into an ISO 9660 disk image.
+All of the required system components located in the isoimage directory are packaged into an \glsxtrshort{iso} 9660 disk image.
 
 \noindent
 Contents of the isoimage directory:
