@@ -156,13 +156,13 @@ In search of minimal software implementations the following packages\\ grouped b
         \cline{2-3}
         & openrc \cite{openrc} & 21 292 \\
         \cline{2-3}
-        & shepherd \cite{shepherd} & 23 733 \\
+        & shepherd \cite{shepherd} & 23 733 \\ % Shell & Scheme
         \cline{2-3}
         & s6 \cite{s6} & 24 824 \\
         \cline{2-3}
         & finit \cite{finit} & 35 280 \\
         \cline{2-3}
-        & nosh \cite{nosh} & 82 618 \\
+        & nosh \cite{nosh} & 82 618 \\ % C++
         \hline
         % \hline
         % \multirow{4}{*}{Logger}
@@ -199,27 +199,47 @@ In search of minimal software implementations the following packages\\ grouped b
         Type & Package & \gls{loc} \\
         \hline
         \hline
-        \multirow{4}{*}{Text editor}
-        & ex \cite{ex-vi} \footnotemark[4] & 23 481 \\
+        \multirow{13}{*}{Text editor}
+        & s \cite{s} & 2 386 \\
+        \cline{2-3}
+        & neatvi \cite{neatvi} & 6 832 \\
+        \cline{2-3}
+        & levee \cite{levee} \footnotemark[4] & 8 309 \\
+        \cline{2-3}
+        & e3 \cite{e3-editor} & 9 321 \\ % Assembly
+        \cline{2-3}
+        & mle \cite{mle} & 13 736 \\
+        \cline{2-3}
+        & mg \cite{mg} & 16 002 \\
+        \cline{2-3}
+        & micro \cite{micro} & 23 261 \\ % Go
+        \cline{2-3}
+        & ex \cite{ex-vi} \footnotemark[5] & 23 481 \\
+        \cline{2-3}
+        & vis \cite{vis} & 33 498 \\ % C & Lua (optional)
+        \cline{2-3}
+        & nvi \cite{nvi} \footnotemark[5] & 49 325 \\
         \cline{2-3}
         & nano \cite{nano} & 97 912 \\
         \cline{2-3}
-        & vim \cite{vim} & 842 984 \\
+        & elvis \cite{elvis} & 134 136 \\
         \cline{2-3}
         & neovim \cite{neovim} & 760 010 \\
+        \cline{2-3}
+        & vim \cite{vim} & 842 984 \\
         \hline
         \hline
         Awk & oawk \cite{oawk} & 32 676 \\
         \hline
         \hline
         \multirow{4}{*}{Assembler}
-        & fasm \cite{fasm} & 3 096 \\
+        & fasm \cite{fasm} & 3 096 \\ % Assembly
         \cline{2-3}
         & hla \cite{hla} & 50 071 \\
         \cline{2-3}
         & nasm \cite{nasm} & 179 029 \\
         \cline{2-3}
-        & yasm \cite{yasm} & 764 223 \\
+        & yasm \cite{yasm} & 764 223 \\ % Assembly
         \hline
         \hline
         \multirow{9}{*}{C Compiler}
@@ -233,7 +253,7 @@ In search of minimal software implementations the following packages\\ grouped b
         \cline{2-3}
         & lacc \cite{lacc} & 27 010 \\
         \cline{2-3}
-        & lcc \cite{lcc} \footnotemark[5] & 27 736 \\
+        & lcc \cite{lcc} \footnotemark[4] & 27 736 \\
         \cline{2-3}
         & ack \cite{ack} & 124 728 \\
         \cline{2-3}
@@ -251,5 +271,5 @@ In search of minimal software implementations the following packages\\ grouped b
     \caption{Alternative packages grouped by type with their sizes expressed in \gls{loc} - continuation.}
 \end{table}
 
-\footnotetext[4]{Non-\gls{osi} open source free software licence.}
-\footnotetext[5]{Non-\gls{foss} open source licence.}
+\footnotetext[4]{Non-\gls{foss} software licence.}
+\footnotetext[5]{Non-\gls{osi} open source free software licence.}
