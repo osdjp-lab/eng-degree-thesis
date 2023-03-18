@@ -1,6 +1,6 @@
 \subsection{Packages}\label{Packages}
 
-An overview of excluded, common, differing and alternative packages.
+An overview of excluded, common, distinct and alternative packages.
 
 \subsubsection{Excluded}
 
@@ -110,7 +110,7 @@ Packages that differ from the selected subset of standard packages.
 
 \subsubsection{Alternative}
 
-In search of minimal software implementations the following packages\\ grouped by type were also considered.
+In search of minimal software implementations the following packages\\ grouped by type and ordered by size were also considered.
 
 \begin{table}[!ht]
     \centering
@@ -133,8 +133,12 @@ In search of minimal software implementations the following packages\\ grouped b
         & heirloom \cite{heirloom} \footnotemark[3] & 355 888 \\
         \hline
         \hline
-        \multirow{3}{*}{Bootloader}
+        \multirow{5}{*}{Bootloader}
+        & bootboot \cite{bootboot} & 21 687 \\
+        \cline{2-3}
         & lilo \cite{lilo} & 36 981 \\
+        \cline{2-3}
+        & limine \cite{limine} & 39 842 \\
         \cline{2-3}
         & refind \cite{refind} & 69 353 \\
         \cline{2-3}
@@ -273,3 +277,7 @@ In search of minimal software implementations the following packages\\ grouped b
 
 \footnotetext[4]{Non-\gls{foss} software licence.}
 \footnotetext[5]{Non-\gls{osi} open source free software licence.}
+
+The \gls{pil} of all listed alternative packages is C with the exception of shepherd (Shell), nosh (C++), e3 (Assembly), micro (Go), fasm (Assembly) and yasm (Assembly).
+
+% Smaller software packages from each category and the reasoning behind their rejection.
