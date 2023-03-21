@@ -1,12 +1,10 @@
 \section{Introduction}\label{Introduction}
 
-The focus of this thesis is the creation of the \enquote{\glsxtrlong{lfl}} system \cite{lfl}. This system consists of minimal implementations of commonly used software and is intended for use as a teaching resource for study and modification by junior programmers.
+The focus of this thesis is the creation of a Linux-based system called \enquote{\glsxtrlong{lfl}}\cite{lfl}. This system consists of minimal implementations of commonly used software available under free and open source software licensing terms and is intended to serve as a teaching resource for study and modification by junior programmers.
 
 \subsection{Free and open source software}
 
-\gls{foss} is software that simultaneously adheres to two definitions: the definition of free software provided by the \gls{fsf} \cite{fsf} and the definition of open source software provided by the \gls{osi} \cite{osi}.
-
-Both definitions overlap in many terms of which the following are most significant:
+\gls{foss} is software that simultaneously adheres to two definitions: the definition of free software \cite{fsf-free-software} provided by the \gls{fsf} \cite{fsf} and the definition of open source software \cite{osi-open-source} provided by the \gls{osi} \cite{osi}. Both definitions overlap in many terms of which the following are most significant:
 
 \begin{itemize}
     \item Free access to source code.
@@ -15,19 +13,17 @@ Both definitions overlap in many terms of which the following are most significa
     \item Freedom to distribute derivative works.
 \end{itemize}
 
-\gls{foss} is distributed under one or many compatible licences. The following are a few key examples of \gls{foss} licences:
+\gls{foss} is distributed under one or many compatible licences. The following are a few key examples of \gls{foss} licences \cite{spdx-licenses,fsf-licenses}:
 
 \begin{itemize}
-    \item \glsxtrshort{cc0}, Unlicense - public domain or equivalent.
-    \item \glsxtrshort{bsd}, \glsxtrshort{mit}, Apache - permissive.
-    \item \glsxtrshort{agpl}, \glsxtrshort{gpl} - protective (copyleft).
+    \item Unlicense \cite{unlicense} - public domain \cite{public-domain} equivalent.
+    \item \glsxtrshort{mit-licence} \cite{mit}, \glsxtrshort{bsd-2} \cite{bsd-2}, \glsxtrshort{bsd-3} \cite{bsd-3}, Apache \cite{apache} - permissive \cite{osi-permissive}.
+    \item \glsxtrshort{mpl} \cite{mpl}, \glsxtrshort{lgpl} \cite{lgpl}, \glsxtrshort{gpl} \cite{gpl}, \glsxtrshort{agpl} \cite{agpl} - protective (copyleft) \cite{gnu-copyleft,eupl-copyleft}.
 \end{itemize}
-
-All of the components used in the creation of this project are available under free and open source software licensing terms.
 
 \subsection{Standard software packages}
 
-The \glsxtrshort{foss} communities are the source of a great number and variety of actively maintained software implementations. However only a small subset of these is included by default in modern day open source operating systems. This selection tends to differ from system to system. As such the following subsets of standardised system interfaces have been created in order to provide a uniform foundation, for software development and use, on Unix and Linux systems:
+The \glsxtrshort{foss} communities are the source of a great number and variety of actively maintained software implementations. However only a small subset of these is included by default in modern day open source operating systems. This selection tends to differ from system to system. As such the following subsets of standardised system interfaces have been created in order to provide a uniform foundation, for software development and use, on \glsxtrshort{unix} and Linux systems:
 
 \begin{itemize}
     \item \gls{sus} \cite{susv4}.
@@ -184,4 +180,4 @@ The first are characterised by modular software installation from source code. T
 
 The second group includes monolithic systems like Busybox and Toybox which contain minimal reimplementations of commonly used software primarily intended for embedded use.
 
-This project stands apart from those mentioned above. Unlike \glsxtrshort{lfs} it intends to incorporate only minimal software solutions and unlike Busybox and Toybox aims to reduce their implementations to a theoretical minimal cognitive complexity not bound by goals like standards compliance, efficiency or security while retaining modularity. As a result none of the preceding systems are suitable for the purposes of this project.
+This project stands apart from those mentioned above. Unlike \glsxtrshort{lfs} it intends to incorporate only minimal software solutions and unlike Busybox and Toybox aims to reduce their implementations to a theoretical minimal cognitive complexity not bound by goals like standards compliance, efficiency or security while retaining modularity. As a result none of the preceding systems entirely fulfil the goals of this project.
