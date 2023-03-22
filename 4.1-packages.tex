@@ -13,13 +13,11 @@ Packages excluded from the initial \gls{lsb} Core set of standard packages.
         Packages & Justification \\
         \hline
         \hline
-        lsb-tools\cite{lsb-tools}, pax\cite{pax}, nspr\cite{nspr}, nss\cite{nss}, & \multirow{2}{*}{Out of scope} \\
-        sendmail\cite{sendmail}, pam\cite{linux-pam} & \\
+        lsb-tools\cite{lsb-tools}, pax\cite{pax}, inetutils\cite{inetutils}, & \multirow{3}{*}{Out of scope} \\
+        nspr\cite{nspr}, nss\cite{nss}, sendmail\cite{sendmail} & \\
+        pam\cite{linux-pam}, cups\cite{cups}, gettext\cite{gettext} & \\
         \hline
-        gzip\cite{gzip}, procps-ng\cite{procps-ng}, psmisc\cite{psmisc}, & \multirow{2}{*}{Non-essential} \\
-        at\cite{at}, fcron\cite{fcron} & \\
-        \hline
-        file\cite{file}\footnotemark[1], shadow\cite{shadow}\footnotemark[1], zlib\cite{zlib}\footnotemark[2] & Incompatible \\
+        at\cite{at}\footnotemark[1], fcron\cite{fcron}\footnotemark[1], zlib\cite{zlib}\footnotemark[2] & Incompatible \\
         \hline
     \end{tabular}
     \caption{Packages excluded from the \gls{lsb} Core standard set of packages grouped by rejection criterion.}
@@ -31,6 +29,9 @@ Packages excluded from the initial \gls{lsb} Core set of standard packages.
 \subsubsection{Common}
 
 Packages retained from selected subset of standard packages:
+
+% To be added:
+% gzip\cite{gzip}, file\cite{file}, shadow\cite{shadow}
 
 \begin{table}[!h]
     \centering
@@ -44,8 +45,6 @@ Packages retained from selected subset of standard packages:
         bc \cite{bc} & 23 708 \\
         \hline        
         diffutils \cite{diffutils} & 127 219 \\
-        \hline
-        less \cite{less} & 21 763 \\
         \hline
         patch \cite{patch} & 64 276 \\
         \hline
@@ -83,15 +82,59 @@ Packages that differ from the selected subset of standard packages.
         \hline
         bash \cite{bash} & 196 059 & dash \cite{dash} & 15 511 \\
         \hline
-        util-linux \cite{util-linux} & 213 861 & ubase \cite{ubase} & 5 482 \\
+        \multirow{3}{*}{
+            \begin{tabular}{c}
+                util-linux \cite{util-linux} \\
+                procps-ng\cite{procps-ng} \\
+                psmisc\cite{psmisc} \\
+            \end{tabular}
+        } & \multirow{3}{*}{
+            \begin{tabular}{c}
+                213 861 \\
+                30 623 \\
+                13 707 \\
+            \end{tabular}
+        } & \multirow{3}{*}{
+            \begin{tabular}{c}
+                ubase \cite{ubase} \\
+                less \cite{less} \\
+            \end{tabular}
+        } & \multirow{3}{*}{
+            \begin{tabular}{c}
+                5 482 \\
+                21 763 \\
+            \end{tabular}
+        } \\
+        & & & \\
+        & & & \\
         \hline
-        coreutils \cite{coreutils} & 355 087 & \multirow{7}{*}{sbase \cite{sbase}} & \multirow{7}{*}{18 531} \\
-        findutils \cite{findutils} & 184 414 & & \\
-        sed \cite{sed} & 103 933 & & \\
-        grep \cite{grep} & 131 031 & & \\
-        tar \cite{tar} & 118 730 & & \\
-        ed \cite{ed} & 3 095 & & \\
-        time \cite{time} & 24 633 & & \\
+        \multirow{7}{*}{
+            \begin{tabular}{c}
+                coreutils \cite{coreutils} \\
+                findutils \cite{findutils} \\
+                sed \cite{sed} \\
+                grep \cite{grep} \\
+                tar \cite{tar} \\
+                ed \cite{ed} \\
+                time \cite{time} \\
+            \end{tabular}
+        } & \multirow{7}{*}{
+            \begin{tabular}{c}
+                355 087 \\
+                184 414 \\
+                103 933 \\
+                131 031 \\
+                118 730 \\
+                3 095 \\
+                24 633 \\
+            \end{tabular}
+        } & \multirow{7}{*}{sbase \cite{sbase}} & \multirow{7}{*}{18 531} \\
+        & & & \\
+        & & & \\
+        & & & \\
+        & & & \\
+        & & & \\
+        & & & \\
         \hline
         gawk \cite{gawk} & 226 032 & mawk \cite{mawk} & 20 112 \\
         \hline
@@ -99,8 +142,18 @@ Packages that differ from the selected subset of standard packages.
         \hline
         glibc \cite{glibc} & 1 495 641 & dietlibc \cite{dietlibc} & 88 075 \\
         \hline
-        binutils \cite{binutils} & 4 292 524 & \multirow{2}{*}{tcc \cite{tcc}} & \multirow{2}{*}{81 481} \\
-        gcc \cite{gcc} & 8 526 557 & & \\
+        \multirow{2}{*}{
+            \begin{tabular}{c}
+                binutils \cite{binutils} \\
+                gcc \cite{gcc} \\
+            \end{tabular}
+        } & \multirow{2}{*}{
+            \begin{tabular}{c}
+                4 292 524 \\
+                8 526 557 \\
+            \end{tabular}
+        } & \multirow{2}{*}{tcc \cite{tcc}} & \multirow{2}{*}{81 481} \\
+        & & & \\
         \hline
     \end{tabular}
     \caption{Corresponding standard and selected packages with their sizes expressed in \gls{loc}.}
