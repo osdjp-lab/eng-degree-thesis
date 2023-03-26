@@ -4,34 +4,36 @@ An overview of excluded, common, distinct and alternative packages.
 
 \subsubsection{Excluded}
 
-Packages excluded from the initial \gls{lsb} Core set of standard packages.
+Packages excluded from the initial \gls{lsb} Core set of standard packages due to being out of scope.
 
 \begin{table}[!h]
     \centering
     \begin{tabular}{|c|c|}
-        \hline
-        Packages & Justification \\
-        \hline
-        \hline
-        lsb-tools\cite{lsb-tools}, pax\cite{pax}, inetutils\cite{inetutils}, & \multirow{3}{*}{Out of scope} \\
-        nspr\cite{nspr}, nss\cite{nss}, sendmail\cite{sendmail} & \\
-        pam\cite{linux-pam}, cups\cite{cups}, gettext\cite{gettext} & \\
-        \hline
-        at\cite{at}\footnotemark[1], fcron\cite{fcron}\footnotemark[1], zlib\cite{zlib}\footnotemark[2] & Incompatible \\
-        \hline
+    \hline
+    Category & Packages \\
+    \hline
+    \hline
+    \multirow{2}{*}{Networking} & inetutils\cite{inetutils}, nspr\cite{nspr}, nss\cite{nss}, \\
+    & sendmail\cite{sendmail}, cups\cite{cups} \\
+    \hline
+    \gls{lsb} specific & lsb-tools\cite{lsb-tools}, pax\cite{pax} \\
+    \hline
+    Scheduling & at\cite{at}, fcron\cite{fcron} \\
+    \hline
+    Security extension & pam\cite{linux-pam} \\
+    \hline
+    Internationalisation & \multirow{2}{*}{gettext\cite{gettext}} \\
+    and localisation & \\
+    \hline
+    Compression & zlib\cite{zlib} \\
+    \hline
     \end{tabular}
-    \caption{Packages excluded from the \gls{lsb} Core standard set of packages grouped by rejection criterion.}
+    \caption{Packages excluded from the \gls{lsb} Core standard set of packages grouped by category.}
 \end{table}
-
-\footnotetext[1]{Lacking support for static builds.}
-\footnotetext[2]{Dynamic library.}
 
 \subsubsection{Common}
 
 Packages retained from selected subset of standard packages:
-
-% To be added:
-% gzip\cite{gzip}, file\cite{file}, shadow\cite{shadow}
 
 \begin{table}[!h]
     \centering
@@ -55,6 +57,12 @@ Packages retained from selected subset of standard packages:
         ncurses \cite{ncurses} & 173 900 \\
         \hline
         cpio \cite{cpio} & 71 635 \\
+        \hline
+        gzip\cite{gzip} & 65 219 \\
+        \hline
+        file\cite{file} & 31 291 \\
+        \hline
+        shadow\cite{shadow} & 79 420 \\
         \hline
     \end{tabular}
     \caption{Common packages and their sizes expressed in \gls{loc}.}
