@@ -61,26 +61,27 @@ Over half of the standard packages needed to fulfil the requirements of \gls{lsb
 
 \subsection{Software bloat}
 
-Software bloat can be defined as a collection of factors impacting the functionality, performance, development and/or maintenance of a piece of software \cite{McGrenere2000AreWA,McGrenere2000BloatTO,Quach2018DebloatingST,Quach2019BloatFA}. A significant amount of research has been conducted that directly or indirectly evaluates the causes \cite{Mitchell2010FourTL} and effects \cite{Quach2019BloatFA} as well as means of prevention \cite{Pike2007ProgramDI,Milicchio2007TheUK} and alleviation \cite{Quach2018DebloatingST} of software bloat. As a result many different kinds of software bloat have been defined. Some of the most commonly studied include inefficient usage of resources, bad software design as well as feature creep. Since software bloat in large part depends on the point of view of the observer other types can also be delimited. The following are a subset of factors contributing to the applicability of a given piece of software for use as a teaching resource:
+Software bloat can be defined as a collection of factors impacting the functionality, performance, development and/or maintenance of a piece of software \cite{McGrenere2000AreWA,McGrenere2000BloatTO,Quach2018DebloatingST,Quach2019BloatFA}. A significant amount of research has been conducted that directly or indirectly evaluates the causes \cite{Mitchell2010FourTL} and effects \cite{Quach2019BloatFA} as well as means of prevention \cite{Pike2007ProgramDI,Milicchio2007TheUK} and alleviation \cite{Quach2018DebloatingST} of software bloat. As a result many different kinds of software bloat have been defined. Some of the most commonly studied include inefficient usage of resources, bad software design as well as feature creep. Since software bloat in large part depends on the point of view of the observer other types can also be delimited. The following are a subset of factors that may contribute to the applicability of a given piece of software for use as a teaching resource:
 
 \begin{itemize}
-    \item Insufficient documentation.
-    \item Excess features.
-    \item Unclear optimisation.
-    \item Extraneous portability considerations.
-    \item Excess fall-back implementations.
-    \item Use of multiple programming languages.
-    \item Convoluted code structuring (unsuitable formatting and/or naming conventions).
-    \item Complex build systems.
+    \item Insufficient documentation \cite{doc-issues,doc-quality}.
+    \item Excessive feature set \cite{lean-plea,lean-software,reduction}.
+    % Excessive portability considerations: ncurses vt100 support, fall-back implementations for missing features GNU coreutils etc. - reimplementations of libc or other library procedures
+    \item Excessive portability considerations among others support for outdated software versions and platforms \cite{autohell,four-lang}.
+    \item Use of multiple programming languages \cite{multi-lang}.
+    % Unclear optimisation - platform specific code and non standard programming constructs
+    \item Convoluted code structuring for e.g. unsuitable formatting and/or naming conventions as well as unclear optimisation \cite{convention-violations,variable-naming}.
+    % Make, GNU Autotools, Cmake, Ninja, Meson
+    \item Complex build systems and build automation \cite{recursive,non-recursive,tool-usage}.
 \end{itemize}
 
 \subsection{Source code evaluation}
 
-In order to evaluate a given piece of source code its qualitative and quantitative properties need to be assessed or measured. 
+In order to evaluate a given piece of source code its qualitative and quantitative properties need to be assessed or measured.
 
-\subsubsection{Qualities}
+\subsubsection{Properties}
 
-The first set, qualities consist of non-numeric values used to describe the source code. Below are a few of the most relevant:
+The first consist of non-numeric values used to describe the source code. Below are a few of the most relevant:
 
 \begin{itemize}
     \item Programming language.
@@ -89,12 +90,10 @@ The first set, qualities consist of non-numeric values used to describe the sour
     \item Software architecture.
 \end{itemize}
 
-\subsubsection{Quantities}
-
-The second set, quantities consist of discrete measurable values which individually or in composition can form distinct metrics. The following are a few most applicable to the goals of this project.
+The second consist of discrete measurable values which individually or in composition can form distinct metrics. The following are a few most applicable to the goals of this project.
 
 \begin{itemize}
-    \item \Gls{loc} \cite{loc}
+    \item \gls{loc} \cite{loc}
     \item \gls{lcm} \cite{lcm-1,lcm-2}
     \item \gls{nof} \cite{nof}
     \item McCabe cyclomatic complexity \cite{mccabe-complexity}
@@ -155,13 +154,23 @@ There are many free and open source programs available for the automated evaluat
 
 \subsection{Operating systems}
 
-Operating systems are complex compositions of programs (software) which enable the utilisation of a computer (hardware). They consist of the following elements:
+Operating systems are sets of programs that jointly control the system resources and the processes using these resources on a computer system \cite{oxford-os,cambridge-os}. Most consist of the following components:
+
+% % Duplication of phrase operating system
+% 
+% Many different system architectures have been designed and implemented resulting in the creation of numerous operating systems. Each of these systems consist of different components.
+% 
+% Most however follow a common pattern:
+
+% Lack of reference/s for components
 
 \begin{itemize}
     \item Bootloader - responsible for loading the kernel.
     \item Kernel - the foundation of the operating system, responsible for managing access to available resources as well as providing a clear and consistent abstraction of the hardware for the creation of software.
     \item User space - software designed for the user or users of the operating system.
 \end{itemize}
+
+% Overlapping statment
 
 At present many open source operating systems are available for e.g. Linux, FreeBSD, MINIX, RedoxOS and FreeDOS. Of these the most commonly used and contributed to is Linux.
 
@@ -176,8 +185,8 @@ Many Linux distributions are currently available. Few however have goals which o
     \item Embedded
 \end{itemize}
 
-The first are characterised by modular software installation from source code. They include \glsxtrshort{lfs}, Gentoo, NixOS, CRUX and \glsxtrshort{gnu} Guix to name a few. Of these the \glsxtrfull{lfs} family of operating systems, are of greatest interest due to their focus on a step-by-step approach to system creation using standard software implementations. 
+The first are characterised by modular software installation from source code. They include \gls{lfs}, Gentoo, NixOS, CRUX and \glsxtrshort{gnu} Guix to name a few. Of these the \gls{lfs} family of operating systems, are of greatest interest due to their focus on a step-by-step approach to system creation using standard software implementations. 
 
 The second group includes monolithic systems like Busybox and Toybox which contain minimal reimplementations of commonly used software primarily intended for embedded use.
 
-This project stands apart from those mentioned above. Unlike \glsxtrshort{lfs} it intends to incorporate only minimal software solutions and unlike Busybox and Toybox aims to reduce their implementations to a theoretical minimal cognitive complexity not bound by goals like standards compliance, efficiency or security while retaining modularity. As a result none of the preceding systems entirely fulfil the goals of this project.
+This project stands apart from those mentioned above. Unlike \gls{lfs} it intends to incorporate only minimal software solutions and unlike Busybox and Toybox aims to reduce their implementations to a theoretical minimal cognitive complexity not bound by goals like standards compliance, efficiency or security while retaining modularity. As a result none of the preceding systems entirely fulfil the goals of this project.
