@@ -156,23 +156,15 @@ There are many free and open source programs available for the automated evaluat
 
 Operating systems are sets of programs that jointly control the system resources and the processes using these resources on a computer system \cite{oxford-os,cambridge-os}. Most consist of the following components:
 
-% % Duplication of phrase operating system
-% 
-% Many different system architectures have been designed and implemented resulting in the creation of numerous operating systems. Each of these systems consist of different components.
-% 
-% Most however follow a common pattern:
-
 % Lack of reference/s for components
 
 \begin{itemize}
     \item Bootloader - responsible for loading the kernel.
     \item Kernel - the foundation of the operating system, responsible for managing access to available resources as well as providing a clear and consistent abstraction of the hardware for the creation of software.
-    \item User space - software designed for the user or users of the operating system.
+    \item Software - programs intended to make use of the kernel interfaces.
 \end{itemize}
 
-% Overlapping statment
-
-At present many open source operating systems are available for e.g. Linux, FreeBSD, MINIX, RedoxOS and FreeDOS. Of these the most commonly used and contributed to is Linux.
+At present many open source operating systems are available for e.g. Linux \cite{linux}, FreeBSD \cite{freebsd}, RedoxOS \cite{redox}, SerenityOS \cite{serenity}, MINIX 3 \cite{minix3} and FreeDOS \cite{freedos}. Of these the most commonly used and contributed to is Linux.
 
 \subsection{Linux}
 
@@ -185,8 +177,8 @@ Many Linux distributions are currently available. Few however have goals which o
     \item Embedded
 \end{itemize}
 
-The first are characterised by modular software installation from source code. They include \gls{lfs}, Gentoo, NixOS, CRUX and \glsxtrshort{gnu} Guix to name a few. Of these the \gls{lfs} family of operating systems, are of greatest interest due to their focus on a step-by-step approach to system creation using standard software implementations. 
+The first are characterised by modular software installation from source code. They include \gls{lfs} \cite{lfs}, Gentoo \cite{gentoo}, NixOS \cite{nixos}, CRUX \cite{crux} and \glsxtrshort{gnu} Guix \cite{guix} to name a few. Of these the \gls{lfs} family of operating systems, are of greatest interest due to their focus on a step-by-step approach to system creation using standard software implementations.
 
-The second group includes monolithic systems like Busybox and Toybox which contain minimal reimplementations of commonly used software primarily intended for embedded use.
+The second group includes monolithic systems like Busybox \cite{busybox} and Toybox \cite{toybox} which contain minimal reimplementations of commonly used software primarily intended for embedded use.
 
 This project stands apart from those mentioned above. Unlike \gls{lfs} it intends to incorporate only minimal software solutions and unlike Busybox and Toybox aims to reduce their implementations to a theoretical minimal cognitive complexity not bound by goals like standards compliance, efficiency or security while retaining modularity. As a result none of the preceding systems entirely fulfil the goals of this project.
