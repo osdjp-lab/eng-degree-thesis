@@ -1,66 +1,24 @@
 \subsection{Features}\label{Features}
 
-A comparison of the features of some of the programs with differing implementations between the standard and selected packages.
+The programs provided by the \gls{lfl} system exhibit a smaller set of features than their standard equivalents.
 
-\begin{table}[H]
-    \begin{center}
-        \begin{tabular}{|c|c|c|c|}
-            \hline
-            \multirow{3}{*}{Program} & \multicolumn{3}{|c|}{Features} \\
-            \cline{2-4}
-            & \multirow{2}{*}{Common} & \multicolumn{2}{|c|}{Distinct} \\
-            \cline{3-4}
-            & & Standard & Selected \\
-            \hline
-            \hline
-            sed & [Eefnr] & [lsuz] & [-] \\
-            \hline
-            ed & [ps] & [GVhlrv] & [-] \\
-            \hline
-            find & [HL] & [DOP] & [-] \\
-            \hline
-            \multirow{2}{*}{tar} & \multirow{2}{*}{[CJZacfhjmtxz]} & [ABFGHIKLMNOPRSTUV & \multirow{2}{*}{[-]} \\
-            & & WXbdgiklnoprsuvw] & \\
-            \hline
-            join & [12aeotv] & [ijz] & [-] \\
-            \hline
-            \multirow{2}{*}{ls} & [1AFHLRUacd & [BCDGILNQSTXZ & \multirow{2}{*}{[-]} \\
-            & fhilnpqrtu] & bgiklmnosvwx] & \\
-            \hline
-            sort & [Cbcdfikmnortu] & [MRSTVghsz] & [-] \\
-            \hline
-            tr & [Ccds] & [t] & [-] \\
-            \hline
-            \multirow{2}{*}{grep} & \multirow{2}{*}{[EFHcefhilnqsvwx]} & [ABCDGILPRTU & \multirow{2}{*}{[-]} \\
-            & & VZabdmoruyz] & \\
-            \hline
-            xargs & [Enrstx] & [0EILPadeilnoprstx] & [-] \\
-            \hline
-            tail & [cfn] & [Fqsvz] & [m] \\
-            \hline
-            cut & [bcdfns] & [z] & [-] \\
-            \hline
-            nl & [bdfhilnpsvw] & [-] & [-] \\
-            \hline
-            install & [Ddgmot] & [CSTZbcpsv] & [-] \\
-            \hline
-            touch & [acdmrt] & [fh] & [T] \\
-            \hline
-            seq & [fsw] & [-] & [-] \\
-            \hline
-            uniq & [cdfu] & [Diszw] & [-] \\
-            \hline
-            paste & [ds] & [z] & [-] \\
-            \hline
-            kill & [sl] & [Ln] & [-] \\ 
-            \hline
-            wc & [clmw] & [L] & [-] \\
-            \hline
-            du & [HLPadhksx] & [0BDSXbclmt] & [-] \\
-            \hline
-            split & [abdl] & [Centux] & [-] \\
-            \hline
-        \end{tabular}
-    \end{center}
-    \caption{Feature comparison of short options of a subset of programs included in the \enquote{\glsxtrlong{lfl}} system against their standard equivalents.}
-\end{table}
+\subsubsection{Compliant}
+
+Programs originating from inherited standard packages as well as programs provided by mawk, dash, less, mandoc and sbase are \gls{lsb} compliant.
+
+\begin{itemize}
+    \item mawk - awk
+    \item dash - sh
+    \item less - less (more emulation)
+    \item mandoc - man
+    \item sbase - basename, cat, chgrp, chmod, chown, cksum, cmp, comm, cut, date, dd, dirname, du, echo, env, expand, expr, false, find, fold, grep, head, hostname, join, kill, ln, logger, logname, md5sum, mkdir, mkfifo, mknod, mktemp, nice, nl, nohup, paste, pathchk, printf, pwd, renice, rmdir, sed, seq, sleep, sort, split, strings, sync, tail, tee, test / [, time, touch, tr, true, tsort, tty, uname, unexpand, uniq, wc
+\end{itemize}
+
+\subsubsection{Non-compliant}
+
+The programs provided by ubase as well as a subset of programs provided by sbase are non-compliant with the \gls{lsb} specification. These implementations are missing certain features (listed or described in parentheses), nontheless they exhibit a high degree of compatability with standard implementations.
+
+\begin{itemize}
+    \item ubase - dd (ibs, obs and cbs), df (-Pt), dmesg (-s), id (-r), killall5 (-egilqVv), mknod (-p), mount (-FfLrsUVvw), passwd (-xnwilu), pidof (-x), ps (-GglnoptUu), su (-cmS), umount (-rtVv)
+    \item sbase - cp (-i), ed (g and v operate on single commands, e, E, r, w and W commands cannot accept shell escapes), getconf (-v), ls (-Ckmpsx), install (-bpSsv), mv (-i), od (-v always enabled, 'd' interpreted as 'u' when given as parameter for -t flag), rm (-i), tar (flag based instead of key based option selection), xargs (-p)
+\end{itemize}
