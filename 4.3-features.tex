@@ -16,9 +16,622 @@ Programs originating from inherited standard packages as well as programs provid
 
 \subsubsection{Non-compliant}
 
-The programs provided by ubase as well as a subset of programs provided by sbase are non-compliant with the \gls{lsb} specification. These implementations are missing certain features (listed or described in parentheses), nontheless they exhibit a high degree of compatability with standard implementations.
+The programs provided by ubase as well as a subset of programs provided by sbase are non-compliant with the \gls{lsb} specification. Their implementations are missing certain features, nontheless they exhibit a high degree of compatability with standard implementations.
 
-\begin{itemize}
-    \item ubase - dd (ibs, obs and cbs), df (-Pt), dmesg (-s), id (-r), killall5 (-egilqVv), mknod (-p), mount (-FfLrsUVvw), passwd (-xnwilu), pidof (-x), ps (-GglnoptUu), su (-cmS), umount (-rtVv)
-    \item sbase - cp (-i), ed (g and v operate on single commands, e, E, r, w and W commands cannot accept shell escapes), getconf (-v), ls (-Ckmpsx), install (-bpSsv), mv (-i), od (-v always enabled, 'd' interpreted as 'u' when given as parameter for -t flag), rm (-i), tar (flag based instead of key based option selection), xargs (-p)
-\end{itemize}
+% UBASE
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Program & Option/s & Description \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%
+        \multirow{3}{*}{dd}
+        %%%%%%%%%%%%%%%%%%%
+        & ibs & Specify the input block size. \\
+        \cline{2-3}
+        & obs & Specify the output block size. \\
+        \cline{2-3}
+        & cbs & Specify the conversion block size. \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%
+        \multirow{4}{*}{df}
+        %%%%%%%%%%%%%%%%%%%
+        & \multirow{2}{*}{-P} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Produce output in the format described \\
+                in the STDOUT section.
+            \end{tabular}
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{2}{*}{-t} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Include total allocated-space figures \\
+                in the output.
+            \end{tabular}    
+        } \\
+        & & \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%%%%
+        \multirow{2}{*}{dmesg}
+        %%%%%%%%%%%%%%%%%%%%%%
+        & \multirow{2}{*}{-s} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Use a buffer of bufsize to query the system \\
+                message buffer. This is 16392 by default.
+            \end{tabular}    
+        } \\
+        & & \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%
+        \multirow{1}{*}{id}
+        %%%%%%%%%%%%%%%%%%%
+        & -r & Output the real ID instead of the effective ID. \\
+        \hline
+        \hline
+        \multicolumn{3}{|c|}{\dots} \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Program & Option/s & Description \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%%%%%%%
+        \multirow{8}{*}{killall5}
+        %%%%%%%%%%%%%%%%%%%%%%%%%
+        & \multirow{1}{*}{-e} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Require an exact match for very long names.
+            \end{tabular}    
+        } \\
+        \cline{2-3}
+        & \multirow{2}{*}{-g} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Kill the process group to which \\
+                the process belongs.
+            \end{tabular}    
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{1}{*}{-i} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Ask for confirmation before killing process.
+            \end{tabular}    
+        } \\
+        \cline{2-3}
+        & \multirow{1}{*}{-l} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                List all known signal names.
+            \end{tabular}    
+        } \\
+        \cline{2-3}
+        & \multirow{1}{*}{-q} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Silent mode.
+            \end{tabular}    
+        } \\
+        \cline{2-3}
+        & \multirow{1}{*}{-V} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Display version information.
+            \end{tabular}    
+        } \\
+        \cline{2-3}
+        & \multirow{1}{*}{-v} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Report if signal was successfully sent.
+            \end{tabular}    
+        } \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%%%%
+        \multirow{1}{*}{mknod}
+        %%%%%%%%%%%%%%%%%%%%%%
+        & \multirow{1}{*}{p} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Create a FIFO.
+            \end{tabular}    
+        } \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%%%%%
+        \multirow{13}{*}{mount}
+        %%%%%%%%%%%%%%%%%%%%%%%
+        & \multirow{2}{*}{-F} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Fork a new incarnation of mount for \\
+                each device to be mounted.
+            \end{tabular}    
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{1}{*}{-f} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Dry run mode.
+            \end{tabular}    
+        } \\
+        \cline{2-3}
+        & \multirow{2}{*}{-L} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Mount the partition that has the \\
+                specified label.
+            \end{tabular}    
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{1}{*}{-r} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Mount the file system read-only.
+            \end{tabular}    
+        } \\
+        \cline{2-3}
+        & \multirow{2}{*}{-s} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Ignore mount options not supported \\
+                by a file system type.
+            \end{tabular}    
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{2}{*}{-U} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Mount the partition that has the \\
+                specified uuid. 
+            \end{tabular}    
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{1}{*}{-V} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Display version information.
+            \end{tabular}    
+        } \\
+        \cline{2-3}
+        & \multirow{1}{*}{-v} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Invoke verbose mode.
+            \end{tabular}    
+        } \\
+        \cline{2-3}
+        & \multirow{1}{*}{-w} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Mount the file system read/write.
+            \end{tabular}    
+        } \\
+        \hline
+        %%%%%%%%%%%%%%%%%%%%%%%%
+        \multirow{15}{*}{passwd}
+        %%%%%%%%%%%%%%%%%%%%%%%%
+        & \multirow{3}{*}{-i} & \multirow{3}{*}{
+            \begin{tabular}{c}
+                Disable an account after the \\
+                password has been expired for \\
+                the given number of days.
+            \end{tabular}    
+        } \\
+        & & \\
+        & & \\
+        \cline{2-3}
+        & \multirow{3}{*}{-l} & \multirow{3}{*}{
+            \begin{tabular}{c}
+                Disable an account by changing the \\
+                password to a value which matches \\
+                no possible encrypted value.
+            \end{tabular}    
+        } \\
+        & & \\
+        & & \\
+        \cline{2-3}
+        & \multirow{2}{*}{-n} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Set the minimum number of days \\
+                before a password may be changed.
+            \end{tabular}    
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{2}{*}{-u} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Re-enable an account by changing \\
+                the password back to its previous value.
+            \end{tabular}    
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{3}{*}{-w} & \multirow{3}{*}{
+            \begin{tabular}{c}
+                Set the number of days warning \\
+                the user will receive before their \\
+                password will expire.
+            \end{tabular}    
+        } \\
+        & & \\
+        & & \\
+        \cline{2-3}
+        & \multirow{2}{*}{-x} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Set the maximum number of days \\
+                a password remains valid.
+            \end{tabular}    
+        } \\
+        & & \\
+        \hline
+        \hline
+        \multicolumn{3}{|c|}{\dots} \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Program & Option/s & Description \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%%%%
+        \multirow{2}{*}{pidof}
+        %%%%%%%%%%%%%%%%%%%%%%
+        & \multirow{2}{*}{-x} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Also return process id's of shells \\
+                running the named scripts.
+            \end{tabular}    
+        } \\
+        & & \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%%
+        \multirow{19}{*}{ps}
+        %%%%%%%%%%%%%%%%%%%%
+        & \multirow{2}{*}{-G} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Write information for processes whose \\
+                real group ID numbers are given in grouplist.
+            \end{tabular}    
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{2}{*}{-g} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Write information for processes whose \\
+                session leaders are given in grouplist.
+            \end{tabular}    
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{1}{*}{-l} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Generate a long listing.
+            \end{tabular}    
+        } \\
+        \cline{2-3}
+        & \multirow{2}{*}{-n} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Specify the name of an alternative system \\
+                namelist file in place of the default.
+            \end{tabular}    
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{2}{*}{-o} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Write information according to the \\
+                format specification given in format.
+            \end{tabular}    
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{2}{*}{-p} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Write information for processes whose \\
+                process ID numbers are given in proclist.
+            \end{tabular}    
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{2}{*}{-t} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Write information for processes associated \\
+                with terminals given in termlist.
+            \end{tabular}    
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{3}{*}{-U} & \multirow{3}{*}{
+            \begin{tabular}{c}
+                Write information for processes whose \\
+                real user ID numbers or login names \\
+                are given in userlist.
+            \end{tabular}    
+        } \\
+        & & \\
+        & & \\
+        \cline{2-3}
+        & \multirow{3}{*}{-u} & \multirow{3}{*}{
+            \begin{tabular}{c}
+                Write information for processes whose \\
+                user ID numbers or login names are \\
+                given in userlist.
+            \end{tabular}    
+        } \\
+        & & \\
+        & & \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%%
+        \multirow{3}{*}{su}
+        %%%%%%%%%%%%%%%%%%%%
+        & \multirow{1}{*}{-c} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Invoke the shell with the option -c command.
+            \end{tabular}    
+        } \\
+        \cline{2-3}
+        & \multirow{1}{*}{-m} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Pass the current environment to the invoked shell.
+            \end{tabular}    
+        } \\
+        \cline{2-3}
+        & \multirow{1}{*}{-s} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Invoke shell as the comamnd interpreter.
+            \end{tabular}    
+        } \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%%%%%
+        \multirow{5}{*}{umount}
+        %%%%%%%%%%%%%%%%%%%%%%%
+        & \multirow{1}{*}{-r} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Try to remount read-only if unmounting fails.
+            \end{tabular}    
+        } \\
+        \cline{2-3}
+        & \multirow{2}{*}{-t} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Indicate that the actions should only \\
+                be taken on file systems of the specified type.
+            \end{tabular}    
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{1}{*}{-V} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Display version information.
+            \end{tabular}    
+        } \\
+        \cline{2-3}
+        & \multirow{1}{*}{-v} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Invoke verbose mode.
+            \end{tabular}    
+        } \\
+        \hline
+    \end{tabular}
+    \caption{List of missing or \gls{lsb} non-compliant features in ubase.}
+\end{table}
+
+% SBASE
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Program & Option/s & Description \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%%
+        \multirow{2}{*}{cp}
+        %%%%%%%%%%%%%%%%%%%%
+        & \multirow{2}{*}{-i} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Prompt when copying to any existing \\
+                destination file.
+            \end{tabular}    
+        } \\
+        & & \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%%%%%
+        \multirow{2}{*}{ed}
+        %%%%%%%%%%%%%%%%%%%%%%%
+        & \multirow{1}{*}{g, v} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Operate on single commands.
+            \end{tabular}    
+        } \\
+        \cline{2-3}
+        & \multirow{1}{*}{E, e, r, W, w} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Cannot accept shell escapes.
+            \end{tabular}    
+        } \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%%
+        \multirow{3}{*}{getconf}
+        %%%%%%%%%%%%%%%%%%%%
+        & \multirow{3}{*}{-v} & \multirow{3}{*}{
+            \begin{tabular}{c}
+                Indicate a specific specification \\
+                and version for which configuration \\
+                variables are to be determined.
+            \end{tabular}    
+        } \\
+        & & \\
+        & & \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%%%%%
+        \multirow{13}{*}{ls}
+        %%%%%%%%%%%%%%%%%%%%%%%
+        & \multirow{3}{*}{-C} & \multirow{3}{*}{
+            \begin{tabular}{c}
+                Write multi-text-column output with entries \\
+                sorted down the columns, according to the \\
+                collating sequence.
+            \end{tabular}    
+        } \\
+        & & \\
+        & & \\
+        \cline{2-3}
+        & \multirow{2}{*}{-m} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Stream output format; list files across \\
+                the page, separated by commas.
+            \end{tabular}    
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{2}{*}{-p} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Write a slash (/) after each filename \\
+                if that file is a directory. 
+            \end{tabular}    
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{2}{*}{-s} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Indicate the total number of file system \\
+                blocks consumed by each file displayed.
+            \end{tabular}    
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{4}{*}{-x} & \multirow{4}{*}{
+            \begin{tabular}{c}
+                The same as -C, except that the \\
+                multi-text-column output is produced \\
+                with entries sorted across, \\
+                rather than down, the columns.
+            \end{tabular}    
+        } \\
+        & & \\
+        & & \\
+        & & \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%%%%%
+        \multirow{10}{*}{install}
+        %%%%%%%%%%%%%%%%%%%%%%%
+        & \multirow{1}{*}{-b} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Equivalent to --backup=existing.
+            \end{tabular}    
+        } \\
+        \cline{2-3}
+        & \multirow{3}{*}{-p} & \multirow{3}{*}{
+            \begin{tabular}{c}
+                Copy the access and modification \\
+                times of SOURCE files to \\
+                corresponding destination files.
+            \end{tabular}    
+        } \\
+        & & \\
+        & & \\
+        \cline{2-3}
+        & \multirow{2}{*}{-S} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Equivalent to --backup=existing, except \\
+                if a simple suffix is required, use SUFFIX.
+            \end{tabular}    
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{2}{*}{-s} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Strips symbol tables, only for 1st and \\
+                2nd formats.
+            \end{tabular}    
+        } \\
+        & & \\
+        \cline{2-3}
+        & \multirow{2}{*}{-v} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Print the name of each file before \\
+                copying it to stdout.
+            \end{tabular}    
+        } \\
+        & & \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%%
+        \multirow{2}{*}{mv}
+        %%%%%%%%%%%%%%%%%%%%
+        & \multirow{2}{*}{-i} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Prompt for confirmation if the \\
+                destination path exists.
+            \end{tabular}    
+        } \\
+        & & \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%%
+        \multirow{2}{*}{od}
+        %%%%%%%%%%%%%%%%%%%%
+        & \multirow{1}{*}{-v} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Always enabled.
+            \end{tabular}    
+        } \\
+        \cline{2-3}
+        & \multirow{1}{*}{-t} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                'd' interpreted as 'u'.
+            \end{tabular}    
+        } \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%%
+        \multirow{1}{*}{rm}
+        %%%%%%%%%%%%%%%%%%%%
+        & \multirow{1}{*}{-i} & \multirow{1}{*}{
+            \begin{tabular}{c}
+                Prompt before every removal.
+            \end{tabular}    
+        } \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%%
+        \multirow{2}{*}{tar}
+        %%%%%%%%%%%%%%%%%%%%
+        & \multirow{2}{*}{None} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Flag based instead of key based \\
+                option selection.
+            \end{tabular}    
+        } \\
+        & & \\
+        \hline
+        \hline
+        %%%%%%%%%%%%%%%%%%%%
+        \multirow{2}{*}{xargs}
+        %%%%%%%%%%%%%%%%%%%%
+        & \multirow{2}{*}{-p} & \multirow{2}{*}{
+            \begin{tabular}{c}
+                Asked whether to execute utility \\
+                at each invocation. 
+            \end{tabular}    
+        } \\
+        & & \\
+        \hline
+    \end{tabular}
+    \caption{List of missing or \gls{lsb} non-compliant features in sbase.}
+\end{table}
