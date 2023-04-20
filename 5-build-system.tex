@@ -1,12 +1,14 @@
 \section{Build system}\label{Build system}
 
+An overview of the components of the \gls{lfl} build system as well as the methodology of system creation.
+
 \subsection{Layout}
 
-Composition of the \gls{lfl} project.
+The build system can be subdivided into static and dynamic components.
 
 \subsubsection{Static}
 
-Components in the repository prior to system build:
+The first are part of the repository prior to running the system build:
 
 \begin{itemize}
     \item \textbf{README.md} - general project information.
@@ -17,11 +19,12 @@ Components in the repository prior to system build:
     \item \textbf{make-scripts} - makefile target scripts.
     \item \textbf{pkg-scripts} - individual package build and install scripts.
     \item \textbf{config-files} - system configuration files.
+    \item \textbf{chroot-scripts} - chroot system initialization scripts.
 \end{itemize}
 
 \subsubsection{Dynamic}
 
-Components created dynamically during system creation:
+The second are created during the system build:
 
 \begin{itemize}
     \item \textbf{archive} - compressed tarballs of source code packages.
@@ -37,7 +40,7 @@ A step by step description of the build process.
 
 \subsubsection{Package acquisition}
 
-All software packages required for the system are downloaded. Where available the packages are gathered in the form of compressed tarballs into the archive directory otherwise they are git cloned from online repositories into the sources directory.
+All software packages required for the system are downloaded. Where available the packages are obtained as compressed tarballs and stored into the archive directory otherwise they are cloned from online repositories via git into the sources directory.
 
 \subsubsection{Source code extraction}
 
@@ -55,11 +58,15 @@ Each piece of software is built in its respective subdirectory of sources, after
 
 All configuration files are copied from the config-files directory tree into corresponding directories in the root filesystem.
 
+\subsubsection{Chroot initialization}
+
+The final steps required to set up the system are run in isolation on the created root filesystem via chroot and include the indexing of man pages and the addition of the root user.
+
 \subsubsection{Packaging}
 
 All of the required system components located in the isoimage directory are packaged into an \glsxtrshort{iso} 9660 disk image.
 
-\noindent
+%\noindent
 Contents of the isoimage directory:
 
 \begin{itemize}
