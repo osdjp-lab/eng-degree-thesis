@@ -26,11 +26,12 @@ The focus of this thesis is the creation of a Linux-based system called \gls{lfl
 The \glsxtrshort{foss} communities are the source of a great number and variety of actively maintained software implementations. However only a small subset of these is included by default in modern day open source operating systems. This selection tends to differ from system to system. As such the following subsets of standardised system interfaces have been created in order to provide a uniform foundation, for software development and use, on \glsxtrshort{unix} and Linux systems:
 
 \begin{itemize}
+    \item \gls{posix} \cite{posix}.
     \item \gls{sus} \cite{susv4}.
-    \item \gls{lsb} specification \cite{lsb}.
+    \item \gls{lsb} \cite{lsb}.
 \end{itemize}
 
-These specifications extend far beyond the scope of this project as such only the \gls{lsb} Core subset of the \gls{lsb} standard has been considered for use in the creation of the \gls{lfl} system.
+These specifications extend far beyond the scope of this project as such only the \gls{lsb} Core module of the \gls{lsb} standard was considered for use in the creation of the \gls{lfl} system.
 
 \begin{table}[H]
     \centering
@@ -105,7 +106,7 @@ The second consist of discrete measurable values which individually or in compos
 
 \subsubsection{Automation}
 
-There are many free and open source programs available for the automated evaluation of source code properties. Few however provide options for measuring values outside of the most basic including the number of lines of code or number of lines of comments. Among those that do their scope is usually limited to a single or at most a few languages with similarly few available metrics. Additionally the consistency of values obtained for the same metrics and code base between different revisions of the same tool or between tools providing the same metrics is not guaranteed.
+There are many free and open source programs available for the automated evaluation of source code properties. Few however provide options for measuring values outside of the most basic such as the number of lines of code or number of lines of comments. Among those that do their scope is usually limited to a single or at most a few languages with similarly few available metrics. Additionally the consistency of values obtained for the same metrics and code base between different revisions of the same tool or between tools providing the same metrics is not guaranteed.
 
 \begin{table}[H]
     \centering
