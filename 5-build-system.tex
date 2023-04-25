@@ -1,6 +1,6 @@
 \section{Build system}\label{Build system}
 
-An overview of the components of the \gls{lfl} build system as well as the methodology of system creation.
+An overview of the components of the \gls{lfl} build system as well as of the methodology of system creation.
 
 \subsection{Layout}
 
@@ -19,7 +19,7 @@ The first are part of the repository prior to running the system build:
     \item \textbf{make-scripts} - makefile target scripts.
     \item \textbf{pkg-scripts} - individual package build and install scripts.
     \item \textbf{config-files} - system configuration files.
-    \item \textbf{chroot-scripts} - chroot system initialization scripts.
+    \item \textbf{chroot-scripts} - chroot system initialisation scripts.
 \end{itemize}
 
 \subsubsection{Dynamic}
@@ -48,7 +48,7 @@ All tarballs found in the archive directory are extracted into the sources direc
 
 \subsubsection{Root filesystem creation}
 
-The base \glsxtrshort{fhs} filesystem layout is created in the rootfs directory.
+The base \gls{fhs} \cite{fhs} layout is created in the rootfs directory.
 
 \subsubsection{Software installation}
 
@@ -58,7 +58,7 @@ Each piece of software is built in its respective subdirectory of sources, after
 
 All configuration files are copied from the config-files directory tree into corresponding directories in the root filesystem.
 
-\subsubsection{Chroot initialization}
+\subsubsection{Chroot initialisation}
 
 The final steps required to set up the system are run in isolation on the created root filesystem via chroot and include the indexing of man pages and the addition of the root user.
 
