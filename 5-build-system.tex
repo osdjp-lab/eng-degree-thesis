@@ -54,13 +54,13 @@ A directory tree based upon the \gls{fhs} \cite{fhs} is created in the rootfs di
 
 Each piece of software is built in its respective subdirectory of sources, after which the compiled static binaries are installed into place in the root filesystem along with their associated manual pages.
 
-\subsubsection{Configuration}
+\subsubsection{System configuration}
 
-All configuration files are copied from the config-files directory tree into corresponding directories in the root filesystem.
+All configuration files are copied from the config-files directory tree into corresponding directories in the root filesystem. The ownership of files and directories in rootfs is changed to that of the root user.
 
 \subsubsection{Chroot initialisation}
 
-The final steps required to set up the system are run in isolation on the created root filesystem via chroot and include the indexing of manual pages, the addition of the root user and the change of directory ownership.
+The final steps required to set up the system are run in isolation on the created root filesystem via chroot and include the indexing of manual pages and the addition of the root user.
 
 \subsubsection{Packaging}
 
