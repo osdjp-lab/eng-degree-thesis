@@ -48,11 +48,11 @@ All tarballs found in the archive directory are extracted into the sources direc
 
 \subsubsection{Root filesystem creation}
 
-The base \gls{fhs} \cite{fhs} layout is created in the rootfs directory.
+A directory tree based upon the \gls{fhs} \cite{fhs} is created in the rootfs directory.
 
 \subsubsection{Software installation}
 
-Each piece of software is built in its respective subdirectory of sources, after which the compiled static binaries are installed into place in the root filesystem along with their associated man-pages.
+Each piece of software is built in its respective subdirectory of sources, after which the compiled static binaries are installed into place in the root filesystem along with their associated manual pages.
 
 \subsubsection{Configuration}
 
@@ -60,7 +60,7 @@ All configuration files are copied from the config-files directory tree into cor
 
 \subsubsection{Chroot initialisation}
 
-The final steps required to set up the system are run in isolation on the created root filesystem via chroot and include the indexing of man pages and the addition of the root user.
+The final steps required to set up the system are run in isolation on the created root filesystem via chroot and include the indexing of manual pages, the addition of the root user and the change of directory ownership.
 
 \subsubsection{Packaging}
 
