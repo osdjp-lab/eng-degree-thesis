@@ -49,16 +49,18 @@
 
 \begin{document}
 
-\newgeometry{margin=2cm, tmargin=0cm}
 \include{0-title-page}
-\restoregeometry
 
 \newgeometry{margin=3cm}
 \maketitle
-{\small\tableofcontents}
-%\restoregeometry
 
 \include{1-abstract}
+
+% \newgeometry{tmargin=1.7cm}
+{\small\tableofcontents}
+% \restoregeometry
+
+\newgeometry{margin=3cm}
 \include{2-introduction}
 \include{3-evaluation}
 \include{4-composition}
