@@ -183,14 +183,18 @@ In search of minimal software implementations the following packages\\ grouped b
         Type & Package & \gls{loc} \\
         \hline
         \hline
-        \multirow{6}{*}{Collection}
+        \multirow{8}{*}{Collection}
         & s6-linux-utils \cite{s6-linux} & 4 032 \\
         \cline{2-3}
         & s6-portable-utils \cite{s6-portable} & 6 578 \\
         \cline{2-3}
+        & asmutils \cite{asmutils} & 36 783 \\ % Assembly
+        \cline{2-3}
         & toybox \cite{toybox} & 70 798 \\
         \cline{2-3}
         & 9base-6 \cite{9base} & 74 177 \\
+        \cline{2-3}
+        & rust-coreutils \cite{rust-coreutils} & 109 563 \\ % Rust
         \cline{2-3}
         & busybox \cite{busybox} & 205 596 \\
         \cline{2-3}
@@ -269,7 +273,7 @@ In search of minimal software implementations the following packages\\ grouped b
         Type & Package & \gls{loc} \\
         \hline
         \hline
-        \multirow{13}{*}{Text editor}
+        \multirow{14}{*}{Text editor}
         & s \cite{s} & 2 386 \\
         \cline{2-3}
         & neatvi \cite{neatvi} & 6 832 \\
@@ -312,7 +316,7 @@ In search of minimal software implementations the following packages\\ grouped b
         & yasm \cite{yasm} & 764 223 \\ % Assembly
         \hline
         \hline
-        \multirow{9}{*}{C Compiler}
+        \multirow{10}{*}{C compiler}
         & c \cite{c} & 7 329 \\
         \cline{2-3}
         & cproc \cite{cproc} & 8 581 \\
@@ -320,6 +324,8 @@ In search of minimal software implementations the following packages\\ grouped b
         & chibicc \cite{chibicc} & 9 665 \\
         \cline{2-3}
         & 8cc \cite{8cc} & 10 229 \\
+        \cline{2-3}
+        & subc \cite{subc} & 17 617 \\
         \cline{2-3}
         & lacc \cite{lacc} & 27 010 \\
         \cline{2-3}
@@ -332,10 +338,14 @@ In search of minimal software implementations the following packages\\ grouped b
         & cparser \cite{cparser} & 178 500 \\
         \hline
         \hline
-        \multirow{2}{*}{Libc}
+        \multirow{4}{*}{Libc}
         & musl \cite{musl} & 95 004 \\
         \cline{2-3}
         & uClibc-ng \cite{uclibc-ng} & 269 410 \\
+        \cline{2-3}
+        & picolibc \cite{picolibc} & 352 295\\
+        \cline{2-3}
+        & newlib \cite{newlib} & 673 295\\
         \hline
     \end{tabular}
     \caption{Alternative packages grouped by type with their sizes expressed in \gls{loc}.}
@@ -345,6 +355,6 @@ In search of minimal software implementations the following packages\\ grouped b
 \footnotetext[4]{Non-\gls{foss} software licence.}
 \footnotetext[5]{Non-\gls{osi} open source free software licence.}
 
-The \gls{pil} of all listed alternative packages is C with the exception of shepherd (Shell), nosh (C++), e3 (Assembly), micro (Go), fasm (Assembly) and yasm (Assembly).
+The \gls{pil} of all listed alternative packages is C with the exception of asmutils (Assembly), rust-coreutils (Rust), shepherd (Shell), nosh (C++), e3 (Assembly), micro (Go), fasm (Assembly) and yasm (Assembly).
 
 % Smaller software packages from each category and the reasoning behind their rejection.
