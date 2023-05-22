@@ -34,6 +34,8 @@ The second are created during the system build:
     \item \textbf{linux-for-learners.iso} - the \gls{lfl} disk image.
 \end{itemize}
 
+\newpage
+
 \subsection{Procedure}
 
 A step by step description of the build process.
@@ -56,7 +58,7 @@ A directory tree based upon the \gls{fhs} \cite{fhs} is created in the rootfs di
 
 \subsubsection{Software installation}
 
-The scripts stored in the pkg-scripts directory are processed in the order specified by their assigned numbers. The contents of each script is read into a bash variable and a \gls{regex} based upon the name of the script excluding the number is generated. The \gls{regex} is used to change the current working directory to that of the corresponding package. Once there the script stored in the bash variable is executed. This process results in each piece of software being built in its respective subdirectory of sources and being installed alongside it's associated manual pages into the root filesystem.
+The scripts stored in the pkg-scripts directory are processed in the order specified by their assigned numbers. The contents of each script is read into a bash variable and a \gls{regex} based upon the name of the script excluding the number is generated. The \gls{regex} is used to change the current working directory to that of the corresponding package. Once there the script stored in the bash variable is executed. This process results in each piece of software being built in its respective subdirectory of sources and being installed alongside its associated manual pages into the root filesystem. All executables are statically linked in order to decouple the generated binaries from the host system shared libraries and dynamic linker.
 
 % Each piece of software is built in its respective subdirectory of sources, after which the compiled static binaries are installed in place in the root filesystem along with their associated manual pages.
 

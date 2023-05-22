@@ -31,7 +31,7 @@ The \glsxtrshort{foss} communities are the source of a great number and variety 
     \item \gls{lsb} \cite{lsb}.
 \end{itemize}
 
-These specifications extend far beyond the scope of this project as such only the \gls{lsb} Core module of the \gls{lsb} standard was considered for use in the creation of the \gls{lfl} system.
+Each of these specifications extend far beyond the scope of this project as such only the \gls{lsb} Core module of the \gls{lsb} standard was considered for use in the creation of the \gls{lfl} system.
 
 \begin{table}[H]
     \centering
@@ -68,7 +68,7 @@ Software bloat can be defined as a collection of factors impacting the functiona
     \item Insufficient documentation \cite{doc-issues,doc-quality}.
     \item Excessive feature set \cite{lean-plea,lean-software,reduction}.
     % Excessive portability considerations: ncurses vt100 support, fall-back implementations for missing features GNU coreutils etc. - reimplementations of libc or other library procedures
-    \item Excessive portability considerations among others support for outdated software versions and platforms \cite{autohell,four-lang}.
+    \item Excessive portability considerations for e.g. support for outdated software versions and platforms \cite{autohell,four-lang}.
     \item Use of multiple programming languages \cite{multi-lang}.
     % Unclear optimisation - platform specific code and non standard programming constructs
     \item Convoluted code structuring for e.g. unsuitable formatting and/or naming conventions as well as unclear optimisation \cite{convention-violations,variable-naming}.
@@ -94,9 +94,9 @@ The first consist of non-numeric values used to describe the source code. Below 
 The second consist of discrete measurable values which individually or in composition can form distinct metrics. The following are a few most applicable to the goals of this project.
 
 \begin{itemize}
-    \item \gls{loc} \cite{loc}
-    \item \gls{lcm} \cite{lcm-1,lcm-2}
-    \item \gls{nof} \cite{nof}
+    \item \Gls{loc} \cite{loc}
+    \item \Gls{lcm} \cite{lcm-1,lcm-2}
+    \item \Gls{nof} \cite{nof}
     \item McCabe cyclomatic complexity \cite{mccabe-complexity}
     \item Halstead complexity measures \cite{halstead-complexity}
     \item Maintainability index \cite{maintainability-1,maintainability-2}
@@ -106,7 +106,7 @@ The second consist of discrete measurable values which individually or in compos
 
 \subsubsection{Automation}
 
-There are many free and open source programs available for the automated evaluation of source code properties. Few however provide options for measuring values outside of the most basic such as the number of lines of code or number of lines of comments. Among those that do their scope is usually limited to a single or at most a few languages with similarly few available metrics. Additionally the consistency of values obtained for the same metrics and code base between different revisions of the same tool or between tools providing the same metrics is not guaranteed.
+There are many free and open source programs available for the automated evaluation of source code properties. Few however provide options for measuring values outside of the most basic, such as the number of \glsxtrlong{loc} or number of \glsxtrlong{lcm}. Among those that do their scope is usually limited to a single or at most a few languages with similarly few available metrics. Additionally the consistency of values obtained for the same metrics and code base between different revisions of the same tool or between tools providing the same metrics is not guaranteed.
 
 \begin{table}[H]
     \centering
@@ -118,9 +118,9 @@ There are many free and open source programs available for the automated evaluat
         tokei \cite{tokei} & 226 languages
         & \multirow{3}{*}{
             \begin{tabular}{c}
-                Lines of code \\
-                Lines of comments \\
-                Number of files \\
+                \Glsxtrlong{loc} \\
+                \Glsxtrlong{lcm} \\
+                \Glsxtrlong{nof} \\
             \end{tabular}
         } \\
         \cline{1-2}
@@ -129,22 +129,22 @@ There are many free and open source programs available for the automated evaluat
         ohcount \cite{ohcount} & 121 languages & \\
         \hline
         \multirow{6}{*}{cccc \cite{cccc}} & \multirow{6}{*}{C, C++, Java}
-        & Lines of code \\
-        & & Lines of comments \\
+        & \Glsxtrlong{loc} \\
+        & & \Glsxtrlong{lcm} \\
         & & Cyclomatic complexity \\
         & & 4/6 Chidamber-Kemerer metrics \\
         & & Fan-in and Fan-out \\
         & & Information flow \\
         \hline
         \multirow{5}{*}{radon \cite{radon}} & \multirow{5}{*}{Python}
-        & Lines of code \\
-        & & Lines of comments \\
+        & \Glsxtrlong{loc} \\
+        & & \Glsxtrlong{lcm} \\
         & & Cyclomatic complexity \\
         & & Halstead metrics \\
         & & Maintainability index \\
         \hline
         \multirow{4}{*}{frama-c \cite{frama-c}} & \multirow{4}{*}{C}
-        & Lines of code \\
+        & \Glsxtrlong{loc} \\
         & & Cyclomatic complexity \\
         & & Halstead metrics \\
         & & Eva coverage estimate \\
